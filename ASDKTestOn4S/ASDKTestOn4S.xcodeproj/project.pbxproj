@@ -15,6 +15,12 @@
 		CA127F831CA7CA6A00DEE218 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA127F811CA7CA6A00DEE218 /* LaunchScreen.storyboard */; };
 		CA127F8E1CA7CA6A00DEE218 /* ASDKTestOn4STests.m in Sources */ = {isa = PBXBuildFile; fileRef = CA127F8D1CA7CA6A00DEE218 /* ASDKTestOn4STests.m */; };
 		CA127F991CA7CA6A00DEE218 /* ASDKTestOn4SUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CA127F981CA7CA6A00DEE218 /* ASDKTestOn4SUITests.m */; };
+		CAEB6DCE1CA82CB60058C699 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEB6DCD1CA82CB60058C699 /* BaseViewController.m */; };
+		CAEB6DD21CA82CD00058C699 /* WithoutASDKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEB6DD01CA82CD00058C699 /* WithoutASDKViewController.m */; };
+		CAEB6DD31CA82CD00058C699 /* WithoutASDKViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAEB6DD11CA82CD00058C699 /* WithoutASDKViewController.xib */; };
+		CAEB6DD61CA82CE50058C699 /* WithASDKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEB6DD51CA82CE50058C699 /* WithASDKViewController.m */; };
+		CAEB6DDA1CA83E350058C699 /* WithoutASDKTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEB6DD81CA83E350058C699 /* WithoutASDKTableViewCell.m */; };
+		CAEB6DDB1CA83E350058C699 /* WithoutASDKTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAEB6DD91CA83E350058C699 /* WithoutASDKTableViewCell.xib */; };
 		F5CC6B93FCF509B7B9FB66C4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F43DCD94D2C2D2B49E4D63C /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +61,16 @@
 		CA127F941CA7CA6A00DEE218 /* ASDKTestOn4SUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ASDKTestOn4SUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA127F981CA7CA6A00DEE218 /* ASDKTestOn4SUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASDKTestOn4SUITests.m; sourceTree = "<group>"; };
 		CA127F9A1CA7CA6A00DEE218 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAEB6DCC1CA82CB60058C699 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		CAEB6DCD1CA82CB60058C699 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		CAEB6DCF1CA82CD00058C699 /* WithoutASDKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WithoutASDKViewController.h; sourceTree = "<group>"; };
+		CAEB6DD01CA82CD00058C699 /* WithoutASDKViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WithoutASDKViewController.m; sourceTree = "<group>"; };
+		CAEB6DD11CA82CD00058C699 /* WithoutASDKViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WithoutASDKViewController.xib; sourceTree = "<group>"; };
+		CAEB6DD41CA82CE50058C699 /* WithASDKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WithASDKViewController.h; sourceTree = "<group>"; };
+		CAEB6DD51CA82CE50058C699 /* WithASDKViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WithASDKViewController.m; sourceTree = "<group>"; };
+		CAEB6DD71CA83E350058C699 /* WithoutASDKTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WithoutASDKTableViewCell.h; sourceTree = "<group>"; };
+		CAEB6DD81CA83E350058C699 /* WithoutASDKTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WithoutASDKTableViewCell.m; sourceTree = "<group>"; };
+		CAEB6DD91CA83E350058C699 /* WithoutASDKTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WithoutASDKTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +129,16 @@
 				CA127F791CA7CA6A00DEE218 /* ViewController.h */,
 				CA127F7A1CA7CA6A00DEE218 /* ViewController.m */,
 				CA127F7C1CA7CA6A00DEE218 /* Main.storyboard */,
+				CAEB6DCC1CA82CB60058C699 /* BaseViewController.h */,
+				CAEB6DCD1CA82CB60058C699 /* BaseViewController.m */,
+				CAEB6DCF1CA82CD00058C699 /* WithoutASDKViewController.h */,
+				CAEB6DD01CA82CD00058C699 /* WithoutASDKViewController.m */,
+				CAEB6DD11CA82CD00058C699 /* WithoutASDKViewController.xib */,
+				CAEB6DD71CA83E350058C699 /* WithoutASDKTableViewCell.h */,
+				CAEB6DD81CA83E350058C699 /* WithoutASDKTableViewCell.m */,
+				CAEB6DD91CA83E350058C699 /* WithoutASDKTableViewCell.xib */,
+				CAEB6DD41CA82CE50058C699 /* WithASDKViewController.h */,
+				CAEB6DD51CA82CE50058C699 /* WithASDKViewController.m */,
 				CA127F7F1CA7CA6A00DEE218 /* Assets.xcassets */,
 				CA127F811CA7CA6A00DEE218 /* LaunchScreen.storyboard */,
 				CA127F841CA7CA6A00DEE218 /* Info.plist */,
@@ -270,6 +296,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAEB6DD31CA82CD00058C699 /* WithoutASDKViewController.xib in Resources */,
+				CAEB6DDB1CA83E350058C699 /* WithoutASDKTableViewCell.xib in Resources */,
 				CA127F831CA7CA6A00DEE218 /* LaunchScreen.storyboard in Resources */,
 				CA127F801CA7CA6A00DEE218 /* Assets.xcassets in Resources */,
 				CA127F7E1CA7CA6A00DEE218 /* Main.storyboard in Resources */,
@@ -345,7 +373,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAEB6DD21CA82CD00058C699 /* WithoutASDKViewController.m in Sources */,
+				CAEB6DD61CA82CE50058C699 /* WithASDKViewController.m in Sources */,
 				CA127F7B1CA7CA6A00DEE218 /* ViewController.m in Sources */,
+				CAEB6DDA1CA83E350058C699 /* WithoutASDKTableViewCell.m in Sources */,
+				CAEB6DCE1CA82CB60058C699 /* BaseViewController.m in Sources */,
 				CA127F781CA7CA6A00DEE218 /* AppDelegate.m in Sources */,
 				CA127F751CA7CA6A00DEE218 /* main.m in Sources */,
 			);
