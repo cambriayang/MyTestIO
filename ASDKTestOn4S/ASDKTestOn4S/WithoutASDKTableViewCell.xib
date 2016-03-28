@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -11,23 +11,23 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="600" height="199.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XXXX Cinema" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eaO-in-K16">
-                        <rect key="frame" x="24" y="20" width="107" height="20.5"/>
+                        <rect key="frame" x="24" y="20" width="107" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="You are good. Yeah" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FR5-Oy-UXk">
-                        <rect key="frame" x="24" y="53" width="147.5" height="20.5"/>
+                        <rect key="frame" x="24" y="53" width="148" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hammer" translatesAutoresizingMaskIntoConstraints="NO" id="SjK-Uc-BmL">
-                        <rect key="frame" x="251" y="10" width="49" height="40.5"/>
+                        <rect key="frame" x="251" y="10" width="49" height="41"/>
                         <color key="backgroundColor" red="0.22764036294736609" green="0.21676514983082998" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="40.5" id="ODg-rP-H7b"/>
@@ -35,13 +35,13 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="759" text="1.8Km" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wx7-Xa-I9R">
-                        <rect key="frame" x="252" y="53" width="47" height="20.5"/>
+                        <rect key="frame" x="252" y="53" width="47" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLS-uZ-hLM">
-                        <rect key="frame" x="24" y="81" width="17.5" height="20.5"/>
+                        <rect key="frame" x="24" y="81" width="18" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -104,6 +104,11 @@
                 <variation key="default">
                     <mask key="constraints">
                         <exclude reference="BUw-hS-87x"/>
+                        <exclude reference="0iD-XJ-hgM"/>
+                        <exclude reference="6UO-QE-fM8"/>
+                        <exclude reference="6py-wV-VJ6"/>
+                        <exclude reference="YTt-Be-eKU"/>
+                        <exclude reference="pPU-c8-BHG"/>
                         <exclude reference="90p-Fr-YM8"/>
                         <exclude reference="Epy-pk-Abd"/>
                         <exclude reference="Jih-gh-Yrc"/>
@@ -111,11 +116,6 @@
                         <exclude reference="i0a-Lt-JfO"/>
                         <exclude reference="tgN-K6-Eyh"/>
                         <exclude reference="zjt-vF-emu"/>
-                        <exclude reference="0iD-XJ-hgM"/>
-                        <exclude reference="6UO-QE-fM8"/>
-                        <exclude reference="6py-wV-VJ6"/>
-                        <exclude reference="YTt-Be-eKU"/>
-                        <exclude reference="pPU-c8-BHG"/>
                     </mask>
                 </variation>
             </tableViewCellContentView>

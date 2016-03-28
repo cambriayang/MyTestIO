@@ -15,6 +15,7 @@
 		CA127F831CA7CA6A00DEE218 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA127F811CA7CA6A00DEE218 /* LaunchScreen.storyboard */; };
 		CA127F8E1CA7CA6A00DEE218 /* ASDKTestOn4STests.m in Sources */ = {isa = PBXBuildFile; fileRef = CA127F8D1CA7CA6A00DEE218 /* ASDKTestOn4STests.m */; };
 		CA127F991CA7CA6A00DEE218 /* ASDKTestOn4SUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CA127F981CA7CA6A00DEE218 /* ASDKTestOn4SUITests.m */; };
+		CA13CACB1CA8FD5600E3335C /* WithASDKTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CA13CACA1CA8FD5600E3335C /* WithASDKTableViewCell.m */; };
 		CAEB6DCE1CA82CB60058C699 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEB6DCD1CA82CB60058C699 /* BaseViewController.m */; };
 		CAEB6DD21CA82CD00058C699 /* WithoutASDKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEB6DD01CA82CD00058C699 /* WithoutASDKViewController.m */; };
 		CAEB6DD31CA82CD00058C699 /* WithoutASDKViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAEB6DD11CA82CD00058C699 /* WithoutASDKViewController.xib */; };
@@ -61,6 +62,8 @@
 		CA127F941CA7CA6A00DEE218 /* ASDKTestOn4SUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ASDKTestOn4SUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA127F981CA7CA6A00DEE218 /* ASDKTestOn4SUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASDKTestOn4SUITests.m; sourceTree = "<group>"; };
 		CA127F9A1CA7CA6A00DEE218 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA13CAC91CA8FD5600E3335C /* WithASDKTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WithASDKTableViewCell.h; sourceTree = "<group>"; };
+		CA13CACA1CA8FD5600E3335C /* WithASDKTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WithASDKTableViewCell.m; sourceTree = "<group>"; };
 		CAEB6DCC1CA82CB60058C699 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		CAEB6DCD1CA82CB60058C699 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		CAEB6DCF1CA82CD00058C699 /* WithoutASDKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WithoutASDKViewController.h; sourceTree = "<group>"; };
@@ -139,6 +142,8 @@
 				CAEB6DD91CA83E350058C699 /* WithoutASDKTableViewCell.xib */,
 				CAEB6DD41CA82CE50058C699 /* WithASDKViewController.h */,
 				CAEB6DD51CA82CE50058C699 /* WithASDKViewController.m */,
+				CA13CAC91CA8FD5600E3335C /* WithASDKTableViewCell.h */,
+				CA13CACA1CA8FD5600E3335C /* WithASDKTableViewCell.m */,
 				CA127F7F1CA7CA6A00DEE218 /* Assets.xcassets */,
 				CA127F811CA7CA6A00DEE218 /* LaunchScreen.storyboard */,
 				CA127F841CA7CA6A00DEE218 /* Info.plist */,
@@ -377,6 +382,7 @@
 				CAEB6DD61CA82CE50058C699 /* WithASDKViewController.m in Sources */,
 				CA127F7B1CA7CA6A00DEE218 /* ViewController.m in Sources */,
 				CAEB6DDA1CA83E350058C699 /* WithoutASDKTableViewCell.m in Sources */,
+				CA13CACB1CA8FD5600E3335C /* WithASDKTableViewCell.m in Sources */,
 				CAEB6DCE1CA82CB60058C699 /* BaseViewController.m in Sources */,
 				CA127F781CA7CA6A00DEE218 /* AppDelegate.m in Sources */,
 				CA127F751CA7CA6A00DEE218 /* main.m in Sources */,
@@ -451,7 +457,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Chenchen Xi (RGGN9B7K8P)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Chenchen Xi (RGGN9B7K8P)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -473,6 +480,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "3dd045cd-acd2-4d31-8343-66942be1aada";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -495,7 +503,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Chenchen Xi (RGGN9B7K8P)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Chenchen Xi (RGGN9B7K8P)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -510,6 +519,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "3dd045cd-acd2-4d31-8343-66942be1aada";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

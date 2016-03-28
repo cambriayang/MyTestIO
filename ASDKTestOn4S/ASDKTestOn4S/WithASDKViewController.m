@@ -8,6 +8,8 @@
 
 #import "WithASDKViewController.h"
 
+#import "WithASDKTableViewCell.h"
+
 @interface WithASDKViewController ()
 
 @end
@@ -17,6 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self.baseTableView registerClass:[WithASDKTableViewCell class] forCellReuseIdentifier:@"WithASDKCell"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,6 +27,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark --- TableView Datasource
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WithASDKCell" forIndexPath:indexPath];
+    
+    return cell;
+}
 /*
 #pragma mark - Navigation
 

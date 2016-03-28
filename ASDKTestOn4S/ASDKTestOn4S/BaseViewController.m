@@ -43,8 +43,8 @@
 
 #pragma mark --- TableView Delegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    return 50 +  (arc4random()%150);
-    return 200;
+    return 100 +  (arc4random()%150);
+//    return 200;
 }
 /*
 #pragma mark - Navigation
