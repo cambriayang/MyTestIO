@@ -8,6 +8,8 @@
 
 #import "WithoutASDKViewController.h"
 
+#import "NSMutableArray+SafeAdd.h"
+
 @interface WithoutASDKViewController ()
 
 @end
@@ -18,6 +20,21 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self.baseTableView registerNib:[UINib nibWithNibName:@"WithoutASDKTableViewCell" bundle:nil] forCellReuseIdentifier:@"WithoutASDKCell"];
+    
+    NSMutableArray *array = [NSMutableArray array];
+    
+    [array addObject:@"1"];
+    
+    [array addObject:@"2"];
+    
+    array.token = @"hahah";
+    
+    [array addObject:@""];
+    
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wundeclared-selector"
+    [array performSelector:@selector(myDynamicMethod:) withObject:nil afterDelay:0];
+#pragma clang diagnostic pop
 }
 
 - (void)didReceiveMemoryWarning {
@@ -31,14 +48,5 @@
     
     return cell;
 }
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

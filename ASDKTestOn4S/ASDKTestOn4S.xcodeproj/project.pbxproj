@@ -16,6 +16,17 @@
 		CA127F8E1CA7CA6A00DEE218 /* ASDKTestOn4STests.m in Sources */ = {isa = PBXBuildFile; fileRef = CA127F8D1CA7CA6A00DEE218 /* ASDKTestOn4STests.m */; };
 		CA127F991CA7CA6A00DEE218 /* ASDKTestOn4SUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CA127F981CA7CA6A00DEE218 /* ASDKTestOn4SUITests.m */; };
 		CA13CACB1CA8FD5600E3335C /* WithASDKTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CA13CACA1CA8FD5600E3335C /* WithASDKTableViewCell.m */; };
+		CA56B0C21CF0285D0018B554 /* extobjc in Resources */ = {isa = PBXBuildFile; fileRef = CA56B0C11CF0285D0018B554 /* extobjc */; };
+		CA56B0DE1CF02F3C0018B554 /* EXTADT.m in Sources */ = {isa = PBXBuildFile; fileRef = CA56B0C71CF02F3C0018B554 /* EXTADT.m */; };
+		CA56B0DF1CF02F3C0018B554 /* EXTConcreteProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = CA56B0C91CF02F3C0018B554 /* EXTConcreteProtocol.m */; };
+		CA56B0E01CF02F3C0018B554 /* EXTNil.m in Sources */ = {isa = PBXBuildFile; fileRef = CA56B0CD1CF02F3C0018B554 /* EXTNil.m */; };
+		CA56B0E11CF02F3C0018B554 /* EXTRuntimeExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = CA56B0D11CF02F3C0018B554 /* EXTRuntimeExtensions.m */; };
+		CA56B0E21CF02F3C0018B554 /* EXTSafeCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = CA56B0D31CF02F3C0018B554 /* EXTSafeCategory.m */; };
+		CA56B0E31CF02F3C0018B554 /* EXTScope.m in Sources */ = {isa = PBXBuildFile; fileRef = CA56B0D51CF02F3C0018B554 /* EXTScope.m */; };
+		CA56B0E41CF02F3C0018B554 /* EXTSelectorChecking.m in Sources */ = {isa = PBXBuildFile; fileRef = CA56B0D71CF02F3C0018B554 /* EXTSelectorChecking.m */; };
+		CA56B0E51CF02F3C0018B554 /* NSInvocation+EXT.m in Sources */ = {isa = PBXBuildFile; fileRef = CA56B0DB1CF02F3C0018B554 /* NSInvocation+EXT.m */; };
+		CA56B0E61CF02F3C0018B554 /* NSMethodSignature+EXT.m in Sources */ = {isa = PBXBuildFile; fileRef = CA56B0DD1CF02F3C0018B554 /* NSMethodSignature+EXT.m */; };
+		CA56B0E91CF053220018B554 /* NSMutableArray+SafeAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = CA56B0E81CF053220018B554 /* NSMutableArray+SafeAdd.m */; };
 		CAEB6DCE1CA82CB60058C699 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEB6DCD1CA82CB60058C699 /* BaseViewController.m */; };
 		CAEB6DD21CA82CD00058C699 /* WithoutASDKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEB6DD01CA82CD00058C699 /* WithoutASDKViewController.m */; };
 		CAEB6DD31CA82CD00058C699 /* WithoutASDKViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAEB6DD11CA82CD00058C699 /* WithoutASDKViewController.xib */; };
@@ -64,6 +75,33 @@
 		CA127F9A1CA7CA6A00DEE218 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA13CAC91CA8FD5600E3335C /* WithASDKTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WithASDKTableViewCell.h; sourceTree = "<group>"; };
 		CA13CACA1CA8FD5600E3335C /* WithASDKTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WithASDKTableViewCell.m; sourceTree = "<group>"; };
+		CA56B0C11CF0285D0018B554 /* extobjc */ = {isa = PBXFileReference; lastKnownFileType = folder; name = extobjc; path = /Users/CambriaYang/Documents/CambriaYang.GitHub/ASDKTestOn4S/ASDKTestOn4S/extobjc; sourceTree = "<absolute>"; };
+		CA56B0C61CF02F3C0018B554 /* EXTADT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EXTADT.h; path = extobjc/EXTADT.h; sourceTree = "<group>"; };
+		CA56B0C71CF02F3C0018B554 /* EXTADT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EXTADT.m; path = extobjc/EXTADT.m; sourceTree = "<group>"; };
+		CA56B0C81CF02F3C0018B554 /* EXTConcreteProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EXTConcreteProtocol.h; path = extobjc/EXTConcreteProtocol.h; sourceTree = "<group>"; };
+		CA56B0C91CF02F3C0018B554 /* EXTConcreteProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EXTConcreteProtocol.m; path = extobjc/EXTConcreteProtocol.m; sourceTree = "<group>"; };
+		CA56B0CA1CF02F3C0018B554 /* EXTCoroutine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EXTCoroutine.h; path = extobjc/EXTCoroutine.h; sourceTree = "<group>"; };
+		CA56B0CB1CF02F3C0018B554 /* EXTKeyPathCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EXTKeyPathCoding.h; path = extobjc/EXTKeyPathCoding.h; sourceTree = "<group>"; };
+		CA56B0CC1CF02F3C0018B554 /* EXTNil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EXTNil.h; path = extobjc/EXTNil.h; sourceTree = "<group>"; };
+		CA56B0CD1CF02F3C0018B554 /* EXTNil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EXTNil.m; path = extobjc/EXTNil.m; sourceTree = "<group>"; };
+		CA56B0CE1CF02F3C0018B554 /* extobjc_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = extobjc_Prefix.pch; path = extobjc/extobjc_Prefix.pch; sourceTree = "<group>"; };
+		CA56B0CF1CF02F3C0018B554 /* extobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = extobjc.h; path = extobjc/extobjc.h; sourceTree = "<group>"; };
+		CA56B0D01CF02F3C0018B554 /* EXTRuntimeExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EXTRuntimeExtensions.h; path = extobjc/EXTRuntimeExtensions.h; sourceTree = "<group>"; };
+		CA56B0D11CF02F3C0018B554 /* EXTRuntimeExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EXTRuntimeExtensions.m; path = extobjc/EXTRuntimeExtensions.m; sourceTree = "<group>"; };
+		CA56B0D21CF02F3C0018B554 /* EXTSafeCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EXTSafeCategory.h; path = extobjc/EXTSafeCategory.h; sourceTree = "<group>"; };
+		CA56B0D31CF02F3C0018B554 /* EXTSafeCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EXTSafeCategory.m; path = extobjc/EXTSafeCategory.m; sourceTree = "<group>"; };
+		CA56B0D41CF02F3C0018B554 /* EXTScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EXTScope.h; path = extobjc/EXTScope.h; sourceTree = "<group>"; };
+		CA56B0D51CF02F3C0018B554 /* EXTScope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EXTScope.m; path = extobjc/EXTScope.m; sourceTree = "<group>"; };
+		CA56B0D61CF02F3C0018B554 /* EXTSelectorChecking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EXTSelectorChecking.h; path = extobjc/EXTSelectorChecking.h; sourceTree = "<group>"; };
+		CA56B0D71CF02F3C0018B554 /* EXTSelectorChecking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EXTSelectorChecking.m; path = extobjc/EXTSelectorChecking.m; sourceTree = "<group>"; };
+		CA56B0D81CF02F3C0018B554 /* EXTSynthesize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EXTSynthesize.h; path = extobjc/EXTSynthesize.h; sourceTree = "<group>"; };
+		CA56B0D91CF02F3C0018B554 /* metamacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = metamacros.h; path = extobjc/metamacros.h; sourceTree = "<group>"; };
+		CA56B0DA1CF02F3C0018B554 /* NSInvocation+EXT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSInvocation+EXT.h"; path = "extobjc/NSInvocation+EXT.h"; sourceTree = "<group>"; };
+		CA56B0DB1CF02F3C0018B554 /* NSInvocation+EXT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSInvocation+EXT.m"; path = "extobjc/NSInvocation+EXT.m"; sourceTree = "<group>"; };
+		CA56B0DC1CF02F3C0018B554 /* NSMethodSignature+EXT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMethodSignature+EXT.h"; path = "extobjc/NSMethodSignature+EXT.h"; sourceTree = "<group>"; };
+		CA56B0DD1CF02F3C0018B554 /* NSMethodSignature+EXT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMethodSignature+EXT.m"; path = "extobjc/NSMethodSignature+EXT.m"; sourceTree = "<group>"; };
+		CA56B0E71CF053220018B554 /* NSMutableArray+SafeAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+SafeAdd.h"; sourceTree = "<group>"; };
+		CA56B0E81CF053220018B554 /* NSMutableArray+SafeAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+SafeAdd.m"; sourceTree = "<group>"; };
 		CAEB6DCC1CA82CB60058C699 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		CAEB6DCD1CA82CB60058C699 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		CAEB6DCF1CA82CD00058C699 /* WithoutASDKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WithoutASDKViewController.h; sourceTree = "<group>"; };
@@ -127,6 +165,30 @@
 		CA127F721CA7CA6A00DEE218 /* ASDKTestOn4S */ = {
 			isa = PBXGroup;
 			children = (
+				CA56B0C61CF02F3C0018B554 /* EXTADT.h */,
+				CA56B0C71CF02F3C0018B554 /* EXTADT.m */,
+				CA56B0C81CF02F3C0018B554 /* EXTConcreteProtocol.h */,
+				CA56B0C91CF02F3C0018B554 /* EXTConcreteProtocol.m */,
+				CA56B0CA1CF02F3C0018B554 /* EXTCoroutine.h */,
+				CA56B0CB1CF02F3C0018B554 /* EXTKeyPathCoding.h */,
+				CA56B0CC1CF02F3C0018B554 /* EXTNil.h */,
+				CA56B0CD1CF02F3C0018B554 /* EXTNil.m */,
+				CA56B0CE1CF02F3C0018B554 /* extobjc_Prefix.pch */,
+				CA56B0CF1CF02F3C0018B554 /* extobjc.h */,
+				CA56B0D01CF02F3C0018B554 /* EXTRuntimeExtensions.h */,
+				CA56B0D11CF02F3C0018B554 /* EXTRuntimeExtensions.m */,
+				CA56B0D21CF02F3C0018B554 /* EXTSafeCategory.h */,
+				CA56B0D31CF02F3C0018B554 /* EXTSafeCategory.m */,
+				CA56B0D41CF02F3C0018B554 /* EXTScope.h */,
+				CA56B0D51CF02F3C0018B554 /* EXTScope.m */,
+				CA56B0D61CF02F3C0018B554 /* EXTSelectorChecking.h */,
+				CA56B0D71CF02F3C0018B554 /* EXTSelectorChecking.m */,
+				CA56B0D81CF02F3C0018B554 /* EXTSynthesize.h */,
+				CA56B0D91CF02F3C0018B554 /* metamacros.h */,
+				CA56B0DA1CF02F3C0018B554 /* NSInvocation+EXT.h */,
+				CA56B0DB1CF02F3C0018B554 /* NSInvocation+EXT.m */,
+				CA56B0DC1CF02F3C0018B554 /* NSMethodSignature+EXT.h */,
+				CA56B0DD1CF02F3C0018B554 /* NSMethodSignature+EXT.m */,
 				CA127F761CA7CA6A00DEE218 /* AppDelegate.h */,
 				CA127F771CA7CA6A00DEE218 /* AppDelegate.m */,
 				CA127F791CA7CA6A00DEE218 /* ViewController.h */,
@@ -144,6 +206,8 @@
 				CAEB6DD51CA82CE50058C699 /* WithASDKViewController.m */,
 				CA13CAC91CA8FD5600E3335C /* WithASDKTableViewCell.h */,
 				CA13CACA1CA8FD5600E3335C /* WithASDKTableViewCell.m */,
+				CA56B0E71CF053220018B554 /* NSMutableArray+SafeAdd.h */,
+				CA56B0E81CF053220018B554 /* NSMutableArray+SafeAdd.m */,
 				CA127F7F1CA7CA6A00DEE218 /* Assets.xcassets */,
 				CA127F811CA7CA6A00DEE218 /* LaunchScreen.storyboard */,
 				CA127F841CA7CA6A00DEE218 /* Info.plist */,
@@ -301,6 +365,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA56B0C21CF0285D0018B554 /* extobjc in Resources */,
 				CAEB6DD31CA82CD00058C699 /* WithoutASDKViewController.xib in Resources */,
 				CAEB6DDB1CA83E350058C699 /* WithoutASDKTableViewCell.xib in Resources */,
 				CA127F831CA7CA6A00DEE218 /* LaunchScreen.storyboard in Resources */,
@@ -378,14 +443,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA56B0E91CF053220018B554 /* NSMutableArray+SafeAdd.m in Sources */,
+				CA56B0E31CF02F3C0018B554 /* EXTScope.m in Sources */,
 				CAEB6DD21CA82CD00058C699 /* WithoutASDKViewController.m in Sources */,
+				CA56B0E11CF02F3C0018B554 /* EXTRuntimeExtensions.m in Sources */,
+				CA56B0DE1CF02F3C0018B554 /* EXTADT.m in Sources */,
 				CAEB6DD61CA82CE50058C699 /* WithASDKViewController.m in Sources */,
+				CA56B0DF1CF02F3C0018B554 /* EXTConcreteProtocol.m in Sources */,
 				CA127F7B1CA7CA6A00DEE218 /* ViewController.m in Sources */,
+				CA56B0E21CF02F3C0018B554 /* EXTSafeCategory.m in Sources */,
 				CAEB6DDA1CA83E350058C699 /* WithoutASDKTableViewCell.m in Sources */,
 				CA13CACB1CA8FD5600E3335C /* WithASDKTableViewCell.m in Sources */,
+				CA56B0E61CF02F3C0018B554 /* NSMethodSignature+EXT.m in Sources */,
 				CAEB6DCE1CA82CB60058C699 /* BaseViewController.m in Sources */,
 				CA127F781CA7CA6A00DEE218 /* AppDelegate.m in Sources */,
 				CA127F751CA7CA6A00DEE218 /* main.m in Sources */,
+				CA56B0E41CF02F3C0018B554 /* EXTSelectorChecking.m in Sources */,
+				CA56B0E01CF02F3C0018B554 /* EXTNil.m in Sources */,
+				CA56B0E51CF02F3C0018B554 /* NSInvocation+EXT.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
