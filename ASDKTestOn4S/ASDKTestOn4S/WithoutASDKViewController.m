@@ -31,6 +31,8 @@
     
     [array addObject:@""];
     
+    [array addObject:nil];
+    
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wundeclared-selector"
     [array performSelector:@selector(myDynamicMethod:) withObject:nil afterDelay:0];

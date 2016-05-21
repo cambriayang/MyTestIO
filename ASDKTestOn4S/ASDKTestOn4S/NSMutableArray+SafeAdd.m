@@ -9,6 +9,7 @@
 #import "NSMutableArray+SafeAdd.h"
 
 #import <objc/runtime.h>
+#import "JRSwizzle.h"
 
 @implementation NSMutableArray (SafeAdd)
 
@@ -25,15 +26,16 @@
         
         Method myMethod = class_getInstanceMethod(cls, mySel);
         
-        __unused BOOL ori = class_addMethod(cls, originalSel, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod));
-        __unused BOOL my = class_addMethod(cls, mySel, method_getImplementation(myMethod), method_getTypeEncoding(myMethod));
+//        __unused BOOL ori = class_addMethod(cls, originalSel, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod));
+//        __unused BOOL my = class_addMethod(cls, mySel, method_getImplementation(myMethod), method_getTypeEncoding(myMethod));
+        BOOL didAddMethod = class_addMethod(cls, originalSel, method_getImplementation(myMethod), method_getTypeEncoding(myMethod));
         
-        method_exchangeImplementations(originalMethod, myMethod);
-//        if (didAddMethod) {
-//            class_replaceMethod(cls, mySel, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod));
-//        } else {
-//            method_exchangeImplementations(originalMethod, myMethod);
-//        }
+        if (didAddMethod) {
+            class_replaceMethod(cls, mySel, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod));
+        } else {
+            method_exchangeImplementations(originalMethod, myMethod);
+        }
+//        [self jr_swizzleMethod:@selector(addObject:) withMethod:@selector(cyAddObject:) error:nil];
     });
 }
 

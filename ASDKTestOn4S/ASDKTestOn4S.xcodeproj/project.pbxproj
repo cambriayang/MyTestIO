@@ -27,6 +27,7 @@
 		CA56B0E51CF02F3C0018B554 /* NSInvocation+EXT.m in Sources */ = {isa = PBXBuildFile; fileRef = CA56B0DB1CF02F3C0018B554 /* NSInvocation+EXT.m */; };
 		CA56B0E61CF02F3C0018B554 /* NSMethodSignature+EXT.m in Sources */ = {isa = PBXBuildFile; fileRef = CA56B0DD1CF02F3C0018B554 /* NSMethodSignature+EXT.m */; };
 		CA56B0E91CF053220018B554 /* NSMutableArray+SafeAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = CA56B0E81CF053220018B554 /* NSMutableArray+SafeAdd.m */; };
+		CA56B0EC1CF07A9A0018B554 /* JRSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = CA56B0EB1CF07A9A0018B554 /* JRSwizzle.m */; };
 		CAEB6DCE1CA82CB60058C699 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEB6DCD1CA82CB60058C699 /* BaseViewController.m */; };
 		CAEB6DD21CA82CD00058C699 /* WithoutASDKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEB6DD01CA82CD00058C699 /* WithoutASDKViewController.m */; };
 		CAEB6DD31CA82CD00058C699 /* WithoutASDKViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAEB6DD11CA82CD00058C699 /* WithoutASDKViewController.xib */; };
@@ -102,6 +103,8 @@
 		CA56B0DD1CF02F3C0018B554 /* NSMethodSignature+EXT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMethodSignature+EXT.m"; path = "extobjc/NSMethodSignature+EXT.m"; sourceTree = "<group>"; };
 		CA56B0E71CF053220018B554 /* NSMutableArray+SafeAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+SafeAdd.h"; sourceTree = "<group>"; };
 		CA56B0E81CF053220018B554 /* NSMutableArray+SafeAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+SafeAdd.m"; sourceTree = "<group>"; };
+		CA56B0EA1CF07A9A0018B554 /* JRSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JRSwizzle.h; path = JRSwizzle/JRSwizzle.h; sourceTree = "<group>"; };
+		CA56B0EB1CF07A9A0018B554 /* JRSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JRSwizzle.m; path = JRSwizzle/JRSwizzle.m; sourceTree = "<group>"; };
 		CAEB6DCC1CA82CB60058C699 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		CAEB6DCD1CA82CB60058C699 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		CAEB6DCF1CA82CD00058C699 /* WithoutASDKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WithoutASDKViewController.h; sourceTree = "<group>"; };
@@ -165,6 +168,8 @@
 		CA127F721CA7CA6A00DEE218 /* ASDKTestOn4S */ = {
 			isa = PBXGroup;
 			children = (
+				CA56B0EA1CF07A9A0018B554 /* JRSwizzle.h */,
+				CA56B0EB1CF07A9A0018B554 /* JRSwizzle.m */,
 				CA56B0C61CF02F3C0018B554 /* EXTADT.h */,
 				CA56B0C71CF02F3C0018B554 /* EXTADT.m */,
 				CA56B0C81CF02F3C0018B554 /* EXTConcreteProtocol.h */,
@@ -457,6 +462,7 @@
 				CA56B0E61CF02F3C0018B554 /* NSMethodSignature+EXT.m in Sources */,
 				CAEB6DCE1CA82CB60058C699 /* BaseViewController.m in Sources */,
 				CA127F781CA7CA6A00DEE218 /* AppDelegate.m in Sources */,
+				CA56B0EC1CF07A9A0018B554 /* JRSwizzle.m in Sources */,
 				CA127F751CA7CA6A00DEE218 /* main.m in Sources */,
 				CA56B0E41CF02F3C0018B554 /* EXTSelectorChecking.m in Sources */,
 				CA56B0E01CF02F3C0018B554 /* EXTNil.m in Sources */,
