@@ -28,6 +28,12 @@
     [array addObject:nil];
         
     array.token = @"hahah";
+    
+    NSMutableString *string = [NSMutableString alloc];
+    
+    __unused NSMutableString *str1 = [string init];
+    __unused NSMutableString *str2 = [string initWithCapacity:0];
+    __unused NSMutableString *str3 = [string initWithString:@"222"];
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wundeclared-selector"
     [array performSelector:@selector(myDynamicMethod:) withObject:nil afterDelay:0];
