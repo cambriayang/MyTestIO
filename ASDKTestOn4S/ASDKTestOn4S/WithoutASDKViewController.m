@@ -25,14 +25,9 @@
     
     [array addObject:@"1"];
     
-    [array addObject:@"2"];
-    
-    array.token = @"hahah";
-    
-    [array addObject:@""];
-    
     [array addObject:nil];
-    
+        
+    array.token = @"hahah";
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wundeclared-selector"
     [array performSelector:@selector(myDynamicMethod:) withObject:nil afterDelay:0];

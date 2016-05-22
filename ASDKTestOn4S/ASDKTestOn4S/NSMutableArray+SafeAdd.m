@@ -9,25 +9,48 @@
 #import "NSMutableArray+SafeAdd.h"
 
 #import <objc/runtime.h>
-#import "JRSwizzle.h"
+#import "NSObject+Swizzle.h"
 
 @implementation NSMutableArray (SafeAdd)
 
 @synthesizeAssociation(NSMutableArray, token);
 
+/**
+ *  The first snappet & second sanppet can both work. The key is the Class.
+ *  Because the NSMutableArray is a class belong to a class cluster. So we need
+ *  to alloc init for a concrete instance so that complier can know what it is.
+ */
 + (void)load {
+    /**
+     *  1.snappet
+     */
+    
+//    static dispatch_once_t onceToken;
+//    dispatch_once(&onceToken, ^{
+//        SEL originalSel = @selector(addObject:);
+//        SEL mySel = @selector(cyAddObject:);
+//        
+//        NSMutableArray *array = [[NSMutableArray alloc] init];
+//        
+//        [array swizzleInstanceMethod:originalSel withMethod:mySel];
+//    });
+
+    /**
+     *  2.snappet
+     */
+    
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         SEL originalSel = @selector(addObject:);
         SEL mySel = @selector(cyAddObject:);
-        Class cls = [self class];
+        Class cls = [[[NSMutableArray alloc] init] class];
         
         Method originalMethod = class_getInstanceMethod(cls, originalSel);
         
         Method myMethod = class_getInstanceMethod(cls, mySel);
         
-//        __unused BOOL ori = class_addMethod(cls, originalSel, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod));
-//        __unused BOOL my = class_addMethod(cls, mySel, method_getImplementation(myMethod), method_getTypeEncoding(myMethod));
+        //        __unused BOOL ori = class_addMethod(cls, originalSel, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod));
+        //        __unused BOOL my = class_addMethod(cls, mySel, method_getImplementation(myMethod), method_getTypeEncoding(myMethod));
         BOOL didAddMethod = class_addMethod(cls, originalSel, method_getImplementation(myMethod), method_getTypeEncoding(myMethod));
         
         if (didAddMethod) {
@@ -35,7 +58,7 @@
         } else {
             method_exchangeImplementations(originalMethod, myMethod);
         }
-//        [self jr_swizzleMethod:@selector(addObject:) withMethod:@selector(cyAddObject:) error:nil];
+        //        [self jr_swizzleMethod:@selector(addObject:) withMethod:@selector(cyAddObject:) error:nil];
     });
 }
 
