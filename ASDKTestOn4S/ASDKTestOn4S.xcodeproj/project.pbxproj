@@ -16,18 +16,17 @@
 		CA127F8E1CA7CA6A00DEE218 /* ASDKTestOn4STests.m in Sources */ = {isa = PBXBuildFile; fileRef = CA127F8D1CA7CA6A00DEE218 /* ASDKTestOn4STests.m */; };
 		CA127F991CA7CA6A00DEE218 /* ASDKTestOn4SUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CA127F981CA7CA6A00DEE218 /* ASDKTestOn4SUITests.m */; };
 		CA13CACB1CA8FD5600E3335C /* WithASDKTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CA13CACA1CA8FD5600E3335C /* WithASDKTableViewCell.m */; };
-		CA56B0C21CF0285D0018B554 /* extobjc in Resources */ = {isa = PBXBuildFile; fileRef = CA56B0C11CF0285D0018B554 /* extobjc */; };
-		CA56B0DE1CF02F3C0018B554 /* EXTADT.m in Sources */ = {isa = PBXBuildFile; fileRef = CA56B0C71CF02F3C0018B554 /* EXTADT.m */; };
-		CA56B0DF1CF02F3C0018B554 /* EXTConcreteProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = CA56B0C91CF02F3C0018B554 /* EXTConcreteProtocol.m */; };
-		CA56B0E01CF02F3C0018B554 /* EXTNil.m in Sources */ = {isa = PBXBuildFile; fileRef = CA56B0CD1CF02F3C0018B554 /* EXTNil.m */; };
-		CA56B0E11CF02F3C0018B554 /* EXTRuntimeExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = CA56B0D11CF02F3C0018B554 /* EXTRuntimeExtensions.m */; };
-		CA56B0E21CF02F3C0018B554 /* EXTSafeCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = CA56B0D31CF02F3C0018B554 /* EXTSafeCategory.m */; };
-		CA56B0E31CF02F3C0018B554 /* EXTScope.m in Sources */ = {isa = PBXBuildFile; fileRef = CA56B0D51CF02F3C0018B554 /* EXTScope.m */; };
-		CA56B0E41CF02F3C0018B554 /* EXTSelectorChecking.m in Sources */ = {isa = PBXBuildFile; fileRef = CA56B0D71CF02F3C0018B554 /* EXTSelectorChecking.m */; };
-		CA56B0E51CF02F3C0018B554 /* NSInvocation+EXT.m in Sources */ = {isa = PBXBuildFile; fileRef = CA56B0DB1CF02F3C0018B554 /* NSInvocation+EXT.m */; };
-		CA56B0E61CF02F3C0018B554 /* NSMethodSignature+EXT.m in Sources */ = {isa = PBXBuildFile; fileRef = CA56B0DD1CF02F3C0018B554 /* NSMethodSignature+EXT.m */; };
+		CA46476F1CF18B23006F2A54 /* JRSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = CA46476E1CF18B23006F2A54 /* JRSwizzle.m */; };
+		CA46478B1CF18BA4006F2A54 /* EXTADT.m in Sources */ = {isa = PBXBuildFile; fileRef = CA4647741CF18BA4006F2A54 /* EXTADT.m */; };
+		CA46478C1CF18BA4006F2A54 /* EXTConcreteProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = CA4647761CF18BA4006F2A54 /* EXTConcreteProtocol.m */; };
+		CA46478D1CF18BA4006F2A54 /* EXTNil.m in Sources */ = {isa = PBXBuildFile; fileRef = CA46477A1CF18BA4006F2A54 /* EXTNil.m */; };
+		CA46478E1CF18BA4006F2A54 /* EXTRuntimeExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = CA46477E1CF18BA4006F2A54 /* EXTRuntimeExtensions.m */; };
+		CA46478F1CF18BA4006F2A54 /* EXTSafeCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = CA4647801CF18BA4006F2A54 /* EXTSafeCategory.m */; };
+		CA4647901CF18BA4006F2A54 /* EXTScope.m in Sources */ = {isa = PBXBuildFile; fileRef = CA4647821CF18BA4006F2A54 /* EXTScope.m */; };
+		CA4647911CF18BA4006F2A54 /* EXTSelectorChecking.m in Sources */ = {isa = PBXBuildFile; fileRef = CA4647841CF18BA4006F2A54 /* EXTSelectorChecking.m */; };
+		CA4647921CF18BA4006F2A54 /* NSInvocation+EXT.m in Sources */ = {isa = PBXBuildFile; fileRef = CA4647881CF18BA4006F2A54 /* NSInvocation+EXT.m */; };
+		CA4647931CF18BA4006F2A54 /* NSMethodSignature+EXT.m in Sources */ = {isa = PBXBuildFile; fileRef = CA46478A1CF18BA4006F2A54 /* NSMethodSignature+EXT.m */; };
 		CA56B0E91CF053220018B554 /* NSMutableArray+SafeAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = CA56B0E81CF053220018B554 /* NSMutableArray+SafeAdd.m */; };
-		CA56B0EC1CF07A9A0018B554 /* JRSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = CA56B0EB1CF07A9A0018B554 /* JRSwizzle.m */; };
 		CAEB6DCE1CA82CB60058C699 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEB6DCD1CA82CB60058C699 /* BaseViewController.m */; };
 		CAEB6DD21CA82CD00058C699 /* WithoutASDKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEB6DD01CA82CD00058C699 /* WithoutASDKViewController.m */; };
 		CAEB6DD31CA82CD00058C699 /* WithoutASDKViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAEB6DD11CA82CD00058C699 /* WithoutASDKViewController.xib */; };
@@ -76,35 +75,34 @@
 		CA127F9A1CA7CA6A00DEE218 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA13CAC91CA8FD5600E3335C /* WithASDKTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WithASDKTableViewCell.h; sourceTree = "<group>"; };
 		CA13CACA1CA8FD5600E3335C /* WithASDKTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WithASDKTableViewCell.m; sourceTree = "<group>"; };
-		CA56B0C11CF0285D0018B554 /* extobjc */ = {isa = PBXFileReference; lastKnownFileType = folder; name = extobjc; path = /Users/CambriaYang/Documents/CambriaYang.GitHub/ASDKTestOn4S/ASDKTestOn4S/extobjc; sourceTree = "<absolute>"; };
-		CA56B0C61CF02F3C0018B554 /* EXTADT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EXTADT.h; path = extobjc/EXTADT.h; sourceTree = "<group>"; };
-		CA56B0C71CF02F3C0018B554 /* EXTADT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EXTADT.m; path = extobjc/EXTADT.m; sourceTree = "<group>"; };
-		CA56B0C81CF02F3C0018B554 /* EXTConcreteProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EXTConcreteProtocol.h; path = extobjc/EXTConcreteProtocol.h; sourceTree = "<group>"; };
-		CA56B0C91CF02F3C0018B554 /* EXTConcreteProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EXTConcreteProtocol.m; path = extobjc/EXTConcreteProtocol.m; sourceTree = "<group>"; };
-		CA56B0CA1CF02F3C0018B554 /* EXTCoroutine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EXTCoroutine.h; path = extobjc/EXTCoroutine.h; sourceTree = "<group>"; };
-		CA56B0CB1CF02F3C0018B554 /* EXTKeyPathCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EXTKeyPathCoding.h; path = extobjc/EXTKeyPathCoding.h; sourceTree = "<group>"; };
-		CA56B0CC1CF02F3C0018B554 /* EXTNil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EXTNil.h; path = extobjc/EXTNil.h; sourceTree = "<group>"; };
-		CA56B0CD1CF02F3C0018B554 /* EXTNil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EXTNil.m; path = extobjc/EXTNil.m; sourceTree = "<group>"; };
-		CA56B0CE1CF02F3C0018B554 /* extobjc_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = extobjc_Prefix.pch; path = extobjc/extobjc_Prefix.pch; sourceTree = "<group>"; };
-		CA56B0CF1CF02F3C0018B554 /* extobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = extobjc.h; path = extobjc/extobjc.h; sourceTree = "<group>"; };
-		CA56B0D01CF02F3C0018B554 /* EXTRuntimeExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EXTRuntimeExtensions.h; path = extobjc/EXTRuntimeExtensions.h; sourceTree = "<group>"; };
-		CA56B0D11CF02F3C0018B554 /* EXTRuntimeExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EXTRuntimeExtensions.m; path = extobjc/EXTRuntimeExtensions.m; sourceTree = "<group>"; };
-		CA56B0D21CF02F3C0018B554 /* EXTSafeCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EXTSafeCategory.h; path = extobjc/EXTSafeCategory.h; sourceTree = "<group>"; };
-		CA56B0D31CF02F3C0018B554 /* EXTSafeCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EXTSafeCategory.m; path = extobjc/EXTSafeCategory.m; sourceTree = "<group>"; };
-		CA56B0D41CF02F3C0018B554 /* EXTScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EXTScope.h; path = extobjc/EXTScope.h; sourceTree = "<group>"; };
-		CA56B0D51CF02F3C0018B554 /* EXTScope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EXTScope.m; path = extobjc/EXTScope.m; sourceTree = "<group>"; };
-		CA56B0D61CF02F3C0018B554 /* EXTSelectorChecking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EXTSelectorChecking.h; path = extobjc/EXTSelectorChecking.h; sourceTree = "<group>"; };
-		CA56B0D71CF02F3C0018B554 /* EXTSelectorChecking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EXTSelectorChecking.m; path = extobjc/EXTSelectorChecking.m; sourceTree = "<group>"; };
-		CA56B0D81CF02F3C0018B554 /* EXTSynthesize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EXTSynthesize.h; path = extobjc/EXTSynthesize.h; sourceTree = "<group>"; };
-		CA56B0D91CF02F3C0018B554 /* metamacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = metamacros.h; path = extobjc/metamacros.h; sourceTree = "<group>"; };
-		CA56B0DA1CF02F3C0018B554 /* NSInvocation+EXT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSInvocation+EXT.h"; path = "extobjc/NSInvocation+EXT.h"; sourceTree = "<group>"; };
-		CA56B0DB1CF02F3C0018B554 /* NSInvocation+EXT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSInvocation+EXT.m"; path = "extobjc/NSInvocation+EXT.m"; sourceTree = "<group>"; };
-		CA56B0DC1CF02F3C0018B554 /* NSMethodSignature+EXT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMethodSignature+EXT.h"; path = "extobjc/NSMethodSignature+EXT.h"; sourceTree = "<group>"; };
-		CA56B0DD1CF02F3C0018B554 /* NSMethodSignature+EXT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMethodSignature+EXT.m"; path = "extobjc/NSMethodSignature+EXT.m"; sourceTree = "<group>"; };
+		CA46476D1CF18B23006F2A54 /* JRSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRSwizzle.h; sourceTree = "<group>"; };
+		CA46476E1CF18B23006F2A54 /* JRSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRSwizzle.m; sourceTree = "<group>"; };
+		CA4647731CF18BA4006F2A54 /* EXTADT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTADT.h; sourceTree = "<group>"; };
+		CA4647741CF18BA4006F2A54 /* EXTADT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTADT.m; sourceTree = "<group>"; };
+		CA4647751CF18BA4006F2A54 /* EXTConcreteProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTConcreteProtocol.h; sourceTree = "<group>"; };
+		CA4647761CF18BA4006F2A54 /* EXTConcreteProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTConcreteProtocol.m; sourceTree = "<group>"; };
+		CA4647771CF18BA4006F2A54 /* EXTCoroutine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTCoroutine.h; sourceTree = "<group>"; };
+		CA4647781CF18BA4006F2A54 /* EXTKeyPathCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTKeyPathCoding.h; sourceTree = "<group>"; };
+		CA4647791CF18BA4006F2A54 /* EXTNil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTNil.h; sourceTree = "<group>"; };
+		CA46477A1CF18BA4006F2A54 /* EXTNil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTNil.m; sourceTree = "<group>"; };
+		CA46477B1CF18BA4006F2A54 /* extobjc_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = extobjc_Prefix.pch; sourceTree = "<group>"; };
+		CA46477C1CF18BA4006F2A54 /* extobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = extobjc.h; sourceTree = "<group>"; };
+		CA46477D1CF18BA4006F2A54 /* EXTRuntimeExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTRuntimeExtensions.h; sourceTree = "<group>"; };
+		CA46477E1CF18BA4006F2A54 /* EXTRuntimeExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTRuntimeExtensions.m; sourceTree = "<group>"; };
+		CA46477F1CF18BA4006F2A54 /* EXTSafeCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTSafeCategory.h; sourceTree = "<group>"; };
+		CA4647801CF18BA4006F2A54 /* EXTSafeCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTSafeCategory.m; sourceTree = "<group>"; };
+		CA4647811CF18BA4006F2A54 /* EXTScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTScope.h; sourceTree = "<group>"; };
+		CA4647821CF18BA4006F2A54 /* EXTScope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTScope.m; sourceTree = "<group>"; };
+		CA4647831CF18BA4006F2A54 /* EXTSelectorChecking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTSelectorChecking.h; sourceTree = "<group>"; };
+		CA4647841CF18BA4006F2A54 /* EXTSelectorChecking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTSelectorChecking.m; sourceTree = "<group>"; };
+		CA4647851CF18BA4006F2A54 /* EXTSynthesize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTSynthesize.h; sourceTree = "<group>"; };
+		CA4647861CF18BA4006F2A54 /* metamacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = metamacros.h; sourceTree = "<group>"; };
+		CA4647871CF18BA4006F2A54 /* NSInvocation+EXT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSInvocation+EXT.h"; sourceTree = "<group>"; };
+		CA4647881CF18BA4006F2A54 /* NSInvocation+EXT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSInvocation+EXT.m"; sourceTree = "<group>"; };
+		CA4647891CF18BA4006F2A54 /* NSMethodSignature+EXT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMethodSignature+EXT.h"; sourceTree = "<group>"; };
+		CA46478A1CF18BA4006F2A54 /* NSMethodSignature+EXT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMethodSignature+EXT.m"; sourceTree = "<group>"; };
 		CA56B0E71CF053220018B554 /* NSMutableArray+SafeAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+SafeAdd.h"; sourceTree = "<group>"; };
 		CA56B0E81CF053220018B554 /* NSMutableArray+SafeAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+SafeAdd.m"; sourceTree = "<group>"; };
-		CA56B0EA1CF07A9A0018B554 /* JRSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JRSwizzle.h; path = JRSwizzle/JRSwizzle.h; sourceTree = "<group>"; };
-		CA56B0EB1CF07A9A0018B554 /* JRSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JRSwizzle.m; path = JRSwizzle/JRSwizzle.m; sourceTree = "<group>"; };
 		CAEB6DCC1CA82CB60058C699 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		CAEB6DCD1CA82CB60058C699 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		CAEB6DCF1CA82CD00058C699 /* WithoutASDKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WithoutASDKViewController.h; sourceTree = "<group>"; };
@@ -168,32 +166,8 @@
 		CA127F721CA7CA6A00DEE218 /* ASDKTestOn4S */ = {
 			isa = PBXGroup;
 			children = (
-				CA56B0EA1CF07A9A0018B554 /* JRSwizzle.h */,
-				CA56B0EB1CF07A9A0018B554 /* JRSwizzle.m */,
-				CA56B0C61CF02F3C0018B554 /* EXTADT.h */,
-				CA56B0C71CF02F3C0018B554 /* EXTADT.m */,
-				CA56B0C81CF02F3C0018B554 /* EXTConcreteProtocol.h */,
-				CA56B0C91CF02F3C0018B554 /* EXTConcreteProtocol.m */,
-				CA56B0CA1CF02F3C0018B554 /* EXTCoroutine.h */,
-				CA56B0CB1CF02F3C0018B554 /* EXTKeyPathCoding.h */,
-				CA56B0CC1CF02F3C0018B554 /* EXTNil.h */,
-				CA56B0CD1CF02F3C0018B554 /* EXTNil.m */,
-				CA56B0CE1CF02F3C0018B554 /* extobjc_Prefix.pch */,
-				CA56B0CF1CF02F3C0018B554 /* extobjc.h */,
-				CA56B0D01CF02F3C0018B554 /* EXTRuntimeExtensions.h */,
-				CA56B0D11CF02F3C0018B554 /* EXTRuntimeExtensions.m */,
-				CA56B0D21CF02F3C0018B554 /* EXTSafeCategory.h */,
-				CA56B0D31CF02F3C0018B554 /* EXTSafeCategory.m */,
-				CA56B0D41CF02F3C0018B554 /* EXTScope.h */,
-				CA56B0D51CF02F3C0018B554 /* EXTScope.m */,
-				CA56B0D61CF02F3C0018B554 /* EXTSelectorChecking.h */,
-				CA56B0D71CF02F3C0018B554 /* EXTSelectorChecking.m */,
-				CA56B0D81CF02F3C0018B554 /* EXTSynthesize.h */,
-				CA56B0D91CF02F3C0018B554 /* metamacros.h */,
-				CA56B0DA1CF02F3C0018B554 /* NSInvocation+EXT.h */,
-				CA56B0DB1CF02F3C0018B554 /* NSInvocation+EXT.m */,
-				CA56B0DC1CF02F3C0018B554 /* NSMethodSignature+EXT.h */,
-				CA56B0DD1CF02F3C0018B554 /* NSMethodSignature+EXT.m */,
+				CA4647721CF18B69006F2A54 /* Extobjc */,
+				CA4647711CF18B5C006F2A54 /* JRSwizzle */,
 				CA127F761CA7CA6A00DEE218 /* AppDelegate.h */,
 				CA127F771CA7CA6A00DEE218 /* AppDelegate.m */,
 				CA127F791CA7CA6A00DEE218 /* ViewController.h */,
@@ -245,6 +219,46 @@
 				CA127F9A1CA7CA6A00DEE218 /* Info.plist */,
 			);
 			path = ASDKTestOn4SUITests;
+			sourceTree = "<group>";
+		};
+		CA4647711CF18B5C006F2A54 /* JRSwizzle */ = {
+			isa = PBXGroup;
+			children = (
+				CA46476D1CF18B23006F2A54 /* JRSwizzle.h */,
+				CA46476E1CF18B23006F2A54 /* JRSwizzle.m */,
+			);
+			name = JRSwizzle;
+			sourceTree = "<group>";
+		};
+		CA4647721CF18B69006F2A54 /* Extobjc */ = {
+			isa = PBXGroup;
+			children = (
+				CA4647731CF18BA4006F2A54 /* EXTADT.h */,
+				CA4647741CF18BA4006F2A54 /* EXTADT.m */,
+				CA4647751CF18BA4006F2A54 /* EXTConcreteProtocol.h */,
+				CA4647761CF18BA4006F2A54 /* EXTConcreteProtocol.m */,
+				CA4647771CF18BA4006F2A54 /* EXTCoroutine.h */,
+				CA4647781CF18BA4006F2A54 /* EXTKeyPathCoding.h */,
+				CA4647791CF18BA4006F2A54 /* EXTNil.h */,
+				CA46477A1CF18BA4006F2A54 /* EXTNil.m */,
+				CA46477B1CF18BA4006F2A54 /* extobjc_Prefix.pch */,
+				CA46477C1CF18BA4006F2A54 /* extobjc.h */,
+				CA46477D1CF18BA4006F2A54 /* EXTRuntimeExtensions.h */,
+				CA46477E1CF18BA4006F2A54 /* EXTRuntimeExtensions.m */,
+				CA46477F1CF18BA4006F2A54 /* EXTSafeCategory.h */,
+				CA4647801CF18BA4006F2A54 /* EXTSafeCategory.m */,
+				CA4647811CF18BA4006F2A54 /* EXTScope.h */,
+				CA4647821CF18BA4006F2A54 /* EXTScope.m */,
+				CA4647831CF18BA4006F2A54 /* EXTSelectorChecking.h */,
+				CA4647841CF18BA4006F2A54 /* EXTSelectorChecking.m */,
+				CA4647851CF18BA4006F2A54 /* EXTSynthesize.h */,
+				CA4647861CF18BA4006F2A54 /* metamacros.h */,
+				CA4647871CF18BA4006F2A54 /* NSInvocation+EXT.h */,
+				CA4647881CF18BA4006F2A54 /* NSInvocation+EXT.m */,
+				CA4647891CF18BA4006F2A54 /* NSMethodSignature+EXT.h */,
+				CA46478A1CF18BA4006F2A54 /* NSMethodSignature+EXT.m */,
+			);
+			name = Extobjc;
 			sourceTree = "<group>";
 		};
 		D4582A19897566318BD9B42E /* Pods */ = {
@@ -370,7 +384,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA56B0C21CF0285D0018B554 /* extobjc in Resources */,
 				CAEB6DD31CA82CD00058C699 /* WithoutASDKViewController.xib in Resources */,
 				CAEB6DDB1CA83E350058C699 /* WithoutASDKTableViewCell.xib in Resources */,
 				CA127F831CA7CA6A00DEE218 /* LaunchScreen.storyboard in Resources */,
@@ -448,25 +461,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA4647901CF18BA4006F2A54 /* EXTScope.m in Sources */,
 				CA56B0E91CF053220018B554 /* NSMutableArray+SafeAdd.m in Sources */,
-				CA56B0E31CF02F3C0018B554 /* EXTScope.m in Sources */,
+				CA46478D1CF18BA4006F2A54 /* EXTNil.m in Sources */,
 				CAEB6DD21CA82CD00058C699 /* WithoutASDKViewController.m in Sources */,
-				CA56B0E11CF02F3C0018B554 /* EXTRuntimeExtensions.m in Sources */,
-				CA56B0DE1CF02F3C0018B554 /* EXTADT.m in Sources */,
+				CA4647931CF18BA4006F2A54 /* NSMethodSignature+EXT.m in Sources */,
+				CA46478C1CF18BA4006F2A54 /* EXTConcreteProtocol.m in Sources */,
 				CAEB6DD61CA82CE50058C699 /* WithASDKViewController.m in Sources */,
-				CA56B0DF1CF02F3C0018B554 /* EXTConcreteProtocol.m in Sources */,
 				CA127F7B1CA7CA6A00DEE218 /* ViewController.m in Sources */,
-				CA56B0E21CF02F3C0018B554 /* EXTSafeCategory.m in Sources */,
+				CA4647911CF18BA4006F2A54 /* EXTSelectorChecking.m in Sources */,
+				CA4647921CF18BA4006F2A54 /* NSInvocation+EXT.m in Sources */,
+				CA46476F1CF18B23006F2A54 /* JRSwizzle.m in Sources */,
 				CAEB6DDA1CA83E350058C699 /* WithoutASDKTableViewCell.m in Sources */,
 				CA13CACB1CA8FD5600E3335C /* WithASDKTableViewCell.m in Sources */,
-				CA56B0E61CF02F3C0018B554 /* NSMethodSignature+EXT.m in Sources */,
+				CA46478F1CF18BA4006F2A54 /* EXTSafeCategory.m in Sources */,
+				CA46478B1CF18BA4006F2A54 /* EXTADT.m in Sources */,
+				CA46478E1CF18BA4006F2A54 /* EXTRuntimeExtensions.m in Sources */,
 				CAEB6DCE1CA82CB60058C699 /* BaseViewController.m in Sources */,
 				CA127F781CA7CA6A00DEE218 /* AppDelegate.m in Sources */,
-				CA56B0EC1CF07A9A0018B554 /* JRSwizzle.m in Sources */,
 				CA127F751CA7CA6A00DEE218 /* main.m in Sources */,
-				CA56B0E41CF02F3C0018B554 /* EXTSelectorChecking.m in Sources */,
-				CA56B0E01CF02F3C0018B554 /* EXTNil.m in Sources */,
-				CA56B0E51CF02F3C0018B554 /* NSInvocation+EXT.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -612,6 +625,14 @@
 			baseConfigurationReference = B62C3A12F2185F032E9B9410 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AsyncDisplayKit\"",
+					"\"${PODS_ROOT}/Headers/Public/PINCache\"",
+					"\"${PODS_ROOT}/Headers/Public/PINRemoteImage\"",
+					"./ASDKTestOn4S/**",
+				);
 				INFOPLIST_FILE = ASDKTestOn4S/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yeio.ASDKTestOn4S;
@@ -624,6 +645,14 @@
 			baseConfigurationReference = 78994C3AAEC2B9FE34AFCE37 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AsyncDisplayKit\"",
+					"\"${PODS_ROOT}/Headers/Public/PINCache\"",
+					"\"${PODS_ROOT}/Headers/Public/PINRemoteImage\"",
+					"./ASDKTestOn4S/**",
+				);
 				INFOPLIST_FILE = ASDKTestOn4S/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yeio.ASDKTestOn4S;

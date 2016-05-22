@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "extobjc/extobjc.h"
+#import "extobjc.h"
 
 @interface NSMutableArray (SafeAdd)
 
