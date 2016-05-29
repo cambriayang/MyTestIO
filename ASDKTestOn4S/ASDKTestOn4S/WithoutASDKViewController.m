@@ -10,7 +10,12 @@
 
 #import "NSMutableArray+SafeAdd.h"
 
-@interface WithoutASDKViewController ()
+@interface WithoutASDKViewController () <NSMachPortDelegate>
+
+@property (nonatomic, strong) NSLock *notificationLock;
+@property (nonatomic, strong) NSMachPort *notificationPort;
+@property (nonatomic, strong) NSThread *expectationThread;
+@property (nonatomic, strong) NSMutableArray *notificationArray;
 
 @end
 
@@ -24,10 +29,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+
+    self.notificationLock = [[NSLock alloc] init];
+    
+    self.notificationArray = [NSMutableArray array];
+    
+    self.expectationThread = [NSThread currentThread];
+    
+    self.notificationPort = [[NSMachPort alloc] init];
+    
+    self.notificationPort.delegate = self;
+    
+    //往当前线程的run loop添加端口源, 当Mach消息到达而接收线程的run loop没有运行时，则内核会保存这条消息，直到下一次进入run loop
+    [[NSRunLoop currentRunLoop] addPort:self.notificationPort forMode:(__bridge NSString *)kCFRunLoopCommonModes];
+    
     [self.baseTableView registerNib:[UINib nibWithNibName:@"WithoutASDKTableViewCell" bundle:nil] forCellReuseIdentifier:@"WithoutASDKCell"];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dealWithTheNotiFromBackground:) name:TESTNOTIFICATIONINSUBTHREAD object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dealWithTheNotiFromBackground:) name:@"MyNotification" object:nil];
+    
+    [self performSelectorInBackground:@selector(postANotiInBackground) withObject:self];
     
     NSMutableArray *array = [NSMutableArray array];
     
@@ -49,12 +69,28 @@
 #pragma clang diagnostic pop
 }
 
+- (void)postANotiInBackground {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"MyNotification" object:nil];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
 - (void)dealWithTheNotiFromBackground:(NSNotification *)noti {
+    NSThread *thread = [NSThread currentThread];
+    NSLog(@"==[%@]==", thread.description);
+    
+    if (self.expectationThread != thread) {
+        [self.notificationLock lock];
+        [self.notificationArray addObject:noti];
+        [self.notificationLock unlock];
+        
+        [self.notificationPort sendBeforeDate:[NSDate date] components:nil from:nil reserved:0];
+    } else {
+        NSLog(@"==[%@]==", [NSThread currentThread].description);
+    }
 }
 
 #pragma mark --- TableView Datasource
@@ -62,6 +98,23 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WithoutASDKCell" forIndexPath:indexPath];
     
     return cell;
+}
+
+#pragma mark --- NSMachPortDelegate
+- (void)handleMachMessage:(void *)msg {
+    [self.notificationLock lock];
+    
+    while (self.notificationArray.count > 0) {
+        NSNotification *noti = [self.notificationArray objectAtIndex:0];
+        
+        [self.notificationArray removeObject:noti];
+        
+        [self.notificationLock unlock];
+        [self dealWithTheNotiFromBackground:noti];
+        [self.notificationLock lock];
+    }
+    
+    [self.notificationLock unlock];
 }
 
 @end

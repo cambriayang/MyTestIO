@@ -24,12 +24,6 @@
     self.baseTableView.dataSource = self;
     
     [self.view addSubview:self.baseTableView];
-    
-    [self performSelectorInBackground:@selector(postANotiInBackground) withObject:self];
-}
-
-- (void)postANotiInBackground {
-    [[NSNotificationCenter defaultCenter] postNotificationName:TESTNOTIFICATIONINSUBTHREAD object:self];
 }
 
 - (void)didReceiveMemoryWarning {
