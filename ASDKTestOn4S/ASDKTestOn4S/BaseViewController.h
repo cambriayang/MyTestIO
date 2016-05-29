@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#define TESTNOTIFICATIONINSUBTHREAD @"TESTNOTIFICATIONINSUBTHREAD"
+
 @interface BaseViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView *baseTableView;

@@ -16,15 +16,24 @@
 
 @implementation WithoutASDKViewController
 
+- (void)dealloc {
+    [NSObject cancelPreviousPerformRequestsWithTarget:self];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self.baseTableView registerNib:[UINib nibWithNibName:@"WithoutASDKTableViewCell" bundle:nil] forCellReuseIdentifier:@"WithoutASDKCell"];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dealWithTheNotiFromBackground:) name:TESTNOTIFICATIONINSUBTHREAD object:nil];
+    
     NSMutableArray *array = [NSMutableArray array];
     
     [array addObject:@"1"];
     
+#warning This is a test code for swizzle. You should never do this in your project!
     [array addObject:nil];
         
     array.token = @"hahah";
@@ -43,6 +52,9 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)dealWithTheNotiFromBackground:(NSNotification *)noti {
 }
 
 #pragma mark --- TableView Datasource
