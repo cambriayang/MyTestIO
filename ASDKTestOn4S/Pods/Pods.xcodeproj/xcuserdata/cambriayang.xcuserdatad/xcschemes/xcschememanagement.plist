@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>FLEX.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>PINCache.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,12 +42,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C5C1C09679D24299259B5663499861F8</key>
+		<key>5E21717032EB04B09CA808510A66A735</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F27A9E81876805F094F573C09D8B5114</key>
+		<key>B8E3EB522A2404774C83B52A649F4C5A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C5C1C09679D24299259B5663499861F8</key>
 		<dict>
 			<key>primary</key>
 			<true/>

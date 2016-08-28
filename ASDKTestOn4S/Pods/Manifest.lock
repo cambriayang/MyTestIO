@@ -5,6 +5,7 @@ PODS:
   - AsyncDisplayKit/PINRemoteImage (1.9.7.1):
     - AsyncDisplayKit/ASDealloc2MainObject
     - PINRemoteImage/iOS (>= 2.1.2)
+  - FLEX (2.3.0)
   - PINCache (2.2.2)
   - PINRemoteImage/Core (2.1.2):
     - PINCache (>= 2.1)
@@ -13,9 +14,11 @@ PODS:
 
 DEPENDENCIES:
   - AsyncDisplayKit
+  - FLEX (~> 2.0)
 
 SPEC CHECKSUMS:
   AsyncDisplayKit: 2b52f841e384e7326d4f59323b1bf35d00696e17
+  FLEX: ba80ea13d2c784e85e616137fd4eff164781e364
   PINCache: 078426d356ab95ef875e9e62e5c35a2ea3333c28
   PINRemoteImage: 2ce3f1fcc52f0360a3821f91f1a1bc653c5d2338
 
