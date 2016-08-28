@@ -631,6 +631,7 @@
 			baseConfigurationReference = B62C3A12F2185F032E9B9410 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EXCLUDED_SOURCE_FILE_NAMES = "";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",
@@ -640,6 +641,7 @@
 					"./ASDKTestOn4S/**",
 				);
 				INFOPLIST_FILE = ASDKTestOn4S/Info.plist;
+				LD_GENERATE_MAP_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yeio.ASDKTestOn4S;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -651,6 +653,7 @@
 			baseConfigurationReference = 78994C3AAEC2B9FE34AFCE37 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EXCLUDED_SOURCE_FILE_NAMES = "FLEX*";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",
@@ -660,6 +663,7 @@
 					"./ASDKTestOn4S/**",
 				);
 				INFOPLIST_FILE = ASDKTestOn4S/Info.plist;
+				LD_GENERATE_MAP_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yeio.ASDKTestOn4S;
 				PRODUCT_NAME = "$(TARGET_NAME)";
