@@ -23,6 +23,17 @@
     self.baseTableView.delegate = self; 
     self.baseTableView.dataSource = self;
     
+    UIWindow *window = [[UIWindow alloc] initWithFrame:CGRectMake(0, 0, 100, 50)];
+    
+    window.backgroundColor = [UIColor redColor];
+    window.windowLevel = UIWindowLevelStatusBar+1;
+    
+    [window makeKeyAndVisible];
+//    [[[[UIApplication sharedApplication] delegate] window] setWindowLevel:UIWindowLevelStatusBar+1];
+    
+    int i = 3;
+    int m = i+++1;
+    
     [self.view addSubview:self.baseTableView];
 }
 
