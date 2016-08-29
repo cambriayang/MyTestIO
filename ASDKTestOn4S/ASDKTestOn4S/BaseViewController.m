@@ -32,7 +32,7 @@
 //    [[[[UIApplication sharedApplication] delegate] window] setWindowLevel:UIWindowLevelStatusBar+1];
     
     int i = 3;
-    int m = i+++1;
+   __unused  int m = i+++1;
     
     [self.view addSubview:self.baseTableView];
 }
@@ -57,14 +57,5 @@
     return 100 +  (arc4random()%150);
 //    return 200;
 }
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

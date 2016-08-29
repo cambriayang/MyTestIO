@@ -28,6 +28,7 @@
 		CA4647921CF18BA4006F2A54 /* NSInvocation+EXT.m in Sources */ = {isa = PBXBuildFile; fileRef = CA4647881CF18BA4006F2A54 /* NSInvocation+EXT.m */; };
 		CA4647931CF18BA4006F2A54 /* NSMethodSignature+EXT.m in Sources */ = {isa = PBXBuildFile; fileRef = CA46478A1CF18BA4006F2A54 /* NSMethodSignature+EXT.m */; };
 		CA56B0E91CF053220018B554 /* NSMutableArray+SafeAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = CA56B0E81CF053220018B554 /* NSMutableArray+SafeAdd.m */; };
+		CA79C4F21D748F9400D043E3 /* SwiftWithoutASDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA79C4F11D748F9400D043E3 /* SwiftWithoutASDK.swift */; };
 		CAEB6DCE1CA82CB60058C699 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEB6DCD1CA82CB60058C699 /* BaseViewController.m */; };
 		CAEB6DD21CA82CD00058C699 /* WithoutASDKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEB6DD01CA82CD00058C699 /* WithoutASDKViewController.m */; };
 		CAEB6DD31CA82CD00058C699 /* WithoutASDKViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAEB6DD11CA82CD00058C699 /* WithoutASDKViewController.xib */; };
@@ -106,6 +107,8 @@
 		CA46478A1CF18BA4006F2A54 /* NSMethodSignature+EXT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMethodSignature+EXT.m"; sourceTree = "<group>"; };
 		CA56B0E71CF053220018B554 /* NSMutableArray+SafeAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+SafeAdd.h"; sourceTree = "<group>"; };
 		CA56B0E81CF053220018B554 /* NSMutableArray+SafeAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+SafeAdd.m"; sourceTree = "<group>"; };
+		CA79C4F11D748F9400D043E3 /* SwiftWithoutASDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftWithoutASDK.swift; sourceTree = "<group>"; };
+		CA79C4F31D748FCF00D043E3 /* ASDKTestOn4S-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ASDKTestOn4S-Bridging-Header.h"; sourceTree = "<group>"; };
 		CAEB6DCC1CA82CB60058C699 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		CAEB6DCD1CA82CB60058C699 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		CAEB6DCF1CA82CD00058C699 /* WithoutASDKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WithoutASDKViewController.h; sourceTree = "<group>"; };
@@ -178,6 +181,7 @@
 				CA127F7C1CA7CA6A00DEE218 /* Main.storyboard */,
 				CAEB6DCC1CA82CB60058C699 /* BaseViewController.h */,
 				CAEB6DCD1CA82CB60058C699 /* BaseViewController.m */,
+				CA79C4F11D748F9400D043E3 /* SwiftWithoutASDK.swift */,
 				CAEB6DCF1CA82CD00058C699 /* WithoutASDKViewController.h */,
 				CAEB6DD01CA82CD00058C699 /* WithoutASDKViewController.m */,
 				CAEB6DD11CA82CD00058C699 /* WithoutASDKViewController.xib */,
@@ -204,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				CA127F741CA7CA6A00DEE218 /* main.m */,
+				CA79C4F31D748FCF00D043E3 /* ASDKTestOn4S-Bridging-Header.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -348,6 +353,7 @@
 		CA127F681CA7CA6A00DEE218 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = CambriaYang;
 				TargetAttributes = {
@@ -474,6 +480,7 @@
 				CA4647931CF18BA4006F2A54 /* NSMethodSignature+EXT.m in Sources */,
 				CA46478C1CF18BA4006F2A54 /* EXTConcreteProtocol.m in Sources */,
 				CAEB6DD61CA82CE50058C699 /* WithASDKViewController.m in Sources */,
+				CA79C4F21D748F9400D043E3 /* SwiftWithoutASDK.swift in Sources */,
 				CA127F7B1CA7CA6A00DEE218 /* ViewController.m in Sources */,
 				CA4647911CF18BA4006F2A54 /* EXTSelectorChecking.m in Sources */,
 				CA4647921CF18BA4006F2A54 /* NSInvocation+EXT.m in Sources */,
@@ -631,6 +638,7 @@
 			baseConfigurationReference = B62C3A12F2185F032E9B9410 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				EXCLUDED_SOURCE_FILE_NAMES = "";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -645,6 +653,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yeio.ASDKTestOn4S;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INCLUDE_PATHS = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "ASDKTestOn4S/ASDKTestOn4S-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -653,6 +664,7 @@
 			baseConfigurationReference = 78994C3AAEC2B9FE34AFCE37 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				EXCLUDED_SOURCE_FILE_NAMES = "FLEX*";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -667,6 +679,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yeio.ASDKTestOn4S;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INCLUDE_PATHS = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "ASDKTestOn4S/ASDKTestOn4S-Bridging-Header.h";
 			};
 			name = Release;
 		};

@@ -54,8 +54,6 @@
         image.frame = CGRectMake(CGRectGetMaxX(self.frame) - 49 - 10, CGRectGetMinY(self.frame)+ 20, 49, 40.5);
         
         [self.contentView addSubview:image.view];
-        
-        
     }
     
     return self;

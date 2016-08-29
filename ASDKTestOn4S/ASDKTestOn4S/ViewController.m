@@ -10,6 +10,7 @@
 
 #import "WithASDKViewController.h"
 #import "WithoutASDKViewController.h"
+#import "ASDKTestOn4S-Swift.h"
 
 @interface ViewController ()
 
@@ -33,9 +34,12 @@
 
 #pragma mark --- Button Clicked
 - (IBAction)withoutASDKClicked:(id)sender {
-    WithoutASDKViewController *vc = [[WithoutASDKViewController alloc] init];
+//    WithoutASDKViewController *vc = [[WithoutASDKViewController alloc] init];
+    SwiftWithoutASDK *vc = [[SwiftWithoutASDK alloc] init];
     
     vc.title = @"WithoutASDK";
+    
+    __unused NSString *result = vc.helloWorld;
     
     [self.navigationController pushViewController:vc animated:YES];
 }
