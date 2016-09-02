@@ -9,15 +9,29 @@
 import Foundation
 import UIKit
 
-class SwiftWithoutASDK : BaseViewController {
+class SwiftWithoutASDK : BaseViewController, UITextFieldDelegate {
     override func viewDidLoad() {
-//        super.viewDidLoad()
-        
         print("Hello, Swift!")
+        
+        self.view.backgroundColor = UIColor.whiteColor()
+        
+        
     }
     
+    override func viewWillLayoutSubviews() {
+        let textField: UITextField = UITextField.init(frame: CGRectMake(20, 100, 100, 50))
+        
+        self.view.addSubview(textField)
+        
+        textField.delegate = self
+        textField.keyboardType = .DecimalPad
+    }
     func helloWorld() -> String {
         print("I am in \(self)")
         return "HelloWorld!"
+    }
+    
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        return true
     }
 }

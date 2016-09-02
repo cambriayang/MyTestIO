@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zzS-K4-GBq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zzS-K4-GBq">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -21,7 +21,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dPx-ky-pgU">
-                                <rect key="frame" x="106" y="349" width="388" height="30"/>
+                                <rect key="frame" x="106" y="226" width="388" height="30"/>
                                 <state key="normal" title="WithASDK"/>
                                 <connections>
                                     <action selector="withASDK:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Gi-2x-x7F"/>
@@ -34,16 +34,37 @@
                                     <action selector="withoutASDKClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t79-RI-mwK"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lmu-HC-jYq">
+                                <rect key="frame" x="180" y="273" width="240" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="dhi-rT-Zo4"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="fnw-st-NJF"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="j2X-Ig-ix8"/>
+                                    <constraint firstAttribute="width" constant="240" id="nne-gE-dNr"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="fnw-st-NJF"/>
+                                        <exclude reference="j2X-Ig-ix8"/>
+                                    </mask>
+                                </variation>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="lmu-HC-jYq" firstAttribute="top" secondItem="dPx-ky-pgU" secondAttribute="bottom" constant="17" id="0mI-k6-IJ5"/>
                             <constraint firstItem="zty-QA-j8b" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="169" id="4pd-jc-yox"/>
                             <constraint firstItem="dPx-ky-pgU" firstAttribute="width" secondItem="zty-QA-j8b" secondAttribute="width" id="BaF-Uh-YYS"/>
+                            <constraint firstItem="lmu-HC-jYq" firstAttribute="centerX" secondItem="zty-QA-j8b" secondAttribute="centerX" id="EJ3-JM-iPj"/>
                             <constraint firstItem="dPx-ky-pgU" firstAttribute="height" secondItem="zty-QA-j8b" secondAttribute="height" id="G5O-Ja-gjy"/>
                             <constraint firstItem="dPx-ky-pgU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="VqS-Vg-sLu"/>
                             <constraint firstItem="zty-QA-j8b" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="106" id="eFU-I0-hum"/>
                             <constraint firstItem="dPx-ky-pgU" firstAttribute="width" secondItem="zty-QA-j8b" secondAttribute="height" multiplier="12:5" id="edO-cX-eVf"/>
-                            <constraint firstItem="zty-QA-j8b" firstAttribute="bottom" secondItem="dPx-ky-pgU" secondAttribute="top" constant="-150" id="rx6-9W-oxj"/>
+                            <constraint firstItem="zty-QA-j8b" firstAttribute="bottom" secondItem="dPx-ky-pgU" secondAttribute="top" constant="-27" id="rx6-9W-oxj"/>
                             <constraint firstItem="dPx-ky-pgU" firstAttribute="centerX" secondItem="zty-QA-j8b" secondAttribute="centerX" id="wYk-zc-W6O"/>
                             <constraint firstItem="zty-QA-j8b" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerXWithinMargins" id="ykd-lT-tQ3"/>
                         </constraints>
@@ -55,6 +76,9 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="Fhr-fK-U85"/>
+                    <connections>
+                        <outlet property="myTextView" destination="lmu-HC-jYq" id="B98-Oi-047"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

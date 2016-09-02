@@ -12,7 +12,8 @@
 #import "WithoutASDKViewController.h"
 #import "ASDKTestOn4S-Swift.h"
 
-@interface ViewController ()
+@interface ViewController () <UITextViewDelegate>
+@property (weak, nonatomic) IBOutlet UITextView *myTextView;
 
 @end
 
@@ -25,6 +26,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.myTextView.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,13 +37,11 @@
 
 #pragma mark --- Button Clicked
 - (IBAction)withoutASDKClicked:(id)sender {
-//    WithoutASDKViewController *vc = [[WithoutASDKViewController alloc] init];
-    SwiftWithoutASDK *vc = [[SwiftWithoutASDK alloc] init];
+    WithoutASDKViewController *vc = [[WithoutASDKViewController alloc] init];
+//    SwiftWithoutASDK *vc = [[SwiftWithoutASDK alloc] init];
     
     vc.title = @"WithoutASDK";
-    
-    __unused NSString *result = vc.helloWorld;
-    
+        
     [self.navigationController pushViewController:vc animated:YES];
 }
 
@@ -50,6 +51,13 @@
     vc.title = @"WithASDK";
     
     [self.navigationController pushViewController:vc animated:YES];
+}
+
+#pragma UITextViewDelegate
+- (void)textViewDidChange:(UITextView *)textView {
+    int loc = (int)textView.selectedRange.location;
+    
+    NSLog(@"==[%d]==", loc);
 }
 
 @end
