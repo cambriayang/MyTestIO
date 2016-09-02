@@ -34,36 +34,27 @@
                                     <action selector="withoutASDKClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t79-RI-mwK"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lmu-HC-jYq">
-                                <rect key="frame" x="180" y="273" width="240" height="60"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Asf-Y9-g57">
+                                <rect key="frame" x="252" y="273" width="97" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="dhi-rT-Zo4"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="fnw-st-NJF"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="j2X-Ig-ix8"/>
-                                    <constraint firstAttribute="width" constant="240" id="nne-gE-dNr"/>
+                                    <constraint firstAttribute="height" constant="30" id="FW1-ih-ZPC"/>
+                                    <constraint firstAttribute="width" constant="97" id="dTU-x7-Dlh"/>
                                 </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="fnw-st-NJF"/>
-                                        <exclude reference="j2X-Ig-ix8"/>
-                                    </mask>
-                                </variation>
-                            </textView>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="lmu-HC-jYq" firstAttribute="top" secondItem="dPx-ky-pgU" secondAttribute="bottom" constant="17" id="0mI-k6-IJ5"/>
                             <constraint firstItem="zty-QA-j8b" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="169" id="4pd-jc-yox"/>
                             <constraint firstItem="dPx-ky-pgU" firstAttribute="width" secondItem="zty-QA-j8b" secondAttribute="width" id="BaF-Uh-YYS"/>
-                            <constraint firstItem="lmu-HC-jYq" firstAttribute="centerX" secondItem="zty-QA-j8b" secondAttribute="centerX" id="EJ3-JM-iPj"/>
                             <constraint firstItem="dPx-ky-pgU" firstAttribute="height" secondItem="zty-QA-j8b" secondAttribute="height" id="G5O-Ja-gjy"/>
+                            <constraint firstItem="Asf-Y9-g57" firstAttribute="top" secondItem="zty-QA-j8b" secondAttribute="bottom" constant="74" id="Ox8-4I-GVV"/>
                             <constraint firstItem="dPx-ky-pgU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="VqS-Vg-sLu"/>
                             <constraint firstItem="zty-QA-j8b" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="106" id="eFU-I0-hum"/>
                             <constraint firstItem="dPx-ky-pgU" firstAttribute="width" secondItem="zty-QA-j8b" secondAttribute="height" multiplier="12:5" id="edO-cX-eVf"/>
+                            <constraint firstItem="Asf-Y9-g57" firstAttribute="centerX" secondItem="zty-QA-j8b" secondAttribute="centerX" id="q0H-eY-RId"/>
                             <constraint firstItem="zty-QA-j8b" firstAttribute="bottom" secondItem="dPx-ky-pgU" secondAttribute="top" constant="-27" id="rx6-9W-oxj"/>
                             <constraint firstItem="dPx-ky-pgU" firstAttribute="centerX" secondItem="zty-QA-j8b" secondAttribute="centerX" id="wYk-zc-W6O"/>
                             <constraint firstItem="zty-QA-j8b" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerXWithinMargins" id="ykd-lT-tQ3"/>
@@ -77,7 +68,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Fhr-fK-U85"/>
                     <connections>
-                        <outlet property="myTextView" destination="lmu-HC-jYq" id="B98-Oi-047"/>
+                        <outlet property="myTextField" destination="Asf-Y9-g57" id="a2V-kx-s35"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

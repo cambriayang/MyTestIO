@@ -12,8 +12,8 @@
 #import "WithoutASDKViewController.h"
 #import "ASDKTestOn4S-Swift.h"
 
-@interface ViewController () <UITextViewDelegate>
-@property (weak, nonatomic) IBOutlet UITextView *myTextView;
+@interface ViewController () <UITextFieldDelegate>
+@property (weak, nonatomic) IBOutlet UITextField *myTextField;
 
 @end
 
@@ -27,7 +27,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.myTextView.delegate = self;
+    self.myTextField.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -54,10 +54,14 @@
 }
 
 #pragma UITextViewDelegate
-- (void)textViewDidChange:(UITextView *)textView {
-    int loc = (int)textView.selectedRange.location;
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    UITextRange *selRange = textField.selectedTextRange;
+    UITextPosition *selStartPos = selRange.start;
+    NSInteger idx = [textField offsetFromPosition:textField.beginningOfDocument toPosition:selStartPos];
     
-    NSLog(@"==[%d]==", loc);
+    NSLog(@"==[%d]==", (int)idx);
+    
+    return YES;
 }
 
 @end
