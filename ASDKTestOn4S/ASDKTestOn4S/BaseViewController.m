@@ -43,8 +43,12 @@
 }
 
 #pragma mark --- TableView Datasource
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1000;
+    return 500;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -55,8 +59,7 @@
 
 #pragma mark --- TableView Delegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 100 +  (arc4random()%150);
-//    return 200;
+    return 80 +  (arc4random()%100);
 }
 
 #pragma mark --- Functional Methods

@@ -51,6 +51,12 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
+- (IBAction)gotoMyTestRootV:(id)sender {
+    MyTestRootVC *vc = [[MyTestRootVC alloc] init];
+    
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 #pragma UITextViewDelegate
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
     UITextRange *selRange = textField.selectedTextRange;
