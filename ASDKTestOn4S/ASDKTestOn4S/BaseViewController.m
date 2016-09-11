@@ -48,7 +48,8 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSAssert(NO, @"The Subclass should overide this method!!!");
+    @throw [NSException exceptionWithName:@"SubClass did not override this method!" reason:@"===[The Subclass should override this method!!!]===" userInfo:nil];
+    
     return nil;
 }
 
@@ -56,6 +57,11 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 100 +  (arc4random()%150);
 //    return 200;
+}
+
+#pragma mark --- Functional Methods
+- (void)printMyClassName {
+    NSLog(@"==[In %@]==", [NSString stringWithUTF8String:object_getClassName(self)]);
 }
 
 @end

@@ -12,4 +12,6 @@
 
 @property (nonatomic, strong) UITableView *baseTableView;
 
+- (void)printMyClassName;
+
 @end

@@ -36,6 +36,7 @@
 - (IBAction)withoutASDKClicked:(id)sender {
     WithoutASDKViewController *vc = [[WithoutASDKViewController alloc] init];
 //    SwiftWithoutASDK *vc = [[SwiftWithoutASDK alloc] init];
+//    [vc helloWorld];
     
     vc.title = @"WithoutASDK";
         

@@ -9,23 +9,39 @@
 import Foundation
 import UIKit
 
-class SwiftWithoutASDK : BaseViewController, UITextFieldDelegate {
+class SwiftWithoutASDK : BaseViewController {
+    //Class stuff here
+    let name = "Cambria"
+    let age = 18
+    
     override func viewDidLoad() {
-        print("Hello, Swift!")
+        //Because this class did not implements the cellForRow method. comment the 'super.viewDidLoad'
+//        super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor.whiteColor()
+        let closure = {
+            print("==[Name is: \(self.name), age is: \(self.age)]==")
+        }
+        
+        view.backgroundColor = UIColor.grayColor()
+        
+        print(helloWorld())
+        
+        printMyClassName()
+        
+        closure()
     }
     
-    override func viewWillLayoutSubviews() {
-        let textField: UITextField = UITextField.init(frame: CGRectMake(20, 100, 100, 50))
-        
-        self.view.addSubview(textField)
-        
-        textField.delegate = self
-        textField.keyboardType = .DecimalPad
-    }
+    //MARK: --- Printer
     func helloWorld() -> String {
-        print("I am in \(self)")
         return "HelloWorld!"
     }
+    
+    override func printMyClassName() -> Void {
+        super.printMyClassName()
+        
+        print("==[In \(self)]==");
+    }
+}
+
+extension SwiftWithoutASDK: UITextFieldDelegate {
 }
