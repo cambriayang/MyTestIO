@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zzS-K4-GBq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zzS-K4-GBq">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -34,42 +33,25 @@
                                     <action selector="withoutASDKClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t79-RI-mwK"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Asf-Y9-g57">
-                                <rect key="frame" x="252" y="273" width="97" height="30"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="FW1-ih-ZPC"/>
-                                    <constraint firstAttribute="width" constant="97" id="dTU-x7-Dlh"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nPj-sy-eEY">
+                                <rect key="frame" x="232" y="285" width="136" height="30"/>
+                                <state key="normal" title="GoToMyTestRootVC"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="zty-QA-j8b" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="169" id="4pd-jc-yox"/>
                             <constraint firstItem="dPx-ky-pgU" firstAttribute="width" secondItem="zty-QA-j8b" secondAttribute="width" id="BaF-Uh-YYS"/>
                             <constraint firstItem="dPx-ky-pgU" firstAttribute="height" secondItem="zty-QA-j8b" secondAttribute="height" id="G5O-Ja-gjy"/>
-                            <constraint firstItem="Asf-Y9-g57" firstAttribute="top" secondItem="zty-QA-j8b" secondAttribute="bottom" constant="74" id="Ox8-4I-GVV"/>
-                            <constraint firstItem="dPx-ky-pgU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="VqS-Vg-sLu"/>
+                            <constraint firstItem="nPj-sy-eEY" firstAttribute="top" secondItem="zty-QA-j8b" secondAttribute="bottom" constant="86" id="dm1-qP-m6A"/>
                             <constraint firstItem="zty-QA-j8b" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="106" id="eFU-I0-hum"/>
-                            <constraint firstItem="dPx-ky-pgU" firstAttribute="width" secondItem="zty-QA-j8b" secondAttribute="height" multiplier="12:5" id="edO-cX-eVf"/>
-                            <constraint firstItem="Asf-Y9-g57" firstAttribute="centerX" secondItem="zty-QA-j8b" secondAttribute="centerX" id="q0H-eY-RId"/>
+                            <constraint firstItem="nPj-sy-eEY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerXWithinMargins" id="l2p-TM-Hy4"/>
                             <constraint firstItem="zty-QA-j8b" firstAttribute="bottom" secondItem="dPx-ky-pgU" secondAttribute="top" constant="-27" id="rx6-9W-oxj"/>
                             <constraint firstItem="dPx-ky-pgU" firstAttribute="centerX" secondItem="zty-QA-j8b" secondAttribute="centerX" id="wYk-zc-W6O"/>
                             <constraint firstItem="zty-QA-j8b" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerXWithinMargins" id="ykd-lT-tQ3"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="VqS-Vg-sLu"/>
-                                <exclude reference="edO-cX-eVf"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="Fhr-fK-U85"/>
-                    <connections>
-                        <outlet property="myTextField" destination="Asf-Y9-g57" id="a2V-kx-s35"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

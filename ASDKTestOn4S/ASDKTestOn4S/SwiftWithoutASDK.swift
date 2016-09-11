@@ -14,8 +14,6 @@ class SwiftWithoutASDK : BaseViewController, UITextFieldDelegate {
         print("Hello, Swift!")
         
         self.view.backgroundColor = UIColor.whiteColor()
-        
-        
     }
     
     override func viewWillLayoutSubviews() {
@@ -29,9 +27,5 @@ class SwiftWithoutASDK : BaseViewController, UITextFieldDelegate {
     func helloWorld() -> String {
         print("I am in \(self)")
         return "HelloWorld!"
-    }
-    
-    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
-        return true
     }
 }

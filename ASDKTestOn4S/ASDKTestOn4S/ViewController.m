@@ -13,7 +13,6 @@
 #import "ASDKTestOn4S-Swift.h"
 
 @interface ViewController () <UITextFieldDelegate>
-@property (weak, nonatomic) IBOutlet UITextField *myTextField;
 
 @end
 
@@ -25,9 +24,7 @@
 }
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    self.myTextField.delegate = self;
+    [super viewDidLoad];    
 }
 
 - (void)didReceiveMemoryWarning {

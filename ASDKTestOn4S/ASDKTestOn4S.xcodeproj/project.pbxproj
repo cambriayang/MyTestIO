@@ -174,28 +174,15 @@
 			children = (
 				CA4647721CF18B69006F2A54 /* Extobjc */,
 				CA4647711CF18B5C006F2A54 /* JRSwizzle */,
-				CA127F761CA7CA6A00DEE218 /* AppDelegate.h */,
-				CA127F771CA7CA6A00DEE218 /* AppDelegate.m */,
-				CA127F791CA7CA6A00DEE218 /* ViewController.h */,
-				CA127F7A1CA7CA6A00DEE218 /* ViewController.m */,
-				CA127F7C1CA7CA6A00DEE218 /* Main.storyboard */,
-				CAEB6DCC1CA82CB60058C699 /* BaseViewController.h */,
-				CAEB6DCD1CA82CB60058C699 /* BaseViewController.m */,
-				CA79C4F11D748F9400D043E3 /* SwiftWithoutASDK.swift */,
-				CAEB6DCF1CA82CD00058C699 /* WithoutASDKViewController.h */,
-				CAEB6DD01CA82CD00058C699 /* WithoutASDKViewController.m */,
-				CAEB6DD11CA82CD00058C699 /* WithoutASDKViewController.xib */,
-				CAEB6DD71CA83E350058C699 /* WithoutASDKTableViewCell.h */,
-				CAEB6DD81CA83E350058C699 /* WithoutASDKTableViewCell.m */,
-				CAEB6DD91CA83E350058C699 /* WithoutASDKTableViewCell.xib */,
-				CAEB6DD41CA82CE50058C699 /* WithASDKViewController.h */,
-				CAEB6DD51CA82CE50058C699 /* WithASDKViewController.m */,
-				CA13CAC91CA8FD5600E3335C /* WithASDKTableViewCell.h */,
-				CA13CACA1CA8FD5600E3335C /* WithASDKTableViewCell.m */,
+				CACE29301D856795009B4A69 /* MainVC */,
+				CACE29311D85683A009B4A69 /* WithoutASDKVC */,
+				CACE29321D856877009B4A69 /* WithASDKVC */,
 				CA56B0E71CF053220018B554 /* NSMutableArray+SafeAdd.h */,
 				CA56B0E81CF053220018B554 /* NSMutableArray+SafeAdd.m */,
 				CA3E289B1CF196A80016081F /* NSObject+Swizzle.h */,
 				CA3E289C1CF196A80016081F /* NSObject+Swizzle.m */,
+				CA127F761CA7CA6A00DEE218 /* AppDelegate.h */,
+				CA127F771CA7CA6A00DEE218 /* AppDelegate.m */,
 				CA127F7F1CA7CA6A00DEE218 /* Assets.xcassets */,
 				CA127F811CA7CA6A00DEE218 /* LaunchScreen.storyboard */,
 				CA127F841CA7CA6A00DEE218 /* Info.plist */,
@@ -269,6 +256,43 @@
 				CA46478A1CF18BA4006F2A54 /* NSMethodSignature+EXT.m */,
 			);
 			name = Extobjc;
+			sourceTree = "<group>";
+		};
+		CACE29301D856795009B4A69 /* MainVC */ = {
+			isa = PBXGroup;
+			children = (
+				CA127F791CA7CA6A00DEE218 /* ViewController.h */,
+				CA127F7A1CA7CA6A00DEE218 /* ViewController.m */,
+				CA127F7C1CA7CA6A00DEE218 /* Main.storyboard */,
+				CAEB6DCC1CA82CB60058C699 /* BaseViewController.h */,
+				CAEB6DCD1CA82CB60058C699 /* BaseViewController.m */,
+			);
+			name = MainVC;
+			sourceTree = "<group>";
+		};
+		CACE29311D85683A009B4A69 /* WithoutASDKVC */ = {
+			isa = PBXGroup;
+			children = (
+				CA79C4F11D748F9400D043E3 /* SwiftWithoutASDK.swift */,
+				CAEB6DD71CA83E350058C699 /* WithoutASDKTableViewCell.h */,
+				CAEB6DD81CA83E350058C699 /* WithoutASDKTableViewCell.m */,
+				CAEB6DD91CA83E350058C699 /* WithoutASDKTableViewCell.xib */,
+				CAEB6DCF1CA82CD00058C699 /* WithoutASDKViewController.h */,
+				CAEB6DD01CA82CD00058C699 /* WithoutASDKViewController.m */,
+				CAEB6DD11CA82CD00058C699 /* WithoutASDKViewController.xib */,
+			);
+			name = WithoutASDKVC;
+			sourceTree = "<group>";
+		};
+		CACE29321D856877009B4A69 /* WithASDKVC */ = {
+			isa = PBXGroup;
+			children = (
+				CAEB6DD41CA82CE50058C699 /* WithASDKViewController.h */,
+				CAEB6DD51CA82CE50058C699 /* WithASDKViewController.m */,
+				CA13CAC91CA8FD5600E3335C /* WithASDKTableViewCell.h */,
+				CA13CACA1CA8FD5600E3335C /* WithASDKTableViewCell.m */,
+			);
+			name = WithASDKVC;
 			sourceTree = "<group>";
 		};
 		D4582A19897566318BD9B42E /* Pods */ = {
