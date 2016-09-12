@@ -33,6 +33,7 @@
 		CACE29391D85A8D7009B4A69 /* MyTestRootVCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACE29381D85A8D7009B4A69 /* MyTestRootVCCell.swift */; };
 		CACE293B1D85A9F1009B4A69 /* MyTestRootVCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CACE293A1D85A9F1009B4A69 /* MyTestRootVCCell.xib */; };
 		CACE293D1D85B021009B4A69 /* DecimalNumberPadForH5TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACE293C1D85B021009B4A69 /* DecimalNumberPadForH5TestVC.swift */; };
+		CACE29411D86F947009B4A69 /* JKTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CACE29401D86F947009B4A69 /* JKTest.m */; };
 		CAEB6DCE1CA82CB60058C699 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEB6DCD1CA82CB60058C699 /* BaseViewController.m */; };
 		CAEB6DD21CA82CD00058C699 /* WithoutASDKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEB6DD01CA82CD00058C699 /* WithoutASDKViewController.m */; };
 		CAEB6DD31CA82CD00058C699 /* WithoutASDKViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAEB6DD11CA82CD00058C699 /* WithoutASDKViewController.xib */; };
@@ -117,6 +118,8 @@
 		CACE29381D85A8D7009B4A69 /* MyTestRootVCCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTestRootVCCell.swift; sourceTree = "<group>"; };
 		CACE293A1D85A9F1009B4A69 /* MyTestRootVCCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyTestRootVCCell.xib; sourceTree = "<group>"; };
 		CACE293C1D85B021009B4A69 /* DecimalNumberPadForH5TestVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecimalNumberPadForH5TestVC.swift; sourceTree = "<group>"; };
+		CACE293F1D86F947009B4A69 /* JKTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKTest.h; sourceTree = "<group>"; };
+		CACE29401D86F947009B4A69 /* JKTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKTest.m; sourceTree = "<group>"; };
 		CAEB6DCC1CA82CB60058C699 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		CAEB6DCD1CA82CB60058C699 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		CAEB6DCF1CA82CD00058C699 /* WithoutASDKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WithoutASDKViewController.h; sourceTree = "<group>"; };
@@ -319,6 +322,8 @@
 			isa = PBXGroup;
 			children = (
 				CACE293C1D85B021009B4A69 /* DecimalNumberPadForH5TestVC.swift */,
+				CACE293F1D86F947009B4A69 /* JKTest.h */,
+				CACE29401D86F947009B4A69 /* JKTest.m */,
 			);
 			name = MyTest;
 			sourceTree = "<group>";
@@ -539,6 +544,7 @@
 				CA4647911CF18BA4006F2A54 /* EXTSelectorChecking.m in Sources */,
 				CA4647921CF18BA4006F2A54 /* NSInvocation+EXT.m in Sources */,
 				CA46476F1CF18B23006F2A54 /* JRSwizzle.m in Sources */,
+				CACE29411D86F947009B4A69 /* JKTest.m in Sources */,
 				CAEB6DDA1CA83E350058C699 /* WithoutASDKTableViewCell.m in Sources */,
 				CA13CACB1CA8FD5600E3335C /* WithASDKTableViewCell.m in Sources */,
 				CA46478F1CF18BA4006F2A54 /* EXTSafeCategory.m in Sources */,

@@ -11,8 +11,9 @@
 #import "WithASDKViewController.h"
 #import "WithoutASDKViewController.h"
 #import "ASDKTestOn4S-Swift.h"
+#import "JKTest.h"
 
-@interface ViewController () <UITextFieldDelegate>
+@interface ViewController () 
 
 @end
 
@@ -24,12 +25,17 @@
 }
 
 - (void)viewDidLoad {
-    [super viewDidLoad];    
+    [super viewDidLoad];
+    
+    JKTest *test = [JKTest new];
+    
+    [test setValue:@"KVC" forKey:@"_objjj"];
+    [test valueForKey:@"_objjj"];
+    NSLog(@"==[%@]==", test.object);
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark --- Button Clicked
@@ -55,17 +61,6 @@
     MyTestRootVC *vc = [[MyTestRootVC alloc] init];
     
     [self.navigationController pushViewController:vc animated:YES];
-}
-
-#pragma UITextViewDelegate
-- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
-    UITextRange *selRange = textField.selectedTextRange;
-    UITextPosition *selStartPos = selRange.start;
-    NSInteger idx = [textField offsetFromPosition:textField.beginningOfDocument toPosition:selStartPos];
-    
-    NSLog(@"==[%d]==", (int)idx);
-    
-    return YES;
 }
 
 @end
