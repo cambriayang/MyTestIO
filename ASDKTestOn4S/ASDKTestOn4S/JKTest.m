@@ -43,20 +43,20 @@
     [super setValue:value forKey:key];
 }
 
-- (void)setValue:(id)value forUndefinedKey:(NSString *)key {
-    NSLog(@"==[%s]==", __func__);
-    
-    if ([key isEqualToString:@"_obj"]) {
-        self.object = @"cvK";
-    } else {
-        self.object = @"VCK";
-    }
-}
-
-- (id)valueForUndefinedKey:(NSString *)key {
-    NSLog(@"==[%s]==", __func__);
-    
-    return self.object;
-}
+//- (void)setValue:(id)value forUndefinedKey:(NSString *)key {
+//    NSLog(@"==[%s]==", __func__);
+//    
+//    if ([key isEqualToString:@"_obj"]) {
+//        self.object = @"cvK";
+//    } else {
+//        self.object = @"VCK";
+//    }
+//}
+//
+//- (id)valueForUndefinedKey:(NSString *)key {
+//    NSLog(@"==[%s]==", __func__);
+//    
+//    return self.object;
+//}
 
 @end

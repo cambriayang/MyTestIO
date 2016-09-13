@@ -29,9 +29,14 @@
     
     JKTest *test = [JKTest new];
     
-    [test setValue:@"KVC" forKey:@"_objjj"];
-    [test valueForKey:@"_objjj"];
-    NSLog(@"==[%@]==", test.object);
+    @try {
+        [test setValue:@"KVC" forKey:@"_objjj"];
+        [test valueForKey:@"_objjj"];
+    } @catch (NSException *exception) {
+        NSLog(@"==[%@]==", exception.description);
+    } @finally {
+        NSLog(@"==[%@]==", test.object);
+    }
 }
 
 - (void)didReceiveMemoryWarning {
