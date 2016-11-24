@@ -9,7 +9,7 @@
 import UIKit
 
 class MyTestRootVC: BaseViewController {
-    let testDataSource = [String(DecimalNumberPadForH5TestVC)];
+    let testDataSource = [String(describing: "DecimalNumberPadForH5TestVC")];
     
     //MARK --- Life Cycle
     deinit {
@@ -19,7 +19,7 @@ class MyTestRootVC: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.baseTableView .registerNib(UINib.init(nibName: "MyTestRootVCCell", bundle: nil), forCellReuseIdentifier: "MyTestRootVCCell")
+        self.baseTableView .register(UINib.init(nibName: "MyTestRootVCCell", bundle: nil), forCellReuseIdentifier: "MyTestRootVCCell")
         
         self.title = "MyTestRootVC"
     }
@@ -32,24 +32,24 @@ class MyTestRootVC: BaseViewController {
         
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("MyTestRootVCCell", forIndexPath: indexPath) as! MyTestRootVCCell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MyTestRootVCCell", for: indexPath) as! MyTestRootVCCell
 
         cell.textLabel?.text = testDataSource[indexPath.row]
         
         return cell
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         
         let testCase = testDataSource[indexPath.row]
         
@@ -59,20 +59,20 @@ class MyTestRootVC: BaseViewController {
         }
     }
     
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 44
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return testDataSource.count
     }
 }
 
 extension MyTestRootVC {
-    func swiftClassFromString(className: String) -> UIViewController? {
+    func swiftClassFromString(_ className: String) -> UIViewController? {
         //方法 NSClassFromString 在Swift中已经不起作用了no effect，需要适当更改
         //官方文档方法：let myPersonClass: AnyClass? = NSClassFromString("MyGreatApp.Person")
-        if  let appName = NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleName") as? String {
+        if  let appName = Bundle.main.object(forInfoDictionaryKey: "CFBundleName") as? String {
             let classStringName = "_TtC\(appName.characters.count)\(appName)\(className.characters.count)\(className)"
             let  cls: AnyClass? = NSClassFromString(classStringName)
             assert(cls != nil, "==[class not found,please check className]==")

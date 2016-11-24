@@ -15,10 +15,10 @@ class DecimalNumberPadForH5TestVC: UIViewController {
         super.awakeFromNib()
     }
     
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         
-        view.backgroundColor = UIColor.greenColor()
+        view.backgroundColor = UIColor.green
     }
     
     required init?(coder aDecoder: NSCoder) {

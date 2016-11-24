@@ -9,15 +9,8 @@
 import Foundation
 
 class MyInstance: NSObject {
-    class var sharedInstance: MyInstance {
-        struct Static {
-            static var onceToken: dispatch_once_t = 0
-            static var instance: MyInstance? = nil
-        }
-        
-        dispatch_once(&Static.onceToken) {
-            Static.instance = MyInstance()
-        }
-        return Static.instance!
-    }
+    //let is thread-safe
+    static let sharedInstance = MyInstance()
+    
+    override fileprivate init() {}
 }

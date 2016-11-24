@@ -22,7 +22,7 @@ class SwiftWithoutASDK : BaseViewController {
             print("==[Name is: \(self.name), age is: \(self.age)]==")
         }
         
-        view.backgroundColor = UIColor.grayColor()
+        view.backgroundColor = UIColor.gray
         
         print(helloWorld())
         
