@@ -11,7 +11,7 @@ import UIKit
 class MyTestRootVC: BaseViewController {
     let testDataSource = [String(describing: "DecimalNumberPadForH5TestVC")];
     
-    //MARK --- Life Cycle
+    //MARK: --- Life Cycle
     deinit {
         
     }
@@ -58,6 +58,7 @@ class MyTestRootVC: BaseViewController {
         super.viewDidAppear(animated)
     }
     
+    //MARK: --- Table View Delegate
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MyTestRootVCCell", for: indexPath) as! MyTestRootVCCell
 
@@ -85,6 +86,7 @@ class MyTestRootVC: BaseViewController {
         return testDataSource.count
     }
     
+    //MARK: --- Regular
     struct MyRegex {
         let regex: NSRegularExpression?
         
