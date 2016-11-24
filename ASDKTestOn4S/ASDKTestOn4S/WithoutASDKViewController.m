@@ -53,9 +53,13 @@
     
     [array addObject:@"1"];
     
-#warning This is a test code for swizzle. You should never do this in your project!
+#pragma mark ---  This is a test code for swizzle. You should never do this in your project!
+
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wnonnull"
     [array addObject:nil];
-        
+#pragma clang diagnostic pop
+    
     array.token = @"hahah";
     
     NSMutableString *string = [NSMutableString alloc];
