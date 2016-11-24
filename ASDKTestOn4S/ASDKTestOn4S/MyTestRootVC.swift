@@ -19,25 +19,43 @@ class MyTestRootVC: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.baseTableView .register(UINib.init(nibName: "MyTestRootVCCell", bundle: nil), forCellReuseIdentifier: "MyTestRootVCCell")
+        self.baseTableView.register(UINib.init(nibName: "MyTestRootVCCell", bundle: nil), forCellReuseIdentifier: "MyTestRootVCCell")
         
         self.title = "MyTestRootVC"
+        
+        //new way, Swift 3
+        let queue = DispatchQueue(label: "com.test.myqueue")
+        
+        queue.async {
+            let mailPattern = "([a-zA-Z0-9]+[_|\\_|\\.]?)*[a-zA-Z0-9]+\\.[a-zA-Z]{2,3}$"
+            let matcher = MyRegex(mailPattern)
+            let maybeMailAddress = "admin.admin.admin@qq.mm.cc.com"
+            
+            if matcher.match(input: maybeMailAddress) {
+                print("Correct Email!")
+            }
+            else{
+                print("Wrong Email!")
+            }
+            
+            sleep(10)
+        }
     }
     
     override func viewWillLayoutSubviews() {
-        
+        super.viewWillLayoutSubviews()
     }
     
     override func viewDidLayoutSubviews() {
-        
+        super.viewDidLayoutSubviews()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
+        super.viewWillAppear(animated)
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        
+        super.viewDidAppear(animated)
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -65,6 +83,25 @@ class MyTestRootVC: BaseViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return testDataSource.count
+    }
+    
+    struct MyRegex {
+        let regex: NSRegularExpression?
+        
+        init(_ pattern: String) {
+            regex = try? NSRegularExpression(pattern: pattern, options: .caseInsensitive)
+        }
+        
+        func match(input: String) -> Bool {
+            if let matches = regex?.matches(in: input,
+                                                    options: [],
+                                                    range: NSMakeRange(0, (input as NSString).length)) {
+                return matches.count > 0
+            }
+            else {
+                return false
+            }
+        }
     }
 }
 
