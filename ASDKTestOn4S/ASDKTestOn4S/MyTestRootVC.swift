@@ -24,13 +24,13 @@ class MyTestRootVC: BaseViewController {
         self.title = "MyTestRootVC"
         
         //new way, Swift 3
-        let queue = DispatchQueue(label: "sjh.shshsh.shshshshshshsh")
+        let queue = DispatchQueue(label: "shshsh.shshshshshshsh")
         //Right Regx
-        let mailPattern1 = "/^[a-z]([a-z0-9]*[-_]?[a-z0-9]+)*@([a-z0-9]*[-_]?[a-z0-9]+)+[\\.][a-z]{2,3}([\\.][a-z]{2})?$/i"
+        let mailPattern1 = "/^[a-z]([a-z0-9]*[-_.]?[a-z0-9]+)*@([a-z0-9]*[-_]?[a-z0-9]+)+[\\.][a-z]{2,3}([\\.][a-z]{2})?$/i"
         //Wrong Regx
-        let mailPattern2 = "([a-zA-Z0-9]+[_|\\_|\\.]?)*[a-zA-Z0-9]+\\.[a-zA-Z]{2,3}$"
+        let mailPattern2 = "([a-zA-Z0-9]+[_|\\-|\\.]?){1,10}[a-zA-Z0-9]+\\.[a-zA-Z]{2,3}$"
         let matcher = MyRegex(mailPattern1)
-        let maybeMailAddress = "sh@shshshshsh.shshshshshshshshshshshshshshshshshshshs"
+        let maybeMailAddress = "shshshshshshshshshshshshshshshshshshshs"
         
         if matcher.match(maybeMailAddress) {
             print("Correct Email!")
