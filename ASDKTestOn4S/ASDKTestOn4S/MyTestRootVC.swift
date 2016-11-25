@@ -27,8 +27,9 @@ class MyTestRootVC: BaseViewController {
         let queue = DispatchQueue(label: "shshsh.shshshshshshsh")
         //Right Regx
         let mailPattern1 = "/^[a-z]([a-z0-9]*[-_.]?[a-z0-9]+)*@([a-z0-9]*[-_]?[a-z0-9]+)+[\\.][a-z]{2,3}([\\.][a-z]{2})?$/i"
+        
         //Wrong Regx
-        let mailPattern2 = "([a-zA-Z0-9]+[_|\\-|\\.]?){1,10}[a-zA-Z0-9]+\\.[a-zA-Z]{2,3}$"
+        _ = "([a-zA-Z0-9]+[_|\\-|\\.]?){1,10}[a-zA-Z0-9]+\\.[a-zA-Z]{2,3}$"
         let matcher = MyRegex(mailPattern1)
         let maybeMailAddress = "shshshshshshshshshshshshshshshshshshshs"
         
