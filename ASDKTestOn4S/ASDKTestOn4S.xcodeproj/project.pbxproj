@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2443B62B1DE6C53B003F0F1C /* MyInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD615411D8709B000804F1E /* MyInstance.swift */; };
+		24D57BDA1DE7F2D500A06318 /* LFMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D57BD51DE7F2D500A06318 /* LFMessage.m */; };
+		24D57BDB1DE7F2D500A06318 /* LFMessageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D57BD71DE7F2D500A06318 /* LFMessageManager.m */; };
+		24D57BDC1DE7F2D500A06318 /* LFMessageTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D57BD91DE7F2D500A06318 /* LFMessageTask.m */; };
 		93A990A9C77245BF2BC2488F /* libPods-ASDKTestOn4S.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59C6F164B84E05FE8F8CDDAB /* libPods-ASDKTestOn4S.a */; };
 		CA127F751CA7CA6A00DEE218 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CA127F741CA7CA6A00DEE218 /* main.m */; };
 		CA127F781CA7CA6A00DEE218 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CA127F771CA7CA6A00DEE218 /* AppDelegate.m */; };
@@ -64,6 +67,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		24D57BD41DE7F2D500A06318 /* LFMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFMessage.h; sourceTree = "<group>"; };
+		24D57BD51DE7F2D500A06318 /* LFMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFMessage.m; sourceTree = "<group>"; };
+		24D57BD61DE7F2D500A06318 /* LFMessageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFMessageManager.h; sourceTree = "<group>"; };
+		24D57BD71DE7F2D500A06318 /* LFMessageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFMessageManager.m; sourceTree = "<group>"; };
+		24D57BD81DE7F2D500A06318 /* LFMessageTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFMessageTask.h; sourceTree = "<group>"; };
+		24D57BD91DE7F2D500A06318 /* LFMessageTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFMessageTask.m; sourceTree = "<group>"; };
 		59C6F164B84E05FE8F8CDDAB /* libPods-ASDKTestOn4S.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ASDKTestOn4S.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AD5D2440681B1B2606007EE /* Pods-ASDKTestOn4S.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASDKTestOn4S.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ASDKTestOn4S/Pods-ASDKTestOn4S.debug.xcconfig"; sourceTree = "<group>"; };
 		B4D7EC839D8B36B95FE5F37B /* Pods-ASDKTestOn4S.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASDKTestOn4S.release.xcconfig"; path = "Pods/Target Support Files/Pods-ASDKTestOn4S/Pods-ASDKTestOn4S.release.xcconfig"; sourceTree = "<group>"; };
@@ -164,6 +173,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24D57BD21DE7F29600A06318 /* Swizzle */ = {
+			isa = PBXGroup;
+			children = (
+				CA3E289B1CF196A80016081F /* NSObject+Swizzle.h */,
+				CA3E289C1CF196A80016081F /* NSObject+Swizzle.m */,
+			);
+			name = Swizzle;
+			sourceTree = "<group>";
+		};
+		24D57BD31DE7F2AC00A06318 /* SafeCategory */ = {
+			isa = PBXGroup;
+			children = (
+				CA56B0E71CF053220018B554 /* NSMutableArray+SafeAdd.h */,
+				CA56B0E81CF053220018B554 /* NSMutableArray+SafeAdd.m */,
+			);
+			name = SafeCategory;
+			sourceTree = "<group>";
+		};
+		24D57BDD1DE7F2DB00A06318 /* LFMessageCenter */ = {
+			isa = PBXGroup;
+			children = (
+				24D57BD41DE7F2D500A06318 /* LFMessage.h */,
+				24D57BD51DE7F2D500A06318 /* LFMessage.m */,
+				24D57BD61DE7F2D500A06318 /* LFMessageManager.h */,
+				24D57BD71DE7F2D500A06318 /* LFMessageManager.m */,
+				24D57BD81DE7F2D500A06318 /* LFMessageTask.h */,
+				24D57BD91DE7F2D500A06318 /* LFMessageTask.m */,
+			);
+			name = LFMessageCenter;
+			sourceTree = "<group>";
+		};
 		5AF2324BAD2AF65B0A9F047B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -213,10 +253,9 @@
 				CACE29311D85683A009B4A69 /* WithoutASDK */,
 				CACE29321D856877009B4A69 /* WithASDK */,
 				CACE293E1D85B04E009B4A69 /* MyTest */,
-				CA56B0E71CF053220018B554 /* NSMutableArray+SafeAdd.h */,
-				CA56B0E81CF053220018B554 /* NSMutableArray+SafeAdd.m */,
-				CA3E289B1CF196A80016081F /* NSObject+Swizzle.h */,
-				CA3E289C1CF196A80016081F /* NSObject+Swizzle.m */,
+				24D57BD21DE7F29600A06318 /* Swizzle */,
+				24D57BD31DE7F2AC00A06318 /* SafeCategory */,
+				24D57BDD1DE7F2DB00A06318 /* LFMessageCenter */,
 				CA127F761CA7CA6A00DEE218 /* AppDelegate.h */,
 				CA127F771CA7CA6A00DEE218 /* AppDelegate.m */,
 				CA127F7F1CA7CA6A00DEE218 /* Assets.xcassets */,
@@ -544,6 +583,7 @@
 			files = (
 				CA4647901CF18BA4006F2A54 /* EXTScope.m in Sources */,
 				CA56B0E91CF053220018B554 /* NSMutableArray+SafeAdd.m in Sources */,
+				24D57BDB1DE7F2D500A06318 /* LFMessageManager.m in Sources */,
 				CA46478D1CF18BA4006F2A54 /* EXTNil.m in Sources */,
 				CAEB6DD21CA82CD00058C699 /* WithoutASDKViewController.m in Sources */,
 				CA3E289D1CF196A80016081F /* NSObject+Swizzle.m in Sources */,
@@ -553,6 +593,7 @@
 				CACE29351D85A748009B4A69 /* MyTestRootVC.swift in Sources */,
 				CA79C4F21D748F9400D043E3 /* SwiftWithoutASDK.swift in Sources */,
 				CA127F7B1CA7CA6A00DEE218 /* ViewController.m in Sources */,
+				24D57BDC1DE7F2D500A06318 /* LFMessageTask.m in Sources */,
 				CA4647911CF18BA4006F2A54 /* EXTSelectorChecking.m in Sources */,
 				CAD615421D8709B000804F1E /* MyInstance.swift in Sources */,
 				CA4647921CF18BA4006F2A54 /* NSInvocation+EXT.m in Sources */,
@@ -567,6 +608,7 @@
 				CA46478E1CF18BA4006F2A54 /* EXTRuntimeExtensions.m in Sources */,
 				CAEB6DCE1CA82CB60058C699 /* BaseViewController.m in Sources */,
 				CA127F781CA7CA6A00DEE218 /* AppDelegate.m in Sources */,
+				24D57BDA1DE7F2D500A06318 /* LFMessage.m in Sources */,
 				CACE29391D85A8D7009B4A69 /* MyTestRootVCCell.swift in Sources */,
 				CA127F751CA7CA6A00DEE218 /* main.m in Sources */,
 			);
