@@ -24,20 +24,22 @@ class MyTestRootVC: BaseViewController {
         self.title = "MyTestRootVC"
         
         //new way, Swift 3
-        let queue = DispatchQueue(label: "com.test.myqueue")
+        let queue = DispatchQueue(label: "sjh.shshsh.shshshshshshsh")
+        //Right Regx
+        let mailPattern1 = "/^[a-z]([a-z0-9]*[-_]?[a-z0-9]+)*@([a-z0-9]*[-_]?[a-z0-9]+)+[\\.][a-z]{2,3}([\\.][a-z]{2})?$/i"
+        //Wrong Regx
+        let mailPattern2 = "([a-zA-Z0-9]+[_|\\_|\\.]?)*[a-zA-Z0-9]+\\.[a-zA-Z]{2,3}$"
+        let matcher = MyRegex(mailPattern1)
+        let maybeMailAddress = "sh@shshshshsh.shshshshshshshshshshshshshshshshshshshs"
+        
+        if matcher.match(maybeMailAddress) {
+            print("Correct Email!")
+        }
+        else{
+            print("Wrong Email!")
+        }
         
         queue.async {
-            let mailPattern = "([a-zA-Z0-9]+[_|\\_|\\.]?)*[a-zA-Z0-9]+\\.[a-zA-Z]{2,3}$"
-            let matcher = MyRegex(mailPattern)
-            let maybeMailAddress = "admin.admin.admin@qq.mm.cc.com"
-            
-            if matcher.match(input: maybeMailAddress) {
-                print("Correct Email!")
-            }
-            else{
-                print("Wrong Email!")
-            }
-            
             sleep(10)
         }
     }
@@ -94,7 +96,7 @@ class MyTestRootVC: BaseViewController {
             regex = try? NSRegularExpression(pattern: pattern, options: .caseInsensitive)
         }
         
-        func match(input: String) -> Bool {
+        func match(_ input: String) -> Bool {
             if let matches = regex?.matches(in: input,
                                                     options: [],
                                                     range: NSMakeRange(0, (input as NSString).length)) {
