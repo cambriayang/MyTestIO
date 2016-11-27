@@ -1,15 +1,15 @@
 //
-//  DecimalNumberPadForH5TestVC.swift
+//  LFMessageTestVC.swift
 //  ASDKTestOn4S
 //
-//  Created by CambriaYang on 16/9/11.
-//  Copyright © 2016年 CambriaYang. All rights reserved.
+//  Created by CambriaYang on 27/11/2016.
+//  Copyright © 2016 CambriaYang. All rights reserved.
 //
 
 import Foundation
 
-class DecimalNumberPadForH5TestVC: UIViewController {
-    let name = "DecimalNumberPadForH5TestVC"
+class LFMessageTestVC: UIViewController {
+    let name = "LFMessageTestVC"
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -18,7 +18,7 @@ class DecimalNumberPadForH5TestVC: UIViewController {
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         
-        view.backgroundColor = UIColor.blue
+        view.backgroundColor = UIColor.purple
     }
     
     required init?(coder aDecoder: NSCoder) {

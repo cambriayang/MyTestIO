@@ -9,7 +9,7 @@
 import UIKit
 
 class MyTestRootVC: BaseViewController {
-    let testDataSource = [String(describing: "DecimalNumberPadForH5TestVC")];
+    let testDataSource = [String(describing: "DecimalNumberPadForH5TestVC"), String(describing:"LFMessageTestVC")];
     
     //MARK: --- Life Cycle
     deinit {

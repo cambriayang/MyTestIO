@@ -21,6 +21,7 @@
 		CA127F8E1CA7CA6A00DEE218 /* ASDKTestOn4STests.m in Sources */ = {isa = PBXBuildFile; fileRef = CA127F8D1CA7CA6A00DEE218 /* ASDKTestOn4STests.m */; };
 		CA127F991CA7CA6A00DEE218 /* ASDKTestOn4SUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CA127F981CA7CA6A00DEE218 /* ASDKTestOn4SUITests.m */; };
 		CA13CACB1CA8FD5600E3335C /* WithASDKTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CA13CACA1CA8FD5600E3335C /* WithASDKTableViewCell.m */; };
+		CA18E9511DEAFFC9008C718C /* LFMessageTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA18E9501DEAFFC9008C718C /* LFMessageTestVC.swift */; };
 		CA3E289D1CF196A80016081F /* NSObject+Swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3E289C1CF196A80016081F /* NSObject+Swizzle.m */; };
 		CA46476F1CF18B23006F2A54 /* JRSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = CA46476E1CF18B23006F2A54 /* JRSwizzle.m */; };
 		CA46478B1CF18BA4006F2A54 /* EXTADT.m in Sources */ = {isa = PBXBuildFile; fileRef = CA4647741CF18BA4006F2A54 /* EXTADT.m */; };
@@ -94,6 +95,7 @@
 		CA127F9A1CA7CA6A00DEE218 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA13CAC91CA8FD5600E3335C /* WithASDKTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WithASDKTableViewCell.h; sourceTree = "<group>"; };
 		CA13CACA1CA8FD5600E3335C /* WithASDKTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WithASDKTableViewCell.m; sourceTree = "<group>"; };
+		CA18E9501DEAFFC9008C718C /* LFMessageTestVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LFMessageTestVC.swift; sourceTree = "<group>"; };
 		CA3E289B1CF196A80016081F /* NSObject+Swizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Swizzle.h"; sourceTree = "<group>"; };
 		CA3E289C1CF196A80016081F /* NSObject+Swizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Swizzle.m"; sourceTree = "<group>"; };
 		CA46476D1CF18B23006F2A54 /* JRSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRSwizzle.h; sourceTree = "<group>"; };
@@ -384,6 +386,7 @@
 			isa = PBXGroup;
 			children = (
 				CACE293C1D85B021009B4A69 /* DecimalNumberPadForH5TestVC.swift */,
+				CA18E9501DEAFFC9008C718C /* LFMessageTestVC.swift */,
 				CAD615411D8709B000804F1E /* MyInstance.swift */,
 				CAD615431D87133300804F1E /* MyTestInstance.h */,
 				CAD615441D87133300804F1E /* MyTestInstance.m */,
@@ -606,6 +609,7 @@
 				CA46478B1CF18BA4006F2A54 /* EXTADT.m in Sources */,
 				CACE293D1D85B021009B4A69 /* DecimalNumberPadForH5TestVC.swift in Sources */,
 				CA46478E1CF18BA4006F2A54 /* EXTRuntimeExtensions.m in Sources */,
+				CA18E9511DEAFFC9008C718C /* LFMessageTestVC.swift in Sources */,
 				CAEB6DCE1CA82CB60058C699 /* BaseViewController.m in Sources */,
 				CA127F781CA7CA6A00DEE218 /* AppDelegate.m in Sources */,
 				24D57BDA1DE7F2D500A06318 /* LFMessage.m in Sources */,
