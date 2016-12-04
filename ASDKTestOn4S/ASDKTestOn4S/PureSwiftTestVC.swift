@@ -54,10 +54,13 @@ class PureSwiftTestVC: UIViewController {
             sleep(10)
         }
         
+        let accumulated =  [1, 2, 3, 4].accumulate(initial: 0, combine: +)
         
-        let result =  [1, 2, 3, 4].accumulate(initial: 0, combine: +)
+        print("accumulated is:\(accumulated)")
         
-        print("result is:\(result)")
+        let square = (1..<10).map{$0 * $0}.filter{$0 % 2 == 0}
+        
+        print("square is:\(square)")
     }
     
     override func viewWillAppear(_ animated: Bool) {
