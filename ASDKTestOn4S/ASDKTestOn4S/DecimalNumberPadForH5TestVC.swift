@@ -11,14 +11,11 @@ import Foundation
 class DecimalNumberPadForH5TestVC: UIViewController {
     let name = "DecimalNumberPadForH5TestVC"
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-    
+    //MARK: --- Initital
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         
-        view.backgroundColor = UIColor.blue
+        view.backgroundColor = UIColor.white
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -27,5 +24,18 @@ class DecimalNumberPadForH5TestVC: UIViewController {
     
     convenience init() {
         self.init(nibName: nil, bundle:  nil)
+    }
+    
+    //MARK: --- Life Cycle
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
     }
 }

@@ -18,7 +18,7 @@ class LFMessageTestVC: UIViewController {
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         
-        view.backgroundColor = UIColor.purple
+        view.backgroundColor = UIColor.white
     }
     
     required init?(coder aDecoder: NSCoder) {

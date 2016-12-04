@@ -9,7 +9,7 @@
 import UIKit
 
 class MyTestRootVC: BaseViewController {
-    let testDataSource = [String(describing: "DecimalNumberPadForH5TestVC"), String(describing:"LFMessageTestVC")];
+    let testDataSource = [String(describing: "DecimalNumberPadForH5TestVC"), String(describing:"LFMessageTestVC"), String(describing: "PureSwiftTestVC")];
     
     //MARK: --- Life Cycle
     deinit {
@@ -22,26 +22,6 @@ class MyTestRootVC: BaseViewController {
         self.baseTableView.register(UINib.init(nibName: "MyTestRootVCCell", bundle: nil), forCellReuseIdentifier: "MyTestRootVCCell")
         
         self.title = "MyTestRootVC"
-        
-        //new way, Swift 3
-        let queue = DispatchQueue(label: "shshsh.shshshshshshsh")
-        
-        //Right Email Regx
-        let mailPattern = "^([a-zA-Z0-9]+[-|_\\-\\.])*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_\\-\\.])*[a-zA-Z0-9]+\\.[a-zA-Z]{2,3}$"
-        
-        let matcher = MyRegex(mailPattern)
-        let maybeMailAddress = "m@m-comx.cxn"
-        
-        if matcher.match(maybeMailAddress) {
-            print("Correct Email!")
-        }
-        else{
-            print("Wrong Email!")
-        }
-        
-        queue.async {
-            sleep(10)
-        }
     }
     
     override func viewWillLayoutSubviews() {
@@ -86,26 +66,6 @@ class MyTestRootVC: BaseViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return testDataSource.count
-    }
-    
-    //MARK: --- Regular
-    struct MyRegex {
-        let regex: NSRegularExpression?
-        
-        init(_ pattern: String) {
-            regex = try? NSRegularExpression(pattern: pattern, options: .caseInsensitive)
-        }
-        
-        func match(_ input: String) -> Bool {
-            if let matches = regex?.matches(in: input,
-                                                    options: [],
-                                                    range: NSMakeRange(0, (input as NSString).length)) {
-                return matches.count > 0
-            }
-            else {
-                return false
-            }
-        }
     }
 }
 
