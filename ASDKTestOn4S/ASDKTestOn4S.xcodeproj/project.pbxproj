@@ -11,6 +11,7 @@
 		24D57BDA1DE7F2D500A06318 /* LFMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D57BD51DE7F2D500A06318 /* LFMessage.m */; };
 		24D57BDB1DE7F2D500A06318 /* LFMessageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D57BD71DE7F2D500A06318 /* LFMessageManager.m */; };
 		24D57BDC1DE7F2D500A06318 /* LFMessageTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D57BD91DE7F2D500A06318 /* LFMessageTask.m */; };
+		24DED14F1DF661E6005C727F /* LFBlockQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DED14E1DF661E6005C727F /* LFBlockQueue.m */; };
 		93A990A9C77245BF2BC2488F /* libPods-ASDKTestOn4S.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59C6F164B84E05FE8F8CDDAB /* libPods-ASDKTestOn4S.a */; };
 		CA0417DB1DF45152007D8B54 /* PureSwiftTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0417DA1DF45152007D8B54 /* PureSwiftTestVC.swift */; };
 		CA127F751CA7CA6A00DEE218 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CA127F741CA7CA6A00DEE218 /* main.m */; };
@@ -75,6 +76,8 @@
 		24D57BD71DE7F2D500A06318 /* LFMessageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFMessageManager.m; sourceTree = "<group>"; };
 		24D57BD81DE7F2D500A06318 /* LFMessageTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFMessageTask.h; sourceTree = "<group>"; };
 		24D57BD91DE7F2D500A06318 /* LFMessageTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFMessageTask.m; sourceTree = "<group>"; };
+		24DED14D1DF661E6005C727F /* LFBlockQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFBlockQueue.h; sourceTree = "<group>"; };
+		24DED14E1DF661E6005C727F /* LFBlockQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFBlockQueue.m; sourceTree = "<group>"; };
 		59C6F164B84E05FE8F8CDDAB /* libPods-ASDKTestOn4S.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ASDKTestOn4S.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AD5D2440681B1B2606007EE /* Pods-ASDKTestOn4S.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASDKTestOn4S.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ASDKTestOn4S/Pods-ASDKTestOn4S.debug.xcconfig"; sourceTree = "<group>"; };
 		B4D7EC839D8B36B95FE5F37B /* Pods-ASDKTestOn4S.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASDKTestOn4S.release.xcconfig"; path = "Pods/Target Support Files/Pods-ASDKTestOn4S/Pods-ASDKTestOn4S.release.xcconfig"; sourceTree = "<group>"; };
@@ -204,6 +207,8 @@
 				24D57BD71DE7F2D500A06318 /* LFMessageManager.m */,
 				24D57BD81DE7F2D500A06318 /* LFMessageTask.h */,
 				24D57BD91DE7F2D500A06318 /* LFMessageTask.m */,
+				24DED14D1DF661E6005C727F /* LFBlockQueue.h */,
+				24DED14E1DF661E6005C727F /* LFBlockQueue.m */,
 			);
 			name = LFMessageCenter;
 			sourceTree = "<group>";
@@ -590,6 +595,7 @@
 				CA4647901CF18BA4006F2A54 /* EXTScope.m in Sources */,
 				CA56B0E91CF053220018B554 /* NSMutableArray+SafeAdd.m in Sources */,
 				24D57BDB1DE7F2D500A06318 /* LFMessageManager.m in Sources */,
+				24DED14F1DF661E6005C727F /* LFBlockQueue.m in Sources */,
 				CA46478D1CF18BA4006F2A54 /* EXTNil.m in Sources */,
 				CAEB6DD21CA82CD00058C699 /* WithoutASDKViewController.m in Sources */,
 				CA3E289D1CF196A80016081F /* NSObject+Swizzle.m in Sources */,

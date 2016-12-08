@@ -8,6 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+@class LFMessage;
+
+typedef void (^MessageAction) ();
+
 typedef NS_ENUM(NSUInteger, LFMessageType) {
     LFMessageTypeDefault = 0,
     LFMessageTypeVCAction
@@ -19,16 +24,21 @@ typedef NS_ENUM(NSUInteger, LFMessagePriority) {
     LFMessagePriorityRequired
 };
 
-NS_ASSUME_NONNULL_BEGIN
-
 @interface LFMessage : NSObject
 
-@property (nonatomic, copy) NSString *messageID;
-@property (nonatomic, copy) NSString *messageName;
+@property (nonatomic, copy, readonly) NSString *messageID;
+@property (nonatomic, copy, readonly) NSString *messageName;
+@property (nonatomic, copy) MessageAction messageAction;
 @property (nonatomic, assign) LFMessageType messageType;
 @property (nonatomic, assign) LFMessagePriority messagePriority;
+@property (nonatomic, strong, readonly) NSArray <__kindof LFMessage *> *subMessages;
 
 + (LFMessage *)messageWithName:(NSString *)name;
++ (LFMessage *)messageWithName:(NSString *)name subMessages:(NSArray <__kindof LFMessage *> *)subMessages;
++ (LFMessage *)messageWithName:(NSString *)name messageType:(LFMessageType)type messagePriority:(LFMessagePriority)priority;
++ (LFMessage *)messageWithName:(NSString *)name messageType:(LFMessageType)type messagePriority:(LFMessagePriority)priority subMessages:(NSArray <__kindof LFMessage *> *)subMessages;
+
+- (void)addAction:(MessageAction)action;
 
 @end
 

@@ -10,5 +10,8 @@
 #define ASDKTestOn4S_Bridging_Header_h
 
 #import "BaseViewController.h"
+#import "LFMessage.h"
+#import "LFMessageTask.h"
+#import "LFMessageManager.h"
 
 #endif /* ASDKTestOn4S_Bridging_Header_h */

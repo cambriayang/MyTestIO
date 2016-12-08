@@ -9,6 +9,7 @@
 #import "LFMessageManager.h"
 
 #import <objc/message.h>
+#import "LFMessage.h"
 
 static const void *LFMessageTarget = &LFMessageTarget;
 static const void *LFMessageSelector = &LFMessageSelector;
@@ -60,71 +61,71 @@ static const void *LFMessageSelector = &LFMessageSelector;
     return self;
 }
 
-- (void)setMaxConcurrentNumber:(NSInteger *)count {
+- (void)setMaxConcurrentNumber:(NSInteger)count {
     self.requestQueue.maxConcurrentOperationCount = count;
 }
 
-- (void)registerMessage:(LFMessage *)message Target:(id)target Hander:(SEL)selector {
-    objc_setAssociatedObject(message, LFMessageTarget, target, OBJC_ASSOCIATION_ASSIGN);
-    objc_setAssociatedObject(message, LFMessageSelector, NSStringFromSelector(selector), OBJC_ASSOCIATION_COPY);
+//- (void)registerMessage:(LFMessage *)message Target:(id)target Hander:(SEL)selector {
+//    objc_setAssociatedObject(message, LFMessageTarget, target, OBJC_ASSOCIATION_ASSIGN);
+//    objc_setAssociatedObject(message, LFMessageSelector, NSStringFromSelector(selector), OBJC_ASSOCIATION_COPY);
+//    
+//    Ivar ivar = class_getInstanceVariable([LFMessage class], [@"messageID" cStringUsingEncoding:NSUTF8StringEncoding]);
     
-    Ivar ivar = class_getInstanceVariable([LFMessage class], [@"messageID" cStringUsingEncoding:NSUTF8StringEncoding]);
-    
-    switch (message.messageType) {
-        case LFMessagePriorityDefault:{
-            [self.defaultPriority addObject:message];
-        }
-            break;
-        case LFMessagePriorityHigh:{
-            [self.highPriority addObject:message];
-        }
-            break;
-        case LFMessagePriorityRequired:{
-            [self.requiredPriority addObject:message];
-        }
-            break;
-        default:
-            break;
-    }
-    
-    if (![target respondsToSelector:selector]) {
-        @throw [NSException exceptionWithName:@"Wrong selector" reason:[NSString stringWithFormat:@"==[%@, cannot responds]==", target] userInfo:nil];
-    }
-}
+//    switch (message.messageType) {
+//        case LFMessagePriorityDefault:{
+//            [self.defaultPriority addObject:message];
+//        }
+//            break;
+//        case LFMessagePriorityHigh:{
+//            [self.highPriority addObject:message];
+//        }
+//            break;
+//        case LFMessagePriorityRequired:{
+//            [self.requiredPriority addObject:message];
+//        }
+//            break;
+//        default:
+//            break;
+//    }
+//    
+//    if (![target respondsToSelector:selector]) {
+//        @throw [NSException exceptionWithName:@"Wrong selector" reason:[NSString stringWithFormat:@"==[%@, cannot responds]==", target] userInfo:nil];
+//    }
+//}
 
-- (void)sendMessage:(NSString *)messageName {
-    //Required
-    [self.requiredPriority enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        LFMessage *message = (LFMessage *)obj;
-        
-        [self innerSendMessage:message];
-    }];
-    
-    //High
-    [self.highPriority enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        LFMessage *message = (LFMessage *)obj;
-        
-        [self innerSendMessage:message];
-    }];
-    
-    //Low
-    [self.defaultPriority enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        LFMessage *message = (LFMessage *)obj;
-        
-        [self innerSendMessage:message];
-    }];
-}
+//- (void)sendMessage:(NSString *)messageName {
+//    //Required
+//    [self.requiredPriority enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+//        LFMessage *message = (LFMessage *)obj;
+//        
+//        [self innerSendMessage:message];
+//    }];
+//    
+//    //High
+//    [self.highPriority enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+//        LFMessage *message = (LFMessage *)obj;
+//        
+//        [self innerSendMessage:message];
+//    }];
+//    
+//    //Low
+//    [self.defaultPriority enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+//        LFMessage *message = (LFMessage *)obj;
+//        
+//        [self innerSendMessage:message];
+//    }];
+//}
 
-- (void)innerSendMessage:(LFMessage *)message {
-    int (*sendMsg)(id, SEL, int) = (int (*)(id, SEL, int))objc_msgSend;
-    
-    NSString *selectorStr = objc_getAssociatedObject(message, LFMessageTarget);
-    
-    id target = objc_getAssociatedObject(message, LFMessageSelector);
-    
-    SEL selector = NSSelectorFromString(selectorStr);
-    
-    sendMsg(target, selector, 0);
-}
+//- (void)innerSendMessage:(LFMessage *)message {
+//    int (*sendMsg)(id, SEL, int) = (int (*)(id, SEL, int))objc_msgSend;
+//    
+//    NSString *selectorStr = objc_getAssociatedObject(message, LFMessageTarget);
+//    
+//    id target = objc_getAssociatedObject(message, LFMessageSelector);
+//    
+//    SEL selector = NSSelectorFromString(selectorStr);
+//    
+//    sendMsg(target, selector, 0);
+//}
 
 @end

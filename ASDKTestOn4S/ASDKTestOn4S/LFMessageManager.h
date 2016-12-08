@@ -8,18 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
-#import "LFMessage.h"
+NS_ASSUME_NONNULL_BEGIN
 
-
+@class LFMessage;
 
 @interface LFMessageManager : NSObject
 
 + (instancetype)shareInstance;
 
-- (void)registerMessage:(LFMessage *)message Target:(id)target Hander:(SEL)selector;
-
-- (void)sendMessage:(NSString *)messageName;
-
-- (void)setMaxConcurrentNumber:(NSInteger *)count;
+- (void)setMaxConcurrentNumber:(NSInteger)count;
 
 @end
+
+NS_ASSUME_NONNULL_END
