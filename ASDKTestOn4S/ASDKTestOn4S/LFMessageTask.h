@@ -8,9 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+@class LFMessage;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface LFMessageTask : NSOperation
+
+- (instancetype)initWithMessage:(LFMessage *)message;
 
 @end
 

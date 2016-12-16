@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2443B62B1DE6C53B003F0F1C /* MyInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD615411D8709B000804F1E /* MyInstance.swift */; };
+		24C1EE4E1E0406E500C26B00 /* findXibs.py in Resources */ = {isa = PBXBuildFile; fileRef = 24C1EE4D1E0406E500C26B00 /* findXibs.py */; };
 		24D57BDA1DE7F2D500A06318 /* LFMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D57BD51DE7F2D500A06318 /* LFMessage.m */; };
 		24D57BDB1DE7F2D500A06318 /* LFMessageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D57BD71DE7F2D500A06318 /* LFMessageManager.m */; };
 		24D57BDC1DE7F2D500A06318 /* LFMessageTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D57BD91DE7F2D500A06318 /* LFMessageTask.m */; };
@@ -70,6 +71,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		24C1EE4D1E0406E500C26B00 /* findXibs.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = findXibs.py; sourceTree = "<group>"; };
 		24D57BD41DE7F2D500A06318 /* LFMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFMessage.h; sourceTree = "<group>"; };
 		24D57BD51DE7F2D500A06318 /* LFMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFMessage.m; sourceTree = "<group>"; };
 		24D57BD61DE7F2D500A06318 /* LFMessageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFMessageManager.h; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 		24D57BDD1DE7F2DB00A06318 /* LFMessageCenter */ = {
 			isa = PBXGroup;
 			children = (
+				24C1EE4D1E0406E500C26B00 /* findXibs.py */,
 				24D57BD41DE7F2D500A06318 /* LFMessage.h */,
 				24D57BD51DE7F2D500A06318 /* LFMessage.m */,
 				24D57BD61DE7F2D500A06318 /* LFMessageManager.h */,
@@ -519,6 +522,7 @@
 				CAEB6DDB1CA83E350058C699 /* WithoutASDKTableViewCell.xib in Resources */,
 				CA127F831CA7CA6A00DEE218 /* LaunchScreen.storyboard in Resources */,
 				CA127F801CA7CA6A00DEE218 /* Assets.xcassets in Resources */,
+				24C1EE4E1E0406E500C26B00 /* findXibs.py in Resources */,
 				CA127F7E1CA7CA6A00DEE218 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

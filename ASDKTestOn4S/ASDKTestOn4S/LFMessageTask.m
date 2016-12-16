@@ -13,6 +13,7 @@
 @interface LFMessageTask ()
 
 @property (nonatomic, strong) LFMessage *message;
+@property (atomic, strong) NSArray <__kindof LFMessage *> *siblings;
 
 @end
 
@@ -31,11 +32,17 @@
     
 }
 
+- (instancetype)init {
+    @throw [NSException exceptionWithName:[NSString stringWithFormat:@"==[Wrong Initialization: %s]==", __FUNCTION__] reason:@"==[Pleas use '+initWithMessage' initializer]==" userInfo:nil];
+    
+    return [super init];
+}
+
 - (instancetype)initWithMessage:(LFMessage *)message {
     self = [super init];
     
     if (self) {
-        
+        self.message = _message;
     }
     
     return self;
