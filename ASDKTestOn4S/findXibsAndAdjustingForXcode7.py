@@ -45,7 +45,6 @@ def isXcode8Xibs(path, file):
 
     if flag in file:
         print path
-        Xcode8Xibs.append(path)
         return True
     else:
         return False
