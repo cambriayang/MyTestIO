@@ -54,5 +54,5 @@ def isXcode8Xibs(path, file):
 if __name__ == "__main__":
     findXibs(argv[1])
 
-    print "Xcode8 version's xibs\n(Listed above. If not means all xibs are compatible with Xcode7)\nhave been modified to be compatible with Xcode7"
+    print "\nXcode8 version's xibs\n(Listed above. If not means all xibs are compatible with Xcode7)\nhave been modified to be compatible with Xcode7"
         
