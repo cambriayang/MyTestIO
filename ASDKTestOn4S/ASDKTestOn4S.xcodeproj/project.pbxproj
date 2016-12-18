@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		2443B62B1DE6C53B003F0F1C /* MyInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD615411D8709B000804F1E /* MyInstance.swift */; };
-		24C1EE4E1E0406E500C26B00 /* findXibs.py in Resources */ = {isa = PBXBuildFile; fileRef = 24C1EE4D1E0406E500C26B00 /* findXibs.py */; };
 		24D57BDA1DE7F2D500A06318 /* LFMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D57BD51DE7F2D500A06318 /* LFMessage.m */; };
 		24D57BDB1DE7F2D500A06318 /* LFMessageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D57BD71DE7F2D500A06318 /* LFMessageManager.m */; };
 		24D57BDC1DE7F2D500A06318 /* LFMessageTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D57BD91DE7F2D500A06318 /* LFMessageTask.m */; };
 		24DED14F1DF661E6005C727F /* LFBlockQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DED14E1DF661E6005C727F /* LFBlockQueue.m */; };
 		93A990A9C77245BF2BC2488F /* libPods-ASDKTestOn4S.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59C6F164B84E05FE8F8CDDAB /* libPods-ASDKTestOn4S.a */; };
 		CA0417DB1DF45152007D8B54 /* PureSwiftTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0417DA1DF45152007D8B54 /* PureSwiftTestVC.swift */; };
+		CA0417E01E070C63007D8B54 /* findXibsAndAdjustingForXcode7.py in Resources */ = {isa = PBXBuildFile; fileRef = CA0417DF1E070C63007D8B54 /* findXibsAndAdjustingForXcode7.py */; };
 		CA127F751CA7CA6A00DEE218 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CA127F741CA7CA6A00DEE218 /* main.m */; };
 		CA127F781CA7CA6A00DEE218 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CA127F771CA7CA6A00DEE218 /* AppDelegate.m */; };
 		CA127F7B1CA7CA6A00DEE218 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA127F7A1CA7CA6A00DEE218 /* ViewController.m */; };
@@ -71,7 +71,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		24C1EE4D1E0406E500C26B00 /* findXibs.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = findXibs.py; sourceTree = "<group>"; };
 		24D57BD41DE7F2D500A06318 /* LFMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFMessage.h; sourceTree = "<group>"; };
 		24D57BD51DE7F2D500A06318 /* LFMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFMessage.m; sourceTree = "<group>"; };
 		24D57BD61DE7F2D500A06318 /* LFMessageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFMessageManager.h; sourceTree = "<group>"; };
@@ -84,6 +83,7 @@
 		9AD5D2440681B1B2606007EE /* Pods-ASDKTestOn4S.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASDKTestOn4S.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ASDKTestOn4S/Pods-ASDKTestOn4S.debug.xcconfig"; sourceTree = "<group>"; };
 		B4D7EC839D8B36B95FE5F37B /* Pods-ASDKTestOn4S.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASDKTestOn4S.release.xcconfig"; path = "Pods/Target Support Files/Pods-ASDKTestOn4S/Pods-ASDKTestOn4S.release.xcconfig"; sourceTree = "<group>"; };
 		CA0417DA1DF45152007D8B54 /* PureSwiftTestVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PureSwiftTestVC.swift; sourceTree = "<group>"; };
+		CA0417DF1E070C63007D8B54 /* findXibsAndAdjustingForXcode7.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = findXibsAndAdjustingForXcode7.py; sourceTree = "<group>"; };
 		CA127F701CA7CA6A00DEE218 /* ASDKTestOn4S.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ASDKTestOn4S.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA127F741CA7CA6A00DEE218 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CA127F761CA7CA6A00DEE218 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -203,7 +203,6 @@
 		24D57BDD1DE7F2DB00A06318 /* LFMessageCenter */ = {
 			isa = PBXGroup;
 			children = (
-				24C1EE4D1E0406E500C26B00 /* findXibs.py */,
 				24D57BD41DE7F2D500A06318 /* LFMessage.h */,
 				24D57BD51DE7F2D500A06318 /* LFMessage.m */,
 				24D57BD61DE7F2D500A06318 /* LFMessageManager.h */,
@@ -233,6 +232,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CA0417DE1E06DF73007D8B54 /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				CA0417DF1E070C63007D8B54 /* findXibsAndAdjustingForXcode7.py */,
+			);
+			name = Scripts;
+			sourceTree = "<group>";
+		};
 		CA127F671CA7CA6A00DEE218 = {
 			isa = PBXGroup;
 			children = (
@@ -258,6 +265,7 @@
 		CA127F721CA7CA6A00DEE218 /* ASDKTestOn4S */ = {
 			isa = PBXGroup;
 			children = (
+				CA0417DE1E06DF73007D8B54 /* Scripts */,
 				CA4647711CF18B5C006F2A54 /* JRSwizzle */,
 				CA4647721CF18B69006F2A54 /* Extobjc */,
 				CACE29301D856795009B4A69 /* MainVC */,
@@ -521,8 +529,8 @@
 				CAEB6DD31CA82CD00058C699 /* WithoutASDKViewController.xib in Resources */,
 				CAEB6DDB1CA83E350058C699 /* WithoutASDKTableViewCell.xib in Resources */,
 				CA127F831CA7CA6A00DEE218 /* LaunchScreen.storyboard in Resources */,
+				CA0417E01E070C63007D8B54 /* findXibsAndAdjustingForXcode7.py in Resources */,
 				CA127F801CA7CA6A00DEE218 /* Assets.xcassets in Resources */,
-				24C1EE4E1E0406E500C26B00 /* findXibs.py in Resources */,
 				CA127F7E1CA7CA6A00DEE218 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
