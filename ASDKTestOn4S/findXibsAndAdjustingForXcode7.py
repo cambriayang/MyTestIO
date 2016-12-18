@@ -37,25 +37,23 @@ def findXibs(path):
                 fileReader.close()    
 
                 if os.path.isfile(copyFile):
-	                	os.remove(copyFile)       
+	                	os.remove(copyFile)                   
 
-def replace(path, file):
-    flag = '<capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>'
-
-    if flag in file:
-        result1 = file.replace('%s' %flag, '')
-        result2 = result1.replace('<deployment identifier="iOS"/>', '<deployment identifier="iOS"/>\n<development version="7000" identifier="xcode"/>')
-        print '==========[%s]=========\n' %(path)
-        print '+++++++++\n%s--------' %(result2)
-        return result2
 
 def isXcode8Xibs(path, file):
     flag = '<capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>'
 
     if flag in file:
+        print path
+        Xcode8Xibs.append(path)
         return True
     else:
         return False
 
+
+
 if __name__ == "__main__":
     findXibs(argv[1])
+
+    print "Xcode8 version's xibs\n(Listed above. If not means all xibs are compatible with Xcode7)\nhave been modified to be compatible with Xcode7"
+        
