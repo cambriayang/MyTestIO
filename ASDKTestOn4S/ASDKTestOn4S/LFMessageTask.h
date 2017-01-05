@@ -14,7 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LFMessageTask : NSOperation
 
-- (instancetype)initWithMessage:(LFMessage *)message;
+- (instancetype)initWithMessage:(__kindof LFMessage *)message;
+- (__kindof LFMessage *)getMessage;
 
 @end
 

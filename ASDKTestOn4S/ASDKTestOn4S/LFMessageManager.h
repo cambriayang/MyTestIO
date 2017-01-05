@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#import "LFMessageTask.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
 @class LFMessage;
@@ -16,7 +18,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)shareInstance;
 
-- (void)setMaxConcurrentNumber:(NSInteger)count;
+- (void)submitTask:(__kindof LFMessageTask *)task;
+
+- (void)submitTasks:(NSArray <__kindof LFMessageTask *> *)tasks;
 
 @end
 

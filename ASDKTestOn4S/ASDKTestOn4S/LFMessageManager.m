@@ -11,12 +11,11 @@
 #import <objc/message.h>
 #import "LFMessage.h"
 
-static const void *LFMessageTarget = &LFMessageTarget;
-static const void *LFMessageSelector = &LFMessageSelector;
-
 @interface LFMessageManager ()
 
-@property (nonatomic, strong) NSOperationQueue *requestQueue;
+@property (nonatomic, strong) NSOperationQueue *defaultQueue;
+@property (nonatomic, strong) NSOperationQueue *vcActionQueue;
+
 @property (atomic, strong) NSMutableArray *defaultPriority;
 @property (atomic, strong) NSMutableArray *highPriority;
 @property (atomic, strong) NSMutableArray *requiredPriority;
@@ -49,20 +48,23 @@ static const void *LFMessageSelector = &LFMessageSelector;
     self = [super init];
     
     if (self) {
-        self.requestQueue = [[NSOperationQueue alloc] init];
+        _defaultQueue = [[NSOperationQueue alloc] init];
         
-        self.requestQueue.maxConcurrentOperationCount = 1;
+        _vcActionQueue = [[NSOperationQueue alloc] init];
         
-        self.defaultPriority = [NSMutableArray array];
-        self.highPriority = [NSMutableArray array];
-        self.requiredPriority = [NSMutableArray array];
+        _defaultQueue.maxConcurrentOperationCount = 1;
+        _vcActionQueue.maxConcurrentOperationCount = 1;
+        
+        _defaultPriority = [NSMutableArray array];
+        _highPriority = [NSMutableArray array];
+        _requiredPriority = [NSMutableArray array];
     }
     
     return self;
 }
 
-- (void)setMaxConcurrentNumber:(NSInteger)count {
-    self.requestQueue.maxConcurrentOperationCount = count;
+- (void)submitTask:(__kindof LFMessageTask *)task {
+    
 }
 
 //- (void)registerMessage:(LFMessage *)message Target:(id)target Hander:(SEL)selector {

@@ -58,4 +58,8 @@
     return self;
 }
 
+- (LFMessage *)getMessage {
+    return _message;
+}
+
 @end

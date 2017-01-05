@@ -10,7 +10,7 @@
 
 @interface LFMessage () {
     @private
-    NSMutableArray <__kindof LFMessage *> *innerSubMessages;
+    NSMutableArray <__kindof LFMessage *> *innerExcludedMessages;
 }
 
 @property (nonatomic, copy, readwrite) NSString *messageID;
@@ -75,9 +75,9 @@
 }
 
 #pragma mark --- Set & Get
-- (NSArray <__kindof LFMessage *> *)subMessages {
-    if (innerSubMessages && innerSubMessages.count > 0) {
-        return [NSArray arrayWithArray:innerSubMessages];
+- (NSArray <__kindof LFMessage *> *)innerExcludedMessages {
+    if (innerExcludedMessages && innerExcludedMessages.count > 0) {
+        return [NSArray arrayWithArray:innerExcludedMessages];
     } else {
         NSLog(@"==[LFMessage(%@): donnot have sub messages]==", self);
         

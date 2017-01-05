@@ -36,13 +36,13 @@ class LFMessageTestVC: UIViewController {
         
         let m1 = LFMessage(name: "xxx");
         let m2 = LFMessage(name: "yyy", messageType:LFMessageType.vcAction, messagePriority:LFMessagePriority.default)
-        let m3 = LFMessage(name: "zzz", subMessages: [m1, m2])
+        let m3 = LFMessage(name: "zzz", excludedMessages: [m1, m2])
         
-        print("m1: \(m1.subMessages)")
+        print("m1: \(m1.excludedMessages)")
         
-        print("m2: \(m2.subMessages)")
+        print("m2: \(m2.excludedMessages)")
         
-        print("m3: \(m3.subMessages)")
+        print("m3: \(m3.excludedMessages)")
 //        LFMessage *m1 = [LFMessage message]
     }
 }
