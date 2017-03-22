@@ -67,6 +67,9 @@
     
 }
 
+- (void)submitTasks:(NSArray <__kindof LFMessageTask *> *)tasks {
+    
+}
 //- (void)registerMessage:(LFMessage *)message Target:(id)target Hander:(SEL)selector {
 //    objc_setAssociatedObject(message, LFMessageTarget, target, OBJC_ASSOCIATION_ASSIGN);
 //    objc_setAssociatedObject(message, LFMessageSelector, NSStringFromSelector(selector), OBJC_ASSOCIATION_COPY);

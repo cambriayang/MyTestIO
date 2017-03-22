@@ -30,7 +30,6 @@
     
     [message setValue:nil forKey:@"innerSubMessages"];
     
-#warning userID should be true
     NSString *userID = @"xxxxx";
     message.messageID = [NSString stringWithFormat:@"%@_%@", userID, name];
     
@@ -55,6 +54,14 @@
     message.messagePriority = priority;
     
     return message;
+}
+
++ (LFMessage *)messageWithName:(NSString *)name excludedMessages:(NSArray <__kindof LFMessage *> *)excludedMessages {
+    return nil;
+}
+
++ (LFMessage *)messageWithName:(NSString *)name messageType:(LFMessageType)type messagePriority:(LFMessagePriority)priority excludedMessages:(NSArray <__kindof LFMessage *> *)excludedMessages {
+    return nil;
 }
 
 + (LFMessage *)messageWithName:(NSString *)name messageType:(LFMessageType)type messagePriority:(LFMessagePriority)priority subMessages:(NSArray <__kindof LFMessage *> *)subMessages {

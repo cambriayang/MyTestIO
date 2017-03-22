@@ -13,5 +13,6 @@
 #import "LFMessage.h"
 #import "LFMessageTask.h"
 #import "LFMessageManager.h"
+#import "PureOCViewController.h"
 
 #endif /* ASDKTestOn4S_Bridging_Header_h */

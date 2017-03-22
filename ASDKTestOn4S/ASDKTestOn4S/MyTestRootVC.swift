@@ -9,7 +9,7 @@
 import UIKit
 
 class MyTestRootVC: BaseViewController {
-    let testDataSource = [String(describing: "DecimalNumberPadForH5TestVC"), String(describing:"LFMessageTestVC"), String(describing: "PureSwiftTestVC")];
+    let testDataSource = [String(describing: "DecimalNumberPadForH5TestVC"), String(describing:"LFMessageTestVC"), String(describing: "PureSwiftTestVC"), String(describing:"PureOCViewController")];
     
     //MARK: --- Life Cycle
     deinit {
@@ -54,7 +54,11 @@ class MyTestRootVC: BaseViewController {
         
         let testCase = testDataSource[indexPath.row]
         
-        if let vc = swiftClassFromString(testCase) {
+        if testCase == "PureOCViewController" {
+            let vc = PureOCViewController.init()
+                        
+            self.navigationController?.pushViewController(vc, animated: true)
+        } else if let vc = swiftClassFromString(testCase) {
             vc.title = testCase
             self.navigationController?.pushViewController(vc, animated: true)
         }

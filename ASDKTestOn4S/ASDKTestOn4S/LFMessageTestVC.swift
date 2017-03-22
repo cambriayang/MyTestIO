@@ -34,15 +34,14 @@ class LFMessageTestVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        let m1 = LFMessage(name: "xxx");
-        let m2 = LFMessage(name: "yyy", messageType:LFMessageType.vcAction, messagePriority:LFMessagePriority.default)
-        let m3 = LFMessage(name: "zzz", excludedMessages: [m1, m2])
-        
-        print("m1: \(m1.excludedMessages)")
-        
-        print("m2: \(m2.excludedMessages)")
-        
-        print("m3: \(m3.excludedMessages)")
-//        LFMessage *m1 = [LFMessage message]
+//        let m1 = LFMessage(name: "xxx");
+//        let m2 = LFMessage(name: "yyy", messageType:LFMessageType.vcAction, messagePriority:LFMessagePriority.default)
+//        let m3 = LFMessage(name: "zzz", excludedMessages: [m1, m2])
+//        
+//        print("m1: \(m1.excludedMessages)")
+//        
+//        print("m2: \(m2.excludedMessages)")
+//        
+//        print("m3: \(m3.excludedMessages)")
     }
 }
