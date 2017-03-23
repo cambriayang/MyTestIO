@@ -17,11 +17,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.view.backgroundColor = [UIColor whiteColor];
+//    self.navigationController.navigationBar.hidden = YES;
+    
+    CGFloat viewWidth = CGRectGetWidth(self.view.frame);
+    CGFloat viewHeight = CGRectGetHeight(self.view.frame);
+    
+    self.view.backgroundColor = [UIColor greenColor];
     
     self.title = NSStringFromClass([self class]);
     
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(5, 100, 50, 50)];
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake((viewWidth - 50)/2.0, (viewHeight - 50)/2.0, 50, 50)];
     
     view.backgroundColor = [UIColor redColor];
     
@@ -38,10 +43,10 @@
 
 
 /**
- Get any view's viewcontroller
-
- @param view
- @return viewcontroller
+ Get the View 's father ViewController as long as the view is in the Viewcontroller's hierarchy
+ 
+ @param view targetView
+ @return father ViewController
  */
 - (UIViewController *)getViewControllerOfView:(UIView *)view {
     for (UIView* next = [view superview]; next; next = next.superview) {
