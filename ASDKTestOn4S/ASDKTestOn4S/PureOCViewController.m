@@ -38,7 +38,7 @@
     
     [view addSubview:anotherView];
     
-    NSLog(@"%@", [self getViewControllerOfView:anotherView]);
+    NSLog(@"%@", [[self getViewControllerOfView:anotherView] description]);
 }
 
 
@@ -49,12 +49,18 @@
  @return father ViewController
  */
 - (UIViewController *)getViewControllerOfView:(UIView *)view {
+    if ([view superview] == nil) {
+        UIResponder *nextResponder = [view nextResponder];
+        return  (UIViewController *)nextResponder;
+    }
+    
     for (UIView* next = [view superview]; next; next = next.superview) {
         UIResponder *nextResponder = [next nextResponder];
         if ([nextResponder isKindOfClass:[UIViewController class]]) {
             return (UIViewController *)nextResponder;
         }
     }
+    
     return nil;
 }
 
