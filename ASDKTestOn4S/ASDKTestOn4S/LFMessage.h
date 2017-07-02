@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 @class LFMessage;
 
-typedef void (^MessageAction) ();
+typedef void (^MessageAction) (void);
 
 typedef NS_ENUM(NSUInteger, LFMessageType) {
     LFMessageTypeDefault = 0,
