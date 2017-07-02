@@ -18,15 +18,46 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor greenColor];
+    self.view.backgroundColor = [UIColor lightGrayColor];
+    
+    //    [self testAutoLayout];
+    //    [self testViews];
+    [self testAutoFillOniOS11];
 }
 
-- (void)viewDidLayoutSubviews {
-    [super viewDidLayoutSubviews];
+- (void)testAutoFillOniOS11 {
+    UITextField *f1 = [[UITextField alloc] init];
     
-//    [self testAutoLayout];
+    [self.view addSubview:f1];
+    f1.backgroundColor = [UIColor whiteColor];
+    if (@available(iOS 11.0, *)) {
+        f1.textContentType = UITextContentTypeUsername;
+    } else {
+        // Fallback on earlier versions
+    }
     
-//    [self testViews];
+    [f1 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.view.mas_centerX);
+        make.top.equalTo(self.view.mas_top).offset(100);
+        make.size.mas_equalTo(CGSizeMake(150, 50));
+    }];
+    
+    UITextField *f2 = [[UITextField alloc] init];
+    
+    [self.view addSubview:f2];
+    f2.backgroundColor = [UIColor whiteColor];
+    f2.secureTextEntry = YES;
+    if (@available(iOS 11.0, *)) {
+        f2.textContentType = UITextContentTypePassword;
+    } else {
+        // Fallback on earlier versions
+    }
+    
+    [f2 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.view.mas_centerX);
+        make.top.equalTo(self.view.mas_top).offset(160);
+        make.size.mas_equalTo(CGSizeMake(150, 50));
+    }];
 }
 
 - (void)testViews {
