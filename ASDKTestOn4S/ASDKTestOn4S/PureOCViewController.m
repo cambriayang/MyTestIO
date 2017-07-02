@@ -7,7 +7,6 @@
 //
 
 #import "PureOCViewController.h"
-
 #import <Masonry.h>
 
 @interface PureOCViewController ()
@@ -18,13 +17,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-//    self.navigationController.navigationBar.hidden = YES;
-    
-    CGFloat viewWidth = CGRectGetWidth(self.view.frame);
-    CGFloat viewHeight = CGRectGetHeight(self.view.frame);
     
     self.view.backgroundColor = [UIColor greenColor];
+}
+
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    
+//    [self testAutoLayout];
+    
+//    [self testViews];
+}
+
+- (void)testViews {
+    CGFloat viewWidth = CGRectGetWidth(self.view.frame);
+    CGFloat viewHeight = CGRectGetHeight(self.view.frame);
     
     self.title = NSStringFromClass([self class]);
     
@@ -43,9 +50,7 @@
     NSLog(@"%@", [[self getViewControllerOfView:anotherView] description]);
 }
 
-- (void)viewDidLayoutSubviews {
-    [super viewDidLayoutSubviews];
-    
+- (void)testAutoLayout {
     UILabel *l1 = [[UILabel alloc] init];
     
     l1.text = @"nihaoooooooooooo";
@@ -61,7 +66,7 @@
     [self.view addSubview:l2];
     
     UILabel *l3 = [[UILabel alloc] init];
-
+    
     l3.text = @"tttttttttttttttttttttttttt";
     l3.backgroundColor = [UIColor purpleColor];
     
@@ -83,6 +88,7 @@
         make.top.equalTo(self.view.mas_top).offset(100.0);
     }];
 }
+
 /**
  Get the View 's father ViewController as long as the view is in the Viewcontroller's hierarchy
  
