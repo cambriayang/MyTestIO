@@ -14,4 +14,7 @@
 
 @property (nonatomic, copy) NSString *token;
 
+- (void)cyAddObject2:(id)object;
+- (void)cyAddObject:(id)object;
+
 @end

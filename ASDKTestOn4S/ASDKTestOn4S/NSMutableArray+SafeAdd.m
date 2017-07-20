@@ -39,37 +39,48 @@
      *  2.snappet
      */
     
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        SEL originalSel = @selector(addObject:);
-        SEL mySel = @selector(cyAddObject:);
-        Class cls = [[[NSMutableArray alloc] init] class];
-        
-        Method originalMethod = class_getInstanceMethod(cls, originalSel);
-        
-        Method myMethod = class_getInstanceMethod(cls, mySel);
-        
-        //        __unused BOOL ori = class_addMethod(cls, originalSel, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod));
-        //        __unused BOOL my = class_addMethod(cls, mySel, method_getImplementation(myMethod), method_getTypeEncoding(myMethod));
-        BOOL didAddMethod = class_addMethod(cls, originalSel, method_getImplementation(myMethod), method_getTypeEncoding(myMethod));
-        
-        if (didAddMethod) {
-            class_replaceMethod(cls, mySel, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod));
-        } else {
-            method_exchangeImplementations(originalMethod, myMethod);
-        }
-        //        [self jr_swizzleMethod:@selector(addObject:) withMethod:@selector(cyAddObject:) error:nil];
-    });
+//    static dispatch_once_t onceToken;
+//    dispatch_once(&onceToken, ^{
+//        SEL originalSel = @selector(addObject:);
+//        SEL mySel = @selector(cyAddObject:);
+//        Class cls = [[[NSMutableArray alloc] init] class];
+//        
+//        Method originalMethod = class_getInstanceMethod(cls, originalSel);
+//        
+//        Method myMethod = class_getInstanceMethod(cls, mySel);
+//        
+//        //        __unused BOOL ori = class_addMethod(cls, originalSel, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod));
+//        //        __unused BOOL my = class_addMethod(cls, mySel, method_getImplementation(myMethod), method_getTypeEncoding(myMethod));
+//        BOOL didAddMethod = class_addMethod(cls, originalSel, method_getImplementation(myMethod), method_getTypeEncoding(myMethod));
+//        
+//        if (didAddMethod) {
+//            class_replaceMethod(cls, mySel, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod));
+//        } else {
+//            method_exchangeImplementations(originalMethod, myMethod);
+//        }
+//        //        [self jr_swizzleMethod:@selector(addObject:) withMethod:@selector(cyAddObject:) error:nil];
+//    });
 }
 
 - (void)cyAddObject:(id)object {
     if (object == nil) {
+        NSLog(@"%s_%s", __FILE__, __FUNCTION__);
         [self cyAddObject:@"You have add a nil!"];
     } else {
         [self cyAddObject:object];
+//        NSLog(@"%s_%s", __FILE__, __FUNCTION__);
     }
 }
 
+- (void)cyAddObject2:(id)object {
+    if (object == nil) {
+        NSLog(@"%s_%s", __FILE__, __FUNCTION__);
+        [self cyAddObject2:object];
+    } else {
+        [self cyAddObject2:object];
+//        NSLog(@"%s_%s", __FILE__, __FUNCTION__);
+    }
+}
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wundeclared-selector"
 + (BOOL)resolveInstanceMethod:(SEL)sel {

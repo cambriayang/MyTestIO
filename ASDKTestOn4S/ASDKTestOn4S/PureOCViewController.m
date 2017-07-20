@@ -8,6 +8,8 @@
 
 #import "PureOCViewController.h"
 #import <Masonry.h>
+#import "JRSwizzle.h"
+#import "NSMutableArray+SafeAdd.h"
 
 @interface PureOCViewController ()
 
@@ -23,6 +25,14 @@
     //    [self testAutoLayout];
     //    [self testViews];
     [self testAutoFillOniOS11];
+    
+    NSMutableArray *array = @[@"1", @"2"].mutableCopy;
+    
+    [[array class] jr_swizzleMethod:@selector(addObject:) withMethod:@selector(cyAddObject:) error:nil];
+    
+    [[array class] jr_swizzleMethod:@selector(addObject:) withMethod:@selector(cyAddObject2:) error:nil];
+    
+    [array addObject:nil];
 }
 
 - (void)testAutoFillOniOS11 {
