@@ -7,9 +7,6 @@
 //
 
 #import "ViewController.h"
-
-#import "WithASDKViewController.h"
-#import "WithoutASDKViewController.h"
 #import "ASDKTestOn4S-Swift.h"
 #import "JKTest.h"
 
@@ -44,24 +41,6 @@
 }
 
 #pragma mark --- Button Clicked
-- (IBAction)withoutASDKClicked:(id)sender {
-    WithoutASDKViewController *vc = [[WithoutASDKViewController alloc] init];
-//    SwiftWithoutASDK *vc = [[SwiftWithoutASDK alloc] init];
-//    [vc helloWorld];
-    
-    vc.title = @"WithoutASDK";
-        
-    [self.navigationController pushViewController:vc animated:YES];
-}
-
-- (IBAction)withASDK:(id)sender {
-    WithASDKViewController *vc = [[WithASDKViewController alloc] init];
- 
-    vc.title = @"WithASDK";
-    
-    [self.navigationController pushViewController:vc animated:YES];
-}
-
 - (IBAction)gotoMyTestRootV:(id)sender {
     MyTestRootVC *vc = [[MyTestRootVC alloc] init];
     

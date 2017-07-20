@@ -1,10 +1,14 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zzS-K4-GBq">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zzS-K4-GBq">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--StoryBoard-->
@@ -16,42 +20,21 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dPx-ky-pgU">
-                                <rect key="frame" x="106" y="226" width="388" height="30"/>
-                                <state key="normal" title="WithASDK"/>
-                                <connections>
-                                    <action selector="withASDK:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Gi-2x-x7F"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zty-QA-j8b">
-                                <rect key="frame" x="106" y="169" width="388" height="30"/>
-                                <state key="normal" title="WithoutASDK"/>
-                                <connections>
-                                    <action selector="withoutASDKClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t79-RI-mwK"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nPj-sy-eEY">
-                                <rect key="frame" x="232" y="285" width="136" height="30"/>
+                                <rect key="frame" x="120" y="318.5" width="135" height="30"/>
                                 <state key="normal" title="GoToMyTestRootVC"/>
                                 <connections>
                                     <action selector="gotoMyTestRootV:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n8Z-p5-c9K"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="zty-QA-j8b" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="169" id="4pd-jc-yox"/>
-                            <constraint firstItem="dPx-ky-pgU" firstAttribute="width" secondItem="zty-QA-j8b" secondAttribute="width" id="BaF-Uh-YYS"/>
-                            <constraint firstItem="dPx-ky-pgU" firstAttribute="height" secondItem="zty-QA-j8b" secondAttribute="height" id="G5O-Ja-gjy"/>
-                            <constraint firstItem="nPj-sy-eEY" firstAttribute="top" secondItem="zty-QA-j8b" secondAttribute="bottom" constant="86" id="dm1-qP-m6A"/>
-                            <constraint firstItem="zty-QA-j8b" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="106" id="eFU-I0-hum"/>
+                            <constraint firstItem="nPj-sy-eEY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Ucb-mA-1Et"/>
                             <constraint firstItem="nPj-sy-eEY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerXWithinMargins" id="l2p-TM-Hy4"/>
-                            <constraint firstItem="zty-QA-j8b" firstAttribute="bottom" secondItem="dPx-ky-pgU" secondAttribute="top" constant="-27" id="rx6-9W-oxj"/>
-                            <constraint firstItem="dPx-ky-pgU" firstAttribute="centerX" secondItem="zty-QA-j8b" secondAttribute="centerX" id="wYk-zc-W6O"/>
-                            <constraint firstItem="zty-QA-j8b" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerXWithinMargins" id="ykd-lT-tQ3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Fhr-fK-U85"/>

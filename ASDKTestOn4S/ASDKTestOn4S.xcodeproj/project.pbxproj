@@ -24,7 +24,6 @@
 		CA127F831CA7CA6A00DEE218 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA127F811CA7CA6A00DEE218 /* LaunchScreen.storyboard */; };
 		CA127F8E1CA7CA6A00DEE218 /* ASDKTestOn4STests.m in Sources */ = {isa = PBXBuildFile; fileRef = CA127F8D1CA7CA6A00DEE218 /* ASDKTestOn4STests.m */; };
 		CA127F991CA7CA6A00DEE218 /* ASDKTestOn4SUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CA127F981CA7CA6A00DEE218 /* ASDKTestOn4SUITests.m */; };
-		CA13CACB1CA8FD5600E3335C /* WithASDKTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CA13CACA1CA8FD5600E3335C /* WithASDKTableViewCell.m */; };
 		CA18E9511DEAFFC9008C718C /* LFMessageTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA18E9501DEAFFC9008C718C /* LFMessageTestVC.swift */; };
 		CA3E289D1CF196A80016081F /* NSObject+Swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3E289C1CF196A80016081F /* NSObject+Swizzle.m */; };
 		CA46476F1CF18B23006F2A54 /* JRSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = CA46476E1CF18B23006F2A54 /* JRSwizzle.m */; };
@@ -38,7 +37,6 @@
 		CA4647921CF18BA4006F2A54 /* NSInvocation+EXT.m in Sources */ = {isa = PBXBuildFile; fileRef = CA4647881CF18BA4006F2A54 /* NSInvocation+EXT.m */; };
 		CA4647931CF18BA4006F2A54 /* NSMethodSignature+EXT.m in Sources */ = {isa = PBXBuildFile; fileRef = CA46478A1CF18BA4006F2A54 /* NSMethodSignature+EXT.m */; };
 		CA56B0E91CF053220018B554 /* NSMutableArray+SafeAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = CA56B0E81CF053220018B554 /* NSMutableArray+SafeAdd.m */; };
-		CA79C4F21D748F9400D043E3 /* SwiftWithoutASDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA79C4F11D748F9400D043E3 /* SwiftWithoutASDK.swift */; };
 		CACE29351D85A748009B4A69 /* MyTestRootVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACE29341D85A748009B4A69 /* MyTestRootVC.swift */; };
 		CACE29391D85A8D7009B4A69 /* MyTestRootVCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACE29381D85A8D7009B4A69 /* MyTestRootVCCell.swift */; };
 		CACE293B1D85A9F1009B4A69 /* MyTestRootVCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CACE293A1D85A9F1009B4A69 /* MyTestRootVCCell.xib */; };
@@ -47,11 +45,6 @@
 		CAD615421D8709B000804F1E /* MyInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD615411D8709B000804F1E /* MyInstance.swift */; };
 		CAD615451D87133300804F1E /* MyTestInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD615441D87133300804F1E /* MyTestInstance.m */; };
 		CAEB6DCE1CA82CB60058C699 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEB6DCD1CA82CB60058C699 /* BaseViewController.m */; };
-		CAEB6DD21CA82CD00058C699 /* WithoutASDKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEB6DD01CA82CD00058C699 /* WithoutASDKViewController.m */; };
-		CAEB6DD31CA82CD00058C699 /* WithoutASDKViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAEB6DD11CA82CD00058C699 /* WithoutASDKViewController.xib */; };
-		CAEB6DD61CA82CE50058C699 /* WithASDKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEB6DD51CA82CE50058C699 /* WithASDKViewController.m */; };
-		CAEB6DDA1CA83E350058C699 /* WithoutASDKTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEB6DD81CA83E350058C699 /* WithoutASDKTableViewCell.m */; };
-		CAEB6DDB1CA83E350058C699 /* WithoutASDKTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAEB6DD91CA83E350058C699 /* WithoutASDKTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,8 +96,6 @@
 		CA127F941CA7CA6A00DEE218 /* ASDKTestOn4SUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ASDKTestOn4SUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA127F981CA7CA6A00DEE218 /* ASDKTestOn4SUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASDKTestOn4SUITests.m; sourceTree = "<group>"; };
 		CA127F9A1CA7CA6A00DEE218 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CA13CAC91CA8FD5600E3335C /* WithASDKTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WithASDKTableViewCell.h; sourceTree = "<group>"; };
-		CA13CACA1CA8FD5600E3335C /* WithASDKTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WithASDKTableViewCell.m; sourceTree = "<group>"; };
 		CA18E9501DEAFFC9008C718C /* LFMessageTestVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LFMessageTestVC.swift; sourceTree = "<group>"; };
 		CA3E289B1CF196A80016081F /* NSObject+Swizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Swizzle.h"; sourceTree = "<group>"; };
 		CA3E289C1CF196A80016081F /* NSObject+Swizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Swizzle.m"; sourceTree = "<group>"; };
@@ -136,7 +127,6 @@
 		CA46478A1CF18BA4006F2A54 /* NSMethodSignature+EXT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMethodSignature+EXT.m"; sourceTree = "<group>"; };
 		CA56B0E71CF053220018B554 /* NSMutableArray+SafeAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+SafeAdd.h"; sourceTree = "<group>"; };
 		CA56B0E81CF053220018B554 /* NSMutableArray+SafeAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+SafeAdd.m"; sourceTree = "<group>"; };
-		CA79C4F11D748F9400D043E3 /* SwiftWithoutASDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftWithoutASDK.swift; sourceTree = "<group>"; };
 		CA79C4F31D748FCF00D043E3 /* ASDKTestOn4S-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ASDKTestOn4S-Bridging-Header.h"; sourceTree = "<group>"; };
 		CACE29341D85A748009B4A69 /* MyTestRootVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTestRootVC.swift; sourceTree = "<group>"; };
 		CACE29381D85A8D7009B4A69 /* MyTestRootVCCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTestRootVCCell.swift; sourceTree = "<group>"; };
@@ -149,14 +139,6 @@
 		CAD615441D87133300804F1E /* MyTestInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTestInstance.m; sourceTree = "<group>"; };
 		CAEB6DCC1CA82CB60058C699 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		CAEB6DCD1CA82CB60058C699 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
-		CAEB6DCF1CA82CD00058C699 /* WithoutASDKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WithoutASDKViewController.h; sourceTree = "<group>"; };
-		CAEB6DD01CA82CD00058C699 /* WithoutASDKViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WithoutASDKViewController.m; sourceTree = "<group>"; };
-		CAEB6DD11CA82CD00058C699 /* WithoutASDKViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WithoutASDKViewController.xib; sourceTree = "<group>"; };
-		CAEB6DD41CA82CE50058C699 /* WithASDKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WithASDKViewController.h; sourceTree = "<group>"; };
-		CAEB6DD51CA82CE50058C699 /* WithASDKViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WithASDKViewController.m; sourceTree = "<group>"; };
-		CAEB6DD71CA83E350058C699 /* WithoutASDKTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WithoutASDKTableViewCell.h; sourceTree = "<group>"; };
-		CAEB6DD81CA83E350058C699 /* WithoutASDKTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WithoutASDKTableViewCell.m; sourceTree = "<group>"; };
-		CAEB6DD91CA83E350058C699 /* WithoutASDKTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WithoutASDKTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -271,8 +253,6 @@
 				24D57BD21DE7F29600A06318 /* Swizzle */,
 				24D57BD31DE7F2AC00A06318 /* SafeCategory */,
 				24D57BDD1DE7F2DB00A06318 /* LFMessageCenter */,
-				CACE29311D85683A009B4A69 /* WithoutASDK */,
-				CACE29321D856877009B4A69 /* WithASDK */,
 				CA0417DE1E06DF73007D8B54 /* Scripts */,
 				CA4647711CF18B5C006F2A54 /* JRSwizzle */,
 				CA4647721CF18B69006F2A54 /* Extobjc */,
@@ -366,31 +346,6 @@
 				CAEB6DCD1CA82CB60058C699 /* BaseViewController.m */,
 			);
 			name = MainVC;
-			sourceTree = "<group>";
-		};
-		CACE29311D85683A009B4A69 /* WithoutASDK */ = {
-			isa = PBXGroup;
-			children = (
-				CA79C4F11D748F9400D043E3 /* SwiftWithoutASDK.swift */,
-				CAEB6DD71CA83E350058C699 /* WithoutASDKTableViewCell.h */,
-				CAEB6DD81CA83E350058C699 /* WithoutASDKTableViewCell.m */,
-				CAEB6DD91CA83E350058C699 /* WithoutASDKTableViewCell.xib */,
-				CAEB6DCF1CA82CD00058C699 /* WithoutASDKViewController.h */,
-				CAEB6DD01CA82CD00058C699 /* WithoutASDKViewController.m */,
-				CAEB6DD11CA82CD00058C699 /* WithoutASDKViewController.xib */,
-			);
-			name = WithoutASDK;
-			sourceTree = "<group>";
-		};
-		CACE29321D856877009B4A69 /* WithASDK */ = {
-			isa = PBXGroup;
-			children = (
-				CAEB6DD41CA82CE50058C699 /* WithASDKViewController.h */,
-				CAEB6DD51CA82CE50058C699 /* WithASDKViewController.m */,
-				CA13CAC91CA8FD5600E3335C /* WithASDKTableViewCell.h */,
-				CA13CACA1CA8FD5600E3335C /* WithASDKTableViewCell.m */,
-			);
-			name = WithASDK;
 			sourceTree = "<group>";
 		};
 		CACE29331D85A707009B4A69 /* MyTestRoot */ = {
@@ -533,8 +488,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CACE293B1D85A9F1009B4A69 /* MyTestRootVCCell.xib in Resources */,
-				CAEB6DD31CA82CD00058C699 /* WithoutASDKViewController.xib in Resources */,
-				CAEB6DDB1CA83E350058C699 /* WithoutASDKTableViewCell.xib in Resources */,
 				CA127F831CA7CA6A00DEE218 /* LaunchScreen.storyboard in Resources */,
 				CA0417E01E070C63007D8B54 /* findXibsAndAdjustingForXcode7.py in Resources */,
 				CA127F801CA7CA6A00DEE218 /* Assets.xcassets in Resources */,
@@ -616,14 +569,11 @@
 				24D57BDB1DE7F2D500A06318 /* LFMessageManager.m in Sources */,
 				24DED14F1DF661E6005C727F /* LFBlockQueue.m in Sources */,
 				CA46478D1CF18BA4006F2A54 /* EXTNil.m in Sources */,
-				CAEB6DD21CA82CD00058C699 /* WithoutASDKViewController.m in Sources */,
 				CA3E289D1CF196A80016081F /* NSObject+Swizzle.m in Sources */,
 				CA4647931CF18BA4006F2A54 /* NSMethodSignature+EXT.m in Sources */,
 				24FCFD601E821F0F001334DE /* PureOCViewController.m in Sources */,
 				CA46478C1CF18BA4006F2A54 /* EXTConcreteProtocol.m in Sources */,
-				CAEB6DD61CA82CE50058C699 /* WithASDKViewController.m in Sources */,
 				CACE29351D85A748009B4A69 /* MyTestRootVC.swift in Sources */,
-				CA79C4F21D748F9400D043E3 /* SwiftWithoutASDK.swift in Sources */,
 				CA127F7B1CA7CA6A00DEE218 /* ViewController.m in Sources */,
 				24D57BDC1DE7F2D500A06318 /* LFMessageTask.m in Sources */,
 				CA4647911CF18BA4006F2A54 /* EXTSelectorChecking.m in Sources */,
@@ -633,8 +583,6 @@
 				CAD615451D87133300804F1E /* MyTestInstance.m in Sources */,
 				CA0417DB1DF45152007D8B54 /* PureSwiftTestVC.swift in Sources */,
 				CACE29411D86F947009B4A69 /* JKTest.m in Sources */,
-				CAEB6DDA1CA83E350058C699 /* WithoutASDKTableViewCell.m in Sources */,
-				CA13CACB1CA8FD5600E3335C /* WithASDKTableViewCell.m in Sources */,
 				CA46478F1CF18BA4006F2A54 /* EXTSafeCategory.m in Sources */,
 				CA46478B1CF18BA4006F2A54 /* EXTADT.m in Sources */,
 				CACE293D1D85B021009B4A69 /* DecimalNumberPadForH5TestVC.swift in Sources */,
