@@ -19,9 +19,9 @@ target 'ASDKTestOn4S' do
     app_pods
 end
 
-#target 'ASDKTestOn4S-simulator' do
-#    app_pods_simulator
-#end
+target 'ASDKTestOn4S-simulator' do
+    app_pods_simulator
+end
 
 ### HOOK POST
 post_install do |installer|
