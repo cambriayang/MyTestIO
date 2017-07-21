@@ -28,11 +28,10 @@
     
     NSMutableArray *array = @[@"1", @"2"].mutableCopy;
     
-    [[array class] jr_swizzleMethod:@selector(addObject:) withMethod:@selector(cyAddObject:) error:nil];
-    
-    [[array class] jr_swizzleMethod:@selector(addObject:) withMethod:@selector(cyAddObject2:) error:nil];
-    
-    [array addObject:nil];
+//    [[array class] jr_swizzleMethod:@selector(addObject:) withMethod:@selector(cyAddObject:) error:nil];
+//    
+//    [[array class] jr_swizzleMethod:@selector(addObject:) withMethod:@selector(cyAddObject2:) error:nil];
+    [array insertObject:nil atIndex:3];
 }
 
 - (void)testAutoFillOniOS11 {

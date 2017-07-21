@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "LFXHookGuard.h"
 
 @interface AppDelegate ()
 
@@ -16,6 +17,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [LFXHookGuard swapMethodsOfMutableArray];
     return YES;
 }
 
