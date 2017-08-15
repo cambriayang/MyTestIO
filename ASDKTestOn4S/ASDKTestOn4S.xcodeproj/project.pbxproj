@@ -173,6 +173,7 @@
 		24D57BD21DE7F29600A06318 /* Swizzle */ = {
 			isa = PBXGroup;
 			children = (
+				CA4647711CF18B5C006F2A54 /* JRSwizzle */,
 				CA3E289B1CF196A80016081F /* NSObject+Swizzle.h */,
 				CA3E289C1CF196A80016081F /* NSObject+Swizzle.m */,
 			);
@@ -259,7 +260,6 @@
 				24D57BD31DE7F2AC00A06318 /* SafeCategory */,
 				24D57BDD1DE7F2DB00A06318 /* LFMessageCenter */,
 				CA0417DE1E06DF73007D8B54 /* Scripts */,
-				CA4647711CF18B5C006F2A54 /* JRSwizzle */,
 				CA4647721CF18B69006F2A54 /* Extobjc */,
 				CACE29301D856795009B4A69 /* MainVC */,
 				CACE29331D85A707009B4A69 /* MyTestRoot */,
@@ -794,6 +794,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -827,6 +828,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "ASDKTestOn4S/ASDKTestOn4S-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
