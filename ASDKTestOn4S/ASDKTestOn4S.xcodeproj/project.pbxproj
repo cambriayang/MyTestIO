@@ -14,6 +14,7 @@
 		24D57BDC1DE7F2D500A06318 /* LFMessageTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D57BD91DE7F2D500A06318 /* LFMessageTask.m */; };
 		24DED14F1DF661E6005C727F /* LFBlockQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DED14E1DF661E6005C727F /* LFBlockQueue.m */; };
 		24FCFD601E821F0F001334DE /* PureOCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24FCFD5F1E821F0F001334DE /* PureOCViewController.m */; };
+		2FF5CEA41F43EBF80060C0DF /* ARKitTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF5CEA31F43EBF80060C0DF /* ARKitTestVC.swift */; };
 		93A990A9C77245BF2BC2488F /* libPods-ASDKTestOn4S.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59C6F164B84E05FE8F8CDDAB /* libPods-ASDKTestOn4S.a */; };
 		CA0417DB1DF45152007D8B54 /* PureSwiftTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0417DA1DF45152007D8B54 /* PureSwiftTestVC.swift */; };
 		CA0417E01E070C63007D8B54 /* findXibsAndAdjustingForXcode7.py in Resources */ = {isa = PBXBuildFile; fileRef = CA0417DF1E070C63007D8B54 /* findXibsAndAdjustingForXcode7.py */; };
@@ -78,6 +79,7 @@
 		24DED14E1DF661E6005C727F /* LFBlockQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFBlockQueue.m; sourceTree = "<group>"; };
 		24FCFD5E1E821F0F001334DE /* PureOCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureOCViewController.h; sourceTree = "<group>"; };
 		24FCFD5F1E821F0F001334DE /* PureOCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PureOCViewController.m; sourceTree = "<group>"; };
+		2FF5CEA31F43EBF80060C0DF /* ARKitTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARKitTestVC.swift; sourceTree = "<group>"; };
 		59C6F164B84E05FE8F8CDDAB /* libPods-ASDKTestOn4S.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ASDKTestOn4S.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AD5D2440681B1B2606007EE /* Pods-ASDKTestOn4S.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASDKTestOn4S.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ASDKTestOn4S/Pods-ASDKTestOn4S.debug.xcconfig"; sourceTree = "<group>"; };
 		B4D7EC839D8B36B95FE5F37B /* Pods-ASDKTestOn4S.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASDKTestOn4S.release.xcconfig"; path = "Pods/Target Support Files/Pods-ASDKTestOn4S/Pods-ASDKTestOn4S.release.xcconfig"; sourceTree = "<group>"; };
@@ -376,6 +378,7 @@
 				CACE29401D86F947009B4A69 /* JKTest.m */,
 				24FCFD5E1E821F0F001334DE /* PureOCViewController.h */,
 				24FCFD5F1E821F0F001334DE /* PureOCViewController.m */,
+				2FF5CEA31F43EBF80060C0DF /* ARKitTestVC.swift */,
 			);
 			name = MyTest;
 			sourceTree = "<group>";
@@ -600,6 +603,7 @@
 				CAEB6DCE1CA82CB60058C699 /* BaseViewController.m in Sources */,
 				CA127F781CA7CA6A00DEE218 /* AppDelegate.m in Sources */,
 				24D57BDA1DE7F2D500A06318 /* LFMessage.m in Sources */,
+				2FF5CEA41F43EBF80060C0DF /* ARKitTestVC.swift in Sources */,
 				CACE29391D85A8D7009B4A69 /* MyTestRootVCCell.swift in Sources */,
 				CA127F751CA7CA6A00DEE218 /* main.m in Sources */,
 			);

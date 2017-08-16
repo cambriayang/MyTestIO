@@ -8,10 +8,17 @@
 
 import UIKit
 
+enum TestType: Int {
+    case DecimalNumberPadForH5 = 0
+    case LFMessage
+    case PureSwift
+    case PureOC
+    case ARKit
+}
+
 class MyTestRootVC: BaseViewController {
-    let testDataSource = [String(describing: "DecimalNumberPadForH5TestVC"), String(describing:"LFMessageTestVC"), String(describing: "PureSwiftTestVC"), String(describing:"PureOCViewController")];
+    let testDataSource = [String(describing: "DecimalNumberPadForH5TestVC"), String(describing: "LFMessageTestVC"), String(describing: "PureSwiftTestVC"), String(describing: "PureOCViewController"), String(describing: "ARKitTestVC")];
     
-    //MARK: --- Life Cycle
     deinit {
         
     }
@@ -54,12 +61,24 @@ class MyTestRootVC: BaseViewController {
         
         let testCase = testDataSource[indexPath.row]
         
-        if testCase == "PureOCViewController" {
-            let vc = PureOCViewController.init()
-                        
-            self.navigationController?.pushViewController(vc, animated: true)
-        } else if let vc = swiftClassFromString(testCase) {
+        let row = TestType(rawValue: indexPath.row)!
+        
+        switch row {
+        case .DecimalNumberPadForH5:
+            fallthrough
+        case .ARKit:
+            fallthrough
+        case .LFMessage:
+            fallthrough
+        case .PureSwift:
+            let vc = swiftClassFromString(testCase)!
+            
             vc.title = testCase
+            self.navigationController?.pushViewController(vc, animated: true)
+        case .PureOC:
+            let vc = PureOCViewController.init()
+            vc.title = testCase
+            
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
