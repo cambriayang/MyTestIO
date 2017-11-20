@@ -80,6 +80,11 @@ class MyTestRootVC: BaseViewController {
             vc.title = testCase
             
             self.navigationController?.pushViewController(vc, animated: true)
+            
+            DispatchQueue.main.asyncAfter(deadline: .now()+5, execute:
+            {
+                NSLog("xxx");
+            })
         }
     }
     

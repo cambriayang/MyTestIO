@@ -10,6 +10,7 @@
 #import <Masonry.h>
 #import "JRSwizzle.h"
 #import "NSMutableArray+SafeAdd.h"
+#import <UIKit/UIActivityViewController.h>
 
 @interface PureOCViewController ()
 
@@ -26,6 +27,25 @@
 //    [self testViews];
 //    [self testAutoFillOniOS11];
 //    [self testHookList];
+//    [self testShare];
+}
+
+- (void)testShare {
+    UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:@[] applicationActivities:@[]];
+    
+    [self presentViewController:activityViewController animated:YES completion:nil];
+    
+    NSString *m = [[UIDevice currentDevice] systemVersion];
+    
+    if ([m floatValue] > 8.000000f) {
+        NSLog(@"mmmmmmmmmmmmmm");
+    }
+    
+    NSMutableArray *mm = [@[@"xxx", @"mmmm"] mutableCopy];
+    
+    NSLog(@"%@", mm[2]);
+    
+    NSLog(@"%@", m);
 }
 
 - (void)testHookList {
@@ -42,11 +62,11 @@
     
     [self.view addSubview:f1];
     f1.backgroundColor = [UIColor whiteColor];
-    if (@available(iOS 11.0, *)) {
-        f1.textContentType = UITextContentTypeUsername;
-    } else {
-        // Fallback on earlier versions
-    }
+//    if (@available(iOS 11.0, *)) {
+//        f1.textContentType = UITextContentTypeUsername;
+//    } else {
+//        // Fallback on earlier versions
+//    }
     
     [f1 mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self.view.mas_centerX);
@@ -59,11 +79,11 @@
     [self.view addSubview:f2];
     f2.backgroundColor = [UIColor whiteColor];
     f2.secureTextEntry = YES;
-    if (@available(iOS 11.0, *)) {
-        f2.textContentType = UITextContentTypePassword;
-    } else {
-        // Fallback on earlier versions
-    }
+//    if (@available(iOS 11.0, *)) {
+//        f2.textContentType = UITextContentTypePassword;
+//    } else {
+//        // Fallback on earlier versions
+//    }
     
     [f2 mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self.view.mas_centerX);
