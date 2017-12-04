@@ -28,6 +28,40 @@
 //    [self testAutoFillOniOS11];
 //    [self testHookList];
 //    [self testShare];
+    [self testIP2Int:@"172.168.5.1"];
+    [self testIP2Int:@"17 2.168.5.1"];
+    [self testIP2Int:@" 172 .168.5.1"];
+    [self testIP2Int:@"172. 168.5. 1"];
+}
+
+- (void)testIP2Int:(NSString *)ipv4 {
+    NSString *src = ipv4;
+    
+    //iterate to have the four segment recorded
+    NSArray *list = [src componentsSeparatedByString:@"."];
+    
+    if (list.count != 4) {
+        NSLog(@"==[Your Input is not IPv4 fromat!!!]==");
+        
+        return;
+    } else {
+        long long sum = 0;
+        
+        for (int i = 0; i < list.count; i++) {
+            NSString *tmp = [list[i] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+
+            //one or more spaces will be wrong.
+            if ([tmp containsString:@" "]) {
+                NSLog(@"==[Your ip segment has one or more spaces]==");
+                break;
+            }
+            
+            sum += [tmp integerValue] * pow(256, 3 - i);
+        }
+        
+        if (sum > 0)
+            NSLog(@"%lld", sum);
+    }
 }
 
 - (void)testShare {
