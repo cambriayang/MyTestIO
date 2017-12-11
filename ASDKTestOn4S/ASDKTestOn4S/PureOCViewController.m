@@ -13,7 +13,11 @@
 #import <UIKit/UIActivityViewController.h>
 
 @interface PureOCViewController ()
-
+@property (nonatomic, strong) UILabel *label;
+@property (nonatomic, strong) UIView *blueBlock;
+@property (nonatomic, strong) MASConstraint *a;
+@property (nonatomic, strong) MASConstraint *b;
+@property (nonatomic, strong) MASConstraint *c;
 @end
 
 @implementation PureOCViewController
@@ -23,15 +27,84 @@
     
     self.view.backgroundColor = [UIColor lightGrayColor];
     
+    [self renderView];
 //    [self testAutoLayout];
 //    [self testViews];
 //    [self testAutoFillOniOS11];
 //    [self testHookList];
 //    [self testShare];
-    [self testIP2Int:@"172.168.5.1"];
-    [self testIP2Int:@"17 2.168.5.1"];
-    [self testIP2Int:@" 172 .168.5.1"];
-    [self testIP2Int:@"172. 168.5. 1"];
+//    [self testIP2Int:@"172.168.5.1"];
+//    [self testIP2Int:@"17 2.168.5.1"];
+//    [self testIP2Int:@" 172 .168.5.1"];
+//    [self testIP2Int:@"172. 168.5. 1"];
+}
+
+- (void)renderView {
+    UILabel *label = [UILabel new];
+    
+    label.text = @"Test";
+    label.textColor = [UIColor redColor];
+    
+    [self.view addSubview:label];
+    
+    [label mas_makeConstraints:^(MASConstraintMaker *make) {
+        self.a = make.top.equalTo(self.view.mas_top).offset(160);
+        make.centerX.equalTo(self.view.mas_centerX);
+    }];
+    
+    self.label = label;
+    
+    UIView *blueBlock = [UIView new];
+    
+    [self.view addSubview:blueBlock];
+    
+    blueBlock.backgroundColor = [UIColor blueColor];
+    
+    [blueBlock mas_makeConstraints:^(MASConstraintMaker *make) {
+        self.b = make.top.equalTo(label.mas_bottom).offset(10);
+        self.c = make.left.equalTo(label.mas_left);
+        make.size.mas_equalTo(CGSizeMake(100, 60));
+    }];
+    
+    self.blueBlock = blueBlock;
+    
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    
+    [btn setTitle:@"Click" forState:UIControlStateNormal];
+    
+    [btn addTarget:self action:@selector(clicked:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.view addSubview:btn];
+    
+    [btn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.equalTo(self.view.mas_bottom).offset(-20);
+        make.size.mas_equalTo(CGSizeMake(100, 50));
+        make.centerX.equalTo(self.view.mas_centerX);
+    }];
+}
+
+- (void)clicked:(UIButton *)btn {
+    [UIView animateWithDuration:2.0 animations:^{
+//        [self.label mas_remakeConstraints:^(MASConstraintMaker *make) {
+//            make.top.equalTo(self.view.mas_top).offset(260);
+//            make.centerX.equalTo(self.view.mas_centerX);
+//        }];
+        self.a.offset = 260;
+        self.label.alpha = 0.5;
+        
+//        [self.blueBlock mas_remakeConstraints:^(MASConstraintMaker *make) {
+//            make.top.equalTo(self.label.mas_bottom).offset(20);
+//            make.left.equalTo(self.label.mas_left).offset(50);
+//            make.size.mas_equalTo(CGSizeMake(100, 60));
+//        }];
+        self.b.offset = 20;
+        self.c.offset = 50;
+        self.label.alpha = 0.7;
+        
+        [self.view layoutIfNeeded];
+    } completion:^(BOOL finished) {
+        NSLog(@"Done");
+    }];
 }
 
 - (void)testIP2Int:(NSString *)ipv4 {
