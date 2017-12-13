@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "ASDKTestOn4S-Swift.h"
+#import "MyTestIO-Swift.h"
 #import "JKTest.h"
 
 @interface ViewController () 

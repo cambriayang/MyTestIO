@@ -9,7 +9,7 @@ def app_pods
     #pod 'FBMemoryProfiler', '0.1.3', :configurations => ['Debug']
 end
 
-target 'ASDKTestOn4S' do
+target 'MyTestIO' do
     app_pods
 end
 
@@ -19,7 +19,7 @@ def app_pods_simulator
     #Can add individual pods
 end
 
-# target 'ASDKTestOn4S-simulator' do
+# target 'MyTestIO-simulator' do
 #     app_pods_simulator
 # end
 
