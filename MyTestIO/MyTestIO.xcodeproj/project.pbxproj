@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2443B62B1DE6C53B003F0F1C /* MyInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD615411D8709B000804F1E /* MyInstance.swift */; };
 		245E03731F21F04600B73513 /* LFXHookGuard.m in Sources */ = {isa = PBXBuildFile; fileRef = 245E03721F21EFEA00B73513 /* LFXHookGuard.m */; };
+		24C9A5991FE1476C00A5B60D /* UIView+AIFAutoCollapse.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C9A5981FE1476C00A5B60D /* UIView+AIFAutoCollapse.m */; };
+		24C9A59C1FE1479600A5B60D /* MASViewConstraint+AIFCommonUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C9A59A1FE1479500A5B60D /* MASViewConstraint+AIFCommonUI.m */; };
 		24D57BDA1DE7F2D500A06318 /* LFMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D57BD51DE7F2D500A06318 /* LFMessage.m */; };
 		24D57BDB1DE7F2D500A06318 /* LFMessageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D57BD71DE7F2D500A06318 /* LFMessageManager.m */; };
 		24D57BDC1DE7F2D500A06318 /* LFMessageTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D57BD91DE7F2D500A06318 /* LFMessageTask.m */; };
@@ -70,6 +72,11 @@
 /* Begin PBXFileReference section */
 		245E03711F21EFEA00B73513 /* LFXHookGuard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFXHookGuard.h; sourceTree = "<group>"; };
 		245E03721F21EFEA00B73513 /* LFXHookGuard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFXHookGuard.m; sourceTree = "<group>"; };
+		24C9A5971FE1476C00A5B60D /* UIView+AIFAutoCollapse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AIFAutoCollapse.h"; sourceTree = "<group>"; };
+		24C9A5981FE1476C00A5B60D /* UIView+AIFAutoCollapse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AIFAutoCollapse.m"; sourceTree = "<group>"; };
+		24C9A59A1FE1479500A5B60D /* MASViewConstraint+AIFCommonUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MASViewConstraint+AIFCommonUI.m"; sourceTree = "<group>"; };
+		24C9A59B1FE1479600A5B60D /* MASViewConstraint+AIFCommonUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASViewConstraint+AIFCommonUI.h"; sourceTree = "<group>"; };
+		24C9A59D1FE147A400A5B60D /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		24D57BD41DE7F2D500A06318 /* LFMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFMessage.h; sourceTree = "<group>"; };
 		24D57BD51DE7F2D500A06318 /* LFMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFMessage.m; sourceTree = "<group>"; };
 		24D57BD61DE7F2D500A06318 /* LFMessageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFMessageManager.h; sourceTree = "<group>"; };
@@ -177,6 +184,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24C9A59E1FE147AF00A5B60D /* AICollapse */ = {
+			isa = PBXGroup;
+			children = (
+				24C9A5971FE1476C00A5B60D /* UIView+AIFAutoCollapse.h */,
+				24C9A5981FE1476C00A5B60D /* UIView+AIFAutoCollapse.m */,
+				24C9A59B1FE1479600A5B60D /* MASViewConstraint+AIFCommonUI.h */,
+				24C9A59A1FE1479500A5B60D /* MASViewConstraint+AIFCommonUI.m */,
+			);
+			name = AICollapse;
+			sourceTree = "<group>";
+		};
 		24D57BD21DE7F29600A06318 /* Swizzle */ = {
 			isa = PBXGroup;
 			children = (
@@ -266,6 +284,7 @@
 		CA127F721CA7CA6A00DEE218 /* MyTestIO */ = {
 			isa = PBXGroup;
 			children = (
+				24C9A59E1FE147AF00A5B60D /* AICollapse */,
 				24D57BD21DE7F29600A06318 /* Swizzle */,
 				24D57BD31DE7F2AC00A06318 /* SafeCategory */,
 				24D57BDD1DE7F2DB00A06318 /* LFMessageCenter */,
@@ -274,6 +293,7 @@
 				CACE29301D856795009B4A69 /* MainVC */,
 				CACE29331D85A707009B4A69 /* MyTestRoot */,
 				CACE293E1D85B04E009B4A69 /* MyTest */,
+				24C9A59D1FE147A400A5B60D /* MyPlayground.playground */,
 				CA127F761CA7CA6A00DEE218 /* AppDelegate.h */,
 				CA127F771CA7CA6A00DEE218 /* AppDelegate.m */,
 				CA127F7F1CA7CA6A00DEE218 /* Assets.xcassets */,
@@ -602,9 +622,11 @@
 				CA46476F1CF18B23006F2A54 /* JRSwizzle.m in Sources */,
 				CAD615451D87133300804F1E /* MyTestInstance.m in Sources */,
 				CA0417DB1DF45152007D8B54 /* PureSwiftTestVC.swift in Sources */,
+				24C9A5991FE1476C00A5B60D /* UIView+AIFAutoCollapse.m in Sources */,
 				CACE29411D86F947009B4A69 /* JKTest.m in Sources */,
 				CA46478F1CF18BA4006F2A54 /* EXTSafeCategory.m in Sources */,
 				CA46478B1CF18BA4006F2A54 /* EXTADT.m in Sources */,
+				24C9A59C1FE1479600A5B60D /* MASViewConstraint+AIFCommonUI.m in Sources */,
 				CACE293D1D85B021009B4A69 /* DecimalNumberPadForH5TestVC.swift in Sources */,
 				CA46478E1CF18BA4006F2A54 /* EXTRuntimeExtensions.m in Sources */,
 				CA18E9511DEAFFC9008C718C /* LFMessageTestVC.swift in Sources */,
