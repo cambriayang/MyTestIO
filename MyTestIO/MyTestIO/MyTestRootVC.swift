@@ -102,7 +102,7 @@ extension MyTestRootVC {
         //方法 NSClassFromString 在Swift中已经不起作用了no effect，需要适当更改
         //官方文档方法：let myPersonClass: AnyClass? = NSClassFromString("MyGreatApp.Person")
         if  let appName = Bundle.main.object(forInfoDictionaryKey: "CFBundleName") as? String {
-            let classStringName = "_TtC\(appName.characters.count)\(appName)\(className.characters.count)\(className)"
+            let classStringName = "_TtC\(appName.count)\(appName)\(className.count)\(className)"
             let  cls: AnyClass? = NSClassFromString(classStringName)
             assert(cls != nil, "==[class not found,please check className]==")
             if let viewClass = cls as? UIViewController.Type {
