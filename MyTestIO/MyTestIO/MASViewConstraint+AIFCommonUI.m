@@ -7,6 +7,7 @@
 
 #import "MASViewConstraint+AIFCommonUI.h"
 #import "UIView+AIFAutoCollapse.h"
+#import <objc/runtime.h>
 
 @implementation MASConstraint (AIFCommonUI)
 
