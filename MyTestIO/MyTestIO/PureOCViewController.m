@@ -27,7 +27,7 @@
     
     self.view.backgroundColor = [UIColor lightGrayColor];
     
-    [self renderView];
+//    [self testLayoutAnimation];
 //    [self testAutoLayout];
 //    [self testViews];
 //    [self testAutoFillOniOS11];
@@ -37,9 +37,14 @@
 //    [self testIP2Int:@"17 2.168.5.1"];
 //    [self testIP2Int:@" 172 .168.5.1"];
 //    [self testIP2Int:@"172. 168.5. 1"];
+    [self testWebView];
 }
 
-- (void)renderView {
+- (void)testWebView {
+    
+}
+
+- (void)testLayoutAnimation {
     UILabel *label = [UILabel new];
     
     label.text = @"Test";

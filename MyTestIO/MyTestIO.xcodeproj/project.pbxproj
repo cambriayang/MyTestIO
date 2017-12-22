@@ -17,7 +17,6 @@
 		24DED14F1DF661E6005C727F /* LFBlockQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DED14E1DF661E6005C727F /* LFBlockQueue.m */; };
 		24FCFD601E821F0F001334DE /* PureOCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24FCFD5F1E821F0F001334DE /* PureOCViewController.m */; };
 		2FF5CEA41F43EBF80060C0DF /* ARKitTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF5CEA31F43EBF80060C0DF /* ARKitTestVC.swift */; };
-		93A990A9C77245BF2BC2488F /* libPods-ASDKTestOn4S.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59C6F164B84E05FE8F8CDDAB /* libPods-ASDKTestOn4S.a */; };
 		CA0417DB1DF45152007D8B54 /* PureSwiftTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0417DA1DF45152007D8B54 /* PureSwiftTestVC.swift */; };
 		CA0417E01E070C63007D8B54 /* findXibsAndAdjustingForXcode7.py in Resources */ = {isa = PBXBuildFile; fileRef = CA0417DF1E070C63007D8B54 /* findXibsAndAdjustingForXcode7.py */; };
 		CA127F751CA7CA6A00DEE218 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CA127F741CA7CA6A00DEE218 /* main.m */; };
@@ -76,7 +75,6 @@
 		24C9A5981FE1476C00A5B60D /* UIView+AIFAutoCollapse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AIFAutoCollapse.m"; sourceTree = "<group>"; };
 		24C9A59A1FE1479500A5B60D /* MASViewConstraint+AIFCommonUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MASViewConstraint+AIFCommonUI.m"; sourceTree = "<group>"; };
 		24C9A59B1FE1479600A5B60D /* MASViewConstraint+AIFCommonUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASViewConstraint+AIFCommonUI.h"; sourceTree = "<group>"; };
-		24C9A59D1FE147A400A5B60D /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		24D57BD41DE7F2D500A06318 /* LFMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFMessage.h; sourceTree = "<group>"; };
 		24D57BD51DE7F2D500A06318 /* LFMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFMessage.m; sourceTree = "<group>"; };
 		24D57BD61DE7F2D500A06318 /* LFMessageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFMessageManager.h; sourceTree = "<group>"; };
@@ -162,7 +160,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93A990A9C77245BF2BC2488F /* libPods-ASDKTestOn4S.a in Frameworks */,
 				F52EA84D15F31094D7E157C6 /* libPods-MyTestIO.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,7 +290,6 @@
 				CACE29301D856795009B4A69 /* MainVC */,
 				CACE29331D85A707009B4A69 /* MyTestRoot */,
 				CACE293E1D85B04E009B4A69 /* MyTest */,
-				24C9A59D1FE147A400A5B60D /* MyPlayground.playground */,
 				CA127F761CA7CA6A00DEE218 /* AppDelegate.h */,
 				CA127F771CA7CA6A00DEE218 /* AppDelegate.m */,
 				CA127F7F1CA7CA6A00DEE218 /* Assets.xcassets */,
