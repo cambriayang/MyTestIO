@@ -13,6 +13,8 @@
 #import "MyTestBindScrollView.h"
 #import "LFXHookGuard.h"
 #import "JKTest.h"
+#import "AutolayoutViewController.h"
+#import "TestLayoutAnimationViewController.h"
 
 NSString *cellIdentifier = @"tableviewcell";
 
@@ -21,17 +23,14 @@ typedef NS_ENUM(NSUInteger, PureOCTestType) {
     PureOCTestTypeTestIP2Int,
     PureOCTestTypeTestHookList,
     PureOCTestTypeTestGetVC,
-    PureOCTestTypeTestJKTest
+    PureOCTestTypeTestJKTest,
+    PureOCTestTypeTestAutoLayout,
+    PureOCTestTypeTestLayoutAnimation
 };
 
 @interface PureOCViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic,strong) NSArray *ds;
 @property (nonatomic,strong) UITableView *tableView;
-@property (nonatomic, strong) UILabel *label;
-@property (nonatomic, strong) UIView *blueBlock;
-@property (nonatomic, strong) MASConstraint *labelTopOffset;
-@property (nonatomic, strong) MASConstraint *blueBlockTopOffset;
-@property (nonatomic, strong) MASConstraint *blueBlockLeftOffset;
 @end
 
 @implementation PureOCViewController
@@ -40,7 +39,7 @@ typedef NS_ENUM(NSUInteger, PureOCTestType) {
     self = [super init];
     
     if (self) {
-        self.ds = @[@"TestBindWebView", @"TestIP2Int", @"TestHookList", @"TestGetVC", @"TestJKTest"];
+        self.ds = @[@"testBindWebView", @"testIP2Int", @"testHookList", @"testGetVC", @"testJKTest", @"testAutoLayout", @"testLayoutAnimation"];
     }
     
     return self;
@@ -61,8 +60,7 @@ typedef NS_ENUM(NSUInteger, PureOCTestType) {
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-//    [self testLayoutAnimation];
-//    [self testAutoLayout];
+    
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellIdentifier];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLineEtched;
     self.tableView.separatorColor = [UIColor redColor];
@@ -81,6 +79,8 @@ typedef NS_ENUM(NSUInteger, PureOCTestType) {
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
     switch (indexPath.row) {
         case PureOCTestTypeTestBindScrollViews:
             [self testBindScrollViews];
@@ -96,6 +96,12 @@ typedef NS_ENUM(NSUInteger, PureOCTestType) {
             break;
         case PureOCTestTypeTestJKTest:
             [self testJKTest];
+            break;
+        case PureOCTestTypeTestAutoLayout:
+            [self testAutoLayout];
+            break;
+        case PureOCTestTypeTestLayoutAnimation:
+            [self testLayoutAnimation];
             break;
         default:
             break;
@@ -144,71 +150,9 @@ typedef NS_ENUM(NSUInteger, PureOCTestType) {
 }
 
 - (void)testLayoutAnimation {
-    UILabel *label = [UILabel new];
+    UIViewController *vc = [[TestLayoutAnimationViewController alloc] init];
     
-    label.text = @"Test";
-    label.textColor = [UIColor redColor];
-    
-    [self.view addSubview:label];
-    
-    [label mas_makeConstraints:^(MASConstraintMaker *make) {
-        self.labelTopOffset = make.top.equalTo(self.view.mas_top).offset(160);
-        make.centerX.equalTo(self.view.mas_centerX);
-    }];
-    
-    self.label = label;
-    
-    UIView *blueBlock = [UIView new];
-    
-    [self.view addSubview:blueBlock];
-    
-    blueBlock.backgroundColor = [UIColor blueColor];
-    
-    [blueBlock mas_makeConstraints:^(MASConstraintMaker *make) {
-        self.blueBlockTopOffset = make.top.equalTo(label.mas_bottom).offset(10);
-        self.blueBlockLeftOffset = make.left.equalTo(label.mas_left);
-        make.size.mas_equalTo(CGSizeMake(100, 60));
-    }];
-    
-    self.blueBlock = blueBlock;
-    
-    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    
-    [btn setTitle:@"Click" forState:UIControlStateNormal];
-    
-    [btn addTarget:self action:@selector(clicked:) forControlEvents:UIControlEventTouchUpInside];
-    
-    [self.view addSubview:btn];
-    
-    [btn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.equalTo(self.view.mas_bottom).offset(-20);
-        make.size.mas_equalTo(CGSizeMake(100, 50));
-        make.centerX.equalTo(self.view.mas_centerX);
-    }];
-}
-
-- (void)clicked:(UIButton *)btn {
-    [UIView animateWithDuration:2.0 animations:^{
-//        [self.label mas_remakeConstraints:^(MASConstraintMaker *make) {
-//            make.top.equalTo(self.view.mas_top).offset(260);
-//            make.centerX.equalTo(self.view.mas_centerX);
-//        }];
-        self.labelTopOffset.offset = 260;
-        self.label.alpha = 0.5;
-        
-//        [self.blueBlock mas_remakeConstraints:^(MASConstraintMaker *make) {
-//            make.top.equalTo(self.label.mas_bottom).offset(20);
-//            make.left.equalTo(self.label.mas_left).offset(50);
-//            make.size.mas_equalTo(CGSizeMake(100, 60));
-//        }];
-        self.blueBlockTopOffset.offset = 20;
-        self.blueBlockLeftOffset.offset = 50;
-        self.label.alpha = 0.7;
-        
-        [self.view layoutIfNeeded];
-    } completion:^(BOOL finished) {
-        NSLog(@"Done");
-    }];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)testIP2Int:(NSString *)ipv4 {
@@ -263,45 +207,9 @@ typedef NS_ENUM(NSUInteger, PureOCTestType) {
 }
 
 - (void)testAutoLayout {
-    UILabel *l1 = [[UILabel alloc] init];
+    UIViewController *vc = [[AutolayoutViewController alloc] init];
     
-    l1.text = @"nihaoooooooooooo";
-    l1.backgroundColor = [UIColor whiteColor];
-    
-    [self.view addSubview:l1];
-    
-    UILabel *l2 = [[UILabel alloc] init];
-    
-    l2.text = @"ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss";
-    l2.backgroundColor = [UIColor yellowColor];
-    l2.preferredMaxLayoutWidth = 100;
-    l2.lineBreakMode = NSLineBreakByTruncatingTail;
-    l2.numberOfLines = 3;
-    
-    [self.view addSubview:l2];
-    
-    UILabel *l3 = [[UILabel alloc] init];
-    
-    l3.text = @"tttttttttttttttttttttttttt";
-    l3.backgroundColor = [UIColor purpleColor];
-    
-    [self.view addSubview:l3];
-    
-    [l3 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(self.view.mas_right).offset(-15.0);
-        make.top.equalTo(self.view.mas_top).offset(150.0);
-    }];
-    
-    [l1 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.view.mas_left).offset(15.0);
-        make.top.equalTo(self.view.mas_top).offset(100.0);
-    }];
-    
-    [l2 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(l1.mas_right).offset(5.0);
-        make.right.equalTo(l3.mas_left).offset(-10.0);
-        make.top.equalTo(self.view.mas_top).offset(100.0);
-    }];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 /**

@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2443B62B1DE6C53B003F0F1C /* MyInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD615411D8709B000804F1E /* MyInstance.swift */; };
+		2440FCC61FFF9DA900AC685F /* AutolayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2440FCC51FFF9DA900AC685F /* AutolayoutViewController.m */; };
+		2440FCC91FFFA04200AC685F /* TestLayoutAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2440FCC81FFFA04200AC685F /* TestLayoutAnimationViewController.m */; };
 		245E03731F21F04600B73513 /* LFXHookGuard.m in Sources */ = {isa = PBXBuildFile; fileRef = 245E03721F21EFEA00B73513 /* LFXHookGuard.m */; };
 		24C5F6E51FFB7C6B006DF2DD /* MyTestBindScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C5F6E41FFB7C6B006DF2DD /* MyTestBindScrollView.m */; };
 		24C9A5991FE1476C00A5B60D /* UIView+AIFAutoCollapse.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C9A5981FE1476C00A5B60D /* UIView+AIFAutoCollapse.m */; };
@@ -70,6 +71,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2440FCC41FFF9DA900AC685F /* AutolayoutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AutolayoutViewController.h; sourceTree = "<group>"; };
+		2440FCC51FFF9DA900AC685F /* AutolayoutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AutolayoutViewController.m; sourceTree = "<group>"; };
+		2440FCC71FFFA04200AC685F /* TestLayoutAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestLayoutAnimationViewController.h; sourceTree = "<group>"; };
+		2440FCC81FFFA04200AC685F /* TestLayoutAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestLayoutAnimationViewController.m; sourceTree = "<group>"; };
 		245E03711F21EFEA00B73513 /* LFXHookGuard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFXHookGuard.h; sourceTree = "<group>"; };
 		245E03721F21EFEA00B73513 /* LFXHookGuard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFXHookGuard.m; sourceTree = "<group>"; };
 		24C5F6E31FFB7C6B006DF2DD /* MyTestBindScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyTestBindScrollView.h; sourceTree = "<group>"; };
@@ -188,8 +193,15 @@
 		24C5F6E21FFB7B53006DF2DD /* MyTestUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				CA18E9501DEAFFC9008C718C /* LFMessageTestVC.swift */,
+				2FF5CEA31F43EBF80060C0DF /* ARKitTestVC.swift */,
+				CACE293C1D85B021009B4A69 /* DecimalNumberPadForH5TestVC.swift */,
 				24C5F6E31FFB7C6B006DF2DD /* MyTestBindScrollView.h */,
 				24C5F6E41FFB7C6B006DF2DD /* MyTestBindScrollView.m */,
+				2440FCC41FFF9DA900AC685F /* AutolayoutViewController.h */,
+				2440FCC51FFF9DA900AC685F /* AutolayoutViewController.m */,
+				2440FCC71FFFA04200AC685F /* TestLayoutAnimationViewController.h */,
+				2440FCC81FFFA04200AC685F /* TestLayoutAnimationViewController.m */,
 			);
 			name = MyTestUIKit;
 			sourceTree = "<group>";
@@ -197,6 +209,9 @@
 		24C5F6E61FFB7D7C006DF2DD /* MyTestKit */ = {
 			isa = PBXGroup;
 			children = (
+				CAD615411D8709B000804F1E /* MyInstance.swift */,
+				CAD615431D87133300804F1E /* MyTestInstance.h */,
+				CAD615441D87133300804F1E /* MyTestInstance.m */,
 				CACE293F1D86F947009B4A69 /* JKTest.h */,
 				CACE29401D86F947009B4A69 /* JKTest.m */,
 			);
@@ -417,15 +432,9 @@
 			children = (
 				24C5F6E61FFB7D7C006DF2DD /* MyTestKit */,
 				24C5F6E21FFB7B53006DF2DD /* MyTestUIKit */,
-				CACE293C1D85B021009B4A69 /* DecimalNumberPadForH5TestVC.swift */,
-				CA18E9501DEAFFC9008C718C /* LFMessageTestVC.swift */,
 				CA0417DA1DF45152007D8B54 /* PureSwiftTestVC.swift */,
-				CAD615411D8709B000804F1E /* MyInstance.swift */,
-				CAD615431D87133300804F1E /* MyTestInstance.h */,
-				CAD615441D87133300804F1E /* MyTestInstance.m */,
 				24FCFD5E1E821F0F001334DE /* PureOCViewController.h */,
 				24FCFD5F1E821F0F001334DE /* PureOCViewController.m */,
-				2FF5CEA31F43EBF80060C0DF /* ARKitTestVC.swift */,
 			);
 			name = MyTest;
 			sourceTree = "<group>";
@@ -625,9 +634,11 @@
 				245E03731F21F04600B73513 /* LFXHookGuard.m in Sources */,
 				CA4647901CF18BA4006F2A54 /* EXTScope.m in Sources */,
 				CA56B0E91CF053220018B554 /* NSMutableArray+SafeAdd.m in Sources */,
+				2440FCC61FFF9DA900AC685F /* AutolayoutViewController.m in Sources */,
 				24D57BDB1DE7F2D500A06318 /* LFMessageManager.m in Sources */,
 				24DED14F1DF661E6005C727F /* LFBlockQueue.m in Sources */,
 				CA46478D1CF18BA4006F2A54 /* EXTNil.m in Sources */,
+				2440FCC91FFFA04200AC685F /* TestLayoutAnimationViewController.m in Sources */,
 				CA3E289D1CF196A80016081F /* NSObject+Swizzle.m in Sources */,
 				CA4647931CF18BA4006F2A54 /* NSMethodSignature+EXT.m in Sources */,
 				24C5F6E51FFB7C6B006DF2DD /* MyTestBindScrollView.m in Sources */,
@@ -663,7 +674,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2443B62B1DE6C53B003F0F1C /* MyInstance.swift in Sources */,
 				CA127F8E1CA7CA6A00DEE218 /* ASDKTestOn4STests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

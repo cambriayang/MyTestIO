@@ -9,15 +9,15 @@
 import UIKit
 
 enum TestType: Int {
-    case DecimalNumberPadForH5 = 0
+    case ARKit = 0
+    case DecimalNumberPadForH5
     case LFMessage
     case PureSwift
     case PureOC
-    case ARKit
 }
 
 class MyTestRootVC: BaseViewController {
-    let testDataSource = [String(describing: "DecimalNumberPadForH5TestVC"), String(describing: "LFMessageTestVC"), String(describing: "PureSwiftTestVC"), String(describing: "PureOCViewController"), String(describing: "ARKitTestVC")];
+    let testDataSource = [String(describing: "ARKitTestVC"), String(describing: "DecimalNumberPadForH5TestVC"), String(describing: "LFMessageTestVC"), String(describing: "PureSwiftTestVC"), String(describing: "PureOCViewController")];
     
     deinit {
         
