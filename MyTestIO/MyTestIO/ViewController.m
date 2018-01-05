@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "MyTestIO-Swift.h"
-#import "JKTest.h"
+
 
 @interface ViewController () 
 
@@ -23,17 +23,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    JKTest *test = [JKTest new];
-    
-    @try {
-        [test setValue:@"KVC" forKey:@"_objjj"];
-        [test valueForKey:@"_objjj"];
-    } @catch (NSException *exception) {
-        NSLog(@"==[%@]==", exception.description);
-    } @finally {
-        NSLog(@"==[%@]==", test.object);
-    }
 }
 
 - (void)didReceiveMemoryWarning {

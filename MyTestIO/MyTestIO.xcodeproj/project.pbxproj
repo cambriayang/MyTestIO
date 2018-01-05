@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2443B62B1DE6C53B003F0F1C /* MyInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD615411D8709B000804F1E /* MyInstance.swift */; };
 		245E03731F21F04600B73513 /* LFXHookGuard.m in Sources */ = {isa = PBXBuildFile; fileRef = 245E03721F21EFEA00B73513 /* LFXHookGuard.m */; };
+		24C5F6E51FFB7C6B006DF2DD /* MyTestBindScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C5F6E41FFB7C6B006DF2DD /* MyTestBindScrollView.m */; };
 		24C9A5991FE1476C00A5B60D /* UIView+AIFAutoCollapse.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C9A5981FE1476C00A5B60D /* UIView+AIFAutoCollapse.m */; };
 		24C9A59C1FE1479600A5B60D /* MASViewConstraint+AIFCommonUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C9A59A1FE1479500A5B60D /* MASViewConstraint+AIFCommonUI.m */; };
 		24D57BDA1DE7F2D500A06318 /* LFMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D57BD51DE7F2D500A06318 /* LFMessage.m */; };
@@ -71,6 +72,9 @@
 /* Begin PBXFileReference section */
 		245E03711F21EFEA00B73513 /* LFXHookGuard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFXHookGuard.h; sourceTree = "<group>"; };
 		245E03721F21EFEA00B73513 /* LFXHookGuard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFXHookGuard.m; sourceTree = "<group>"; };
+		24C5F6E31FFB7C6B006DF2DD /* MyTestBindScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyTestBindScrollView.h; sourceTree = "<group>"; };
+		24C5F6E41FFB7C6B006DF2DD /* MyTestBindScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyTestBindScrollView.m; sourceTree = "<group>"; };
+		24C5F6E71FFB7F04006DF2DD /* MyTestIO-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MyTestIO-Prefix.pch"; sourceTree = "<group>"; };
 		24C9A5971FE1476C00A5B60D /* UIView+AIFAutoCollapse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AIFAutoCollapse.h"; sourceTree = "<group>"; };
 		24C9A5981FE1476C00A5B60D /* UIView+AIFAutoCollapse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AIFAutoCollapse.m"; sourceTree = "<group>"; };
 		24C9A59A1FE1479500A5B60D /* MASViewConstraint+AIFCommonUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MASViewConstraint+AIFCommonUI.m"; sourceTree = "<group>"; };
@@ -181,6 +185,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24C5F6E21FFB7B53006DF2DD /* MyTestUIKit */ = {
+			isa = PBXGroup;
+			children = (
+				24C5F6E31FFB7C6B006DF2DD /* MyTestBindScrollView.h */,
+				24C5F6E41FFB7C6B006DF2DD /* MyTestBindScrollView.m */,
+			);
+			name = MyTestUIKit;
+			sourceTree = "<group>";
+		};
+		24C5F6E61FFB7D7C006DF2DD /* MyTestKit */ = {
+			isa = PBXGroup;
+			children = (
+				CACE293F1D86F947009B4A69 /* JKTest.h */,
+				CACE29401D86F947009B4A69 /* JKTest.m */,
+			);
+			name = MyTestKit;
+			sourceTree = "<group>";
+		};
 		24C9A59E1FE147AF00A5B60D /* AICollapse */ = {
 			isa = PBXGroup;
 			children = (
@@ -303,6 +325,7 @@
 		CA127F731CA7CA6A00DEE218 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				24C5F6E71FFB7F04006DF2DD /* MyTestIO-Prefix.pch */,
 				CA127F741CA7CA6A00DEE218 /* main.m */,
 				CA79C4F31D748FCF00D043E3 /* MyTestIO-Bridging-Header.h */,
 			);
@@ -392,14 +415,14 @@
 		CACE293E1D85B04E009B4A69 /* MyTest */ = {
 			isa = PBXGroup;
 			children = (
+				24C5F6E61FFB7D7C006DF2DD /* MyTestKit */,
+				24C5F6E21FFB7B53006DF2DD /* MyTestUIKit */,
 				CACE293C1D85B021009B4A69 /* DecimalNumberPadForH5TestVC.swift */,
 				CA18E9501DEAFFC9008C718C /* LFMessageTestVC.swift */,
 				CA0417DA1DF45152007D8B54 /* PureSwiftTestVC.swift */,
 				CAD615411D8709B000804F1E /* MyInstance.swift */,
 				CAD615431D87133300804F1E /* MyTestInstance.h */,
 				CAD615441D87133300804F1E /* MyTestInstance.m */,
-				CACE293F1D86F947009B4A69 /* JKTest.h */,
-				CACE29401D86F947009B4A69 /* JKTest.m */,
 				24FCFD5E1E821F0F001334DE /* PureOCViewController.h */,
 				24FCFD5F1E821F0F001334DE /* PureOCViewController.m */,
 				2FF5CEA31F43EBF80060C0DF /* ARKitTestVC.swift */,
@@ -607,6 +630,7 @@
 				CA46478D1CF18BA4006F2A54 /* EXTNil.m in Sources */,
 				CA3E289D1CF196A80016081F /* NSObject+Swizzle.m in Sources */,
 				CA4647931CF18BA4006F2A54 /* NSMethodSignature+EXT.m in Sources */,
+				24C5F6E51FFB7C6B006DF2DD /* MyTestBindScrollView.m in Sources */,
 				24FCFD601E821F0F001334DE /* PureOCViewController.m in Sources */,
 				CA46478C1CF18BA4006F2A54 /* EXTConcreteProtocol.m in Sources */,
 				CACE29351D85A748009B4A69 /* MyTestRootVC.swift in Sources */,
@@ -803,6 +827,8 @@
 				DEVELOPMENT_TEAM = 8T9HE858RS;
 				ENABLE_BITCODE = NO;
 				EXCLUDED_SOURCE_FILE_NAMES = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "./MyTestIO/MyTestIO-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",
@@ -839,6 +865,8 @@
 				DEVELOPMENT_TEAM = 8T9HE858RS;
 				ENABLE_BITCODE = NO;
 				EXCLUDED_SOURCE_FILE_NAMES = "FLEX*";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "./MyTestIO/MyTestIO-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",

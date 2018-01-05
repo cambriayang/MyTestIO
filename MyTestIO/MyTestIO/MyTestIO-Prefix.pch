@@ -1,0 +1,15 @@
+//
+//  MyTestIO-Prefix.pch
+//  MyTestIO
+//
+//  Created by Cambria on 2018/01/02.
+//  Copyright © 2018年 Yeio. All rights reserved.
+//
+
+#ifndef MyTestIO_Prefix_pch
+#define MyTestIO_Prefix_pch
+
+#import <Masonry.h>
+#import "EXTScope.h"
+
+#endif /* MyTestIO_Prefix_pch */

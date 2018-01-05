@@ -83,7 +83,7 @@ class MyTestRootVC: BaseViewController {
             
             DispatchQueue.main.asyncAfter(deadline: .now()+5, execute:
             {
-                NSLog("xxx");
+                NSLog("===[swift ayncafter: PureOCViewController");
             })
         }
     }

@@ -7,41 +7,140 @@
 //
 
 #import "PureOCViewController.h"
-#import <Masonry.h>
 #import "JRSwizzle.h"
 #import "NSMutableArray+SafeAdd.h"
 #import <UIKit/UIActivityViewController.h>
+#import "MyTestBindScrollView.h"
+#import "LFXHookGuard.h"
+#import "JKTest.h"
 
-@interface PureOCViewController ()
+NSString *cellIdentifier = @"tableviewcell";
+
+typedef NS_ENUM(NSUInteger, PureOCTestType) {
+    PureOCTestTypeTestBindScrollViews = 0,
+    PureOCTestTypeTestIP2Int,
+    PureOCTestTypeTestHookList,
+    PureOCTestTypeTestGetVC,
+    PureOCTestTypeTestJKTest
+};
+
+@interface PureOCViewController () <UITableViewDelegate, UITableViewDataSource>
+@property (nonatomic,strong) NSArray *ds;
+@property (nonatomic,strong) UITableView *tableView;
 @property (nonatomic, strong) UILabel *label;
 @property (nonatomic, strong) UIView *blueBlock;
-@property (nonatomic, strong) MASConstraint *a;
-@property (nonatomic, strong) MASConstraint *b;
-@property (nonatomic, strong) MASConstraint *c;
+@property (nonatomic, strong) MASConstraint *labelTopOffset;
+@property (nonatomic, strong) MASConstraint *blueBlockTopOffset;
+@property (nonatomic, strong) MASConstraint *blueBlockLeftOffset;
 @end
 
 @implementation PureOCViewController
 
+- (instancetype)init {
+    self = [super init];
+    
+    if (self) {
+        self.ds = @[@"TestBindWebView", @"TestIP2Int", @"TestHookList", @"TestGetVC", @"TestJKTest"];
+    }
+    
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor lightGrayColor];
+    self.view.backgroundColor = [UIColor whiteColor];
     
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
+    
+    [self.view addSubview:self.tableView];
+    
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view);
+    }];
+    
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
 //    [self testLayoutAnimation];
 //    [self testAutoLayout];
-//    [self testViews];
-//    [self testAutoFillOniOS11];
-//    [self testHookList];
-//    [self testShare];
-//    [self testIP2Int:@"172.168.5.1"];
-//    [self testIP2Int:@"17 2.168.5.1"];
-//    [self testIP2Int:@" 172 .168.5.1"];
-//    [self testIP2Int:@"172. 168.5. 1"];
-    [self testWebView];
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellIdentifier];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLineEtched;
+    self.tableView.separatorColor = [UIColor redColor];
 }
 
-- (void)testWebView {
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.ds.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     
+    cell.textLabel.text = self.ds[indexPath.row];
+    
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    switch (indexPath.row) {
+        case PureOCTestTypeTestBindScrollViews:
+            [self testBindScrollViews];
+            break;
+        case PureOCTestTypeTestIP2Int:
+            [self testIP2Int];
+            break;
+        case PureOCTestTypeTestHookList:
+            [self testHookList];
+            break;
+        case PureOCTestTypeTestGetVC:
+            [self testGetVC];
+            break;
+        case PureOCTestTypeTestJKTest:
+            [self testJKTest];
+            break;
+        default:
+            break;
+    }
+}
+
+- (void)testJKTest {
+    JKTest *test = [JKTest new];
+    
+    @try {
+        [test setValue:@"KVC" forKey:@"_objjj"];
+        [test valueForKey:@"_objjj"];
+    } @catch (NSException *exception) {
+        NSLog(@"==[%@]==", exception.description);
+    } @finally {
+        NSLog(@"==[%@]==", test.object);
+    }
+}
+
+- (void)testHookList {
+    [LFXHookGuard swapMethodsOfMutableArray];
+    NSLog(@"******%s",  __FUNCTION__);
+}
+
+- (void)testIP2Int {
+    [self testIP2Int:@"172.168.5.1"];
+    [self testIP2Int:@"17 2.168.5.1"];
+    [self testIP2Int:@" 172 .168.5.1"];
+    [self testIP2Int:@"172. 168.5. 1"];
+}
+
+- (void)testBindScrollViews {
+    UIViewController *vc = [UIViewController new];
+    
+    vc.view.backgroundColor = [UIColor whiteColor];
+    
+    MyTestBindScrollView *view = [MyTestBindScrollView new];
+    
+    [vc.view addSubview:view];
+    
+    [view mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.mas_equalTo(vc.view);
+    }];
+    
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)testLayoutAnimation {
@@ -53,7 +152,7 @@
     [self.view addSubview:label];
     
     [label mas_makeConstraints:^(MASConstraintMaker *make) {
-        self.a = make.top.equalTo(self.view.mas_top).offset(160);
+        self.labelTopOffset = make.top.equalTo(self.view.mas_top).offset(160);
         make.centerX.equalTo(self.view.mas_centerX);
     }];
     
@@ -66,8 +165,8 @@
     blueBlock.backgroundColor = [UIColor blueColor];
     
     [blueBlock mas_makeConstraints:^(MASConstraintMaker *make) {
-        self.b = make.top.equalTo(label.mas_bottom).offset(10);
-        self.c = make.left.equalTo(label.mas_left);
+        self.blueBlockTopOffset = make.top.equalTo(label.mas_bottom).offset(10);
+        self.blueBlockLeftOffset = make.left.equalTo(label.mas_left);
         make.size.mas_equalTo(CGSizeMake(100, 60));
     }];
     
@@ -94,7 +193,7 @@
 //            make.top.equalTo(self.view.mas_top).offset(260);
 //            make.centerX.equalTo(self.view.mas_centerX);
 //        }];
-        self.a.offset = 260;
+        self.labelTopOffset.offset = 260;
         self.label.alpha = 0.5;
         
 //        [self.blueBlock mas_remakeConstraints:^(MASConstraintMaker *make) {
@@ -102,8 +201,8 @@
 //            make.left.equalTo(self.label.mas_left).offset(50);
 //            make.size.mas_equalTo(CGSizeMake(100, 60));
 //        }];
-        self.b.offset = 20;
-        self.c.offset = 50;
+        self.blueBlockTopOffset.offset = 20;
+        self.blueBlockLeftOffset.offset = 50;
         self.label.alpha = 0.7;
         
         [self.view layoutIfNeeded];
@@ -142,69 +241,7 @@
     }
 }
 
-- (void)testShare {
-    UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:@[] applicationActivities:@[]];
-    
-    [self presentViewController:activityViewController animated:YES completion:nil];
-    
-    NSString *m = [[UIDevice currentDevice] systemVersion];
-    
-    if ([m floatValue] > 8.000000f) {
-        NSLog(@"mmmmmmmmmmmmmm");
-    }
-    
-    NSMutableArray *mm = [@[@"xxx", @"mmmm"] mutableCopy];
-    
-    NSLog(@"%@", mm[2]);
-    
-    NSLog(@"%@", m);
-}
-
-- (void)testHookList {
-//    NSMutableArray *array = @[@"1", @"2"].mutableCopy;
-//
-//    [[array class] jr_swizzleMethod:@selector(addObject:) withMethod:@selector(cyAddObject:) error:nil];
-//
-//    [[array class] jr_swizzleMethod:@selector(addObject:) withMethod:@selector(cyAddObject2:) error:nil];
-//    [array insertObject:nil atIndex:3];
-}
-
-- (void)testAutoFillOniOS11 {
-    UITextField *f1 = [[UITextField alloc] init];
-    
-    [self.view addSubview:f1];
-    f1.backgroundColor = [UIColor whiteColor];
-//    if (@available(iOS 11.0, *)) {
-//        f1.textContentType = UITextContentTypeUsername;
-//    } else {
-//        // Fallback on earlier versions
-//    }
-    
-    [f1 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(self.view.mas_centerX);
-        make.top.equalTo(self.view.mas_top).offset(100);
-        make.size.mas_equalTo(CGSizeMake(150, 50));
-    }];
-    
-    UITextField *f2 = [[UITextField alloc] init];
-    
-    [self.view addSubview:f2];
-    f2.backgroundColor = [UIColor whiteColor];
-    f2.secureTextEntry = YES;
-//    if (@available(iOS 11.0, *)) {
-//        f2.textContentType = UITextContentTypePassword;
-//    } else {
-//        // Fallback on earlier versions
-//    }
-    
-    [f2 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(self.view.mas_centerX);
-        make.top.equalTo(self.view.mas_top).offset(160);
-        make.size.mas_equalTo(CGSizeMake(150, 50));
-    }];
-}
-
-- (void)testViews {
+- (void)testGetVC {
     CGFloat viewWidth = CGRectGetWidth(self.view.frame);
     CGFloat viewHeight = CGRectGetHeight(self.view.frame);
     
@@ -235,8 +272,11 @@
     
     UILabel *l2 = [[UILabel alloc] init];
     
-    l2.text = @"ssssssssssssssssssssssssssssss";
+    l2.text = @"ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss";
     l2.backgroundColor = [UIColor yellowColor];
+    l2.preferredMaxLayoutWidth = 100;
+    l2.lineBreakMode = NSLineBreakByTruncatingTail;
+    l2.numberOfLines = 3;
     
     [self.view addSubview:l2];
     
@@ -284,10 +324,6 @@
     }
     
     return nil;
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
 }
 
 @end
