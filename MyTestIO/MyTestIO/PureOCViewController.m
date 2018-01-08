@@ -136,7 +136,7 @@ typedef NS_ENUM(NSUInteger, PureOCTestType) {
 - (void)testBindScrollViews {
     UIViewController *vc = [UIViewController new];
     
-    vc.view.backgroundColor = [UIColor whiteColor];
+    vc.view.backgroundColor = [UIColor grayColor];
     
     MyTestBindScrollView *view = [MyTestBindScrollView new];
     
