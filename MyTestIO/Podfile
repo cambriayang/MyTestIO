@@ -11,17 +11,14 @@ end
 
 target 'MyTestIO' do
     app_pods
-end
-
-#Have serveral targets may need this 'def
-def app_pods_simulator
-    app_pods
+    
     #Can add individual pods
 end
 
-# target 'MyTestIO-simulator' do
-#     app_pods_simulator
-# end
+#Have serveral targets may need this 'def
+def common_pods
+    
+end
 
 ### HOOK POST
 post_install do |installer|
