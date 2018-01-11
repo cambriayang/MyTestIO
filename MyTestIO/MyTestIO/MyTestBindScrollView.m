@@ -55,7 +55,7 @@ CGFloat defaultSectionCount = 1;
     
     self.webView = web;
   
-    NSString *urlStr = @"https://www.tuicool.com/articles/FNrIbmi";
+    NSString *urlStr = @"http://m.thepaper.cn/wifiKey_detail.jsp?contid=1913999&from=wifiKey&fromId=1966555810873344&newsId=26~2490337347993600&docId=26~249033743474688";
     
     NSString *encodedString = [urlStr stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
     
