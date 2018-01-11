@@ -15,11 +15,13 @@
 #import "JKTest.h"
 #import "AutolayoutViewController.h"
 #import "TestLayoutAnimationViewController.h"
+#import <FLEX/FLEX.h>
 
 NSString *cellIdentifier = @"tableviewcell";
 
 typedef NS_ENUM(NSUInteger, PureOCTestType) {
-    PureOCTestTypeTestBindScrollViews = 0,
+    PureOCTestTypeShowFlex = 0,
+    PureOCTestTypeTestBindScrollViews,
     PureOCTestTypeTestIP2Int,
     PureOCTestTypeTestHookList,
     PureOCTestTypeTestGetVC,
@@ -39,7 +41,7 @@ typedef NS_ENUM(NSUInteger, PureOCTestType) {
     self = [super init];
     
     if (self) {
-        self.ds = @[@"testBindWebView", @"testIP2Int", @"testHookList", @"testGetVC", @"testJKTest", @"testAutoLayout", @"testLayoutAnimation"];
+        self.ds = @[@"ShowFlex", @"testBindWebView", @"testIP2Int", @"testHookList", @"testGetVC", @"testJKTest", @"testAutoLayout", @"testLayoutAnimation"];
     }
     
     return self;
@@ -82,6 +84,11 @@ typedef NS_ENUM(NSUInteger, PureOCTestType) {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     switch (indexPath.row) {
+        case PureOCTestTypeShowFlex:
+        {
+            [[FLEXManager sharedManager] toggleExplorer];
+        }
+            break;
         case PureOCTestTypeTestBindScrollViews:
             [self testBindScrollViews];
             break;

@@ -57,7 +57,7 @@ CGFloat defaultSectionCount = 1;
   
     NSString *urlStr = @"https://www.tuicool.com/articles/FNrIbmi";
     
-    NSString *encodedString = [urlStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSString *encodedString = [urlStr stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
     
     NSURL *weburl = [NSURL URLWithString:encodedString];
     
@@ -116,7 +116,7 @@ CGFloat defaultSectionCount = 1;
     NSInteger commandId = __instance % (1024*1024);
     __instance++;
     
-    cell.textLabel.text = [NSString stringWithFormat:@"%ld", commandId];
+    cell.textLabel.text = [NSString stringWithFormat:@"%ld", (long)commandId];
     
     return cell;
 }
