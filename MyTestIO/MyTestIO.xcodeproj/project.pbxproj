@@ -11,6 +11,7 @@
 		2440FCC91FFFA04200AC685F /* TestLayoutAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2440FCC81FFFA04200AC685F /* TestLayoutAnimationViewController.m */; };
 		2448087B2008671600E41B49 /* TestBindScrollViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2448087A2008671600E41B49 /* TestBindScrollViewVC.m */; };
 		2448087E2008690B00E41B49 /* TestGetVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2448087D2008690B00E41B49 /* TestGetVC.m */; };
+		244808832008D11900E41B49 /* TestWKWebViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 244808822008D11900E41B49 /* TestWKWebViewVC.m */; };
 		245E03731F21F04600B73513 /* LFXHookGuard.m in Sources */ = {isa = PBXBuildFile; fileRef = 245E03721F21EFEA00B73513 /* LFXHookGuard.m */; };
 		24C5F6E51FFB7C6B006DF2DD /* MyTestBindScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C5F6E41FFB7C6B006DF2DD /* MyTestBindScrollView.m */; };
 		24C9A5991FE1476C00A5B60D /* UIView+AIFAutoCollapse.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C9A5981FE1476C00A5B60D /* UIView+AIFAutoCollapse.m */; };
@@ -83,6 +84,8 @@
 		2448087A2008671600E41B49 /* TestBindScrollViewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestBindScrollViewVC.m; sourceTree = "<group>"; };
 		2448087C2008690B00E41B49 /* TestGetVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestGetVC.h; sourceTree = "<group>"; };
 		2448087D2008690B00E41B49 /* TestGetVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestGetVC.m; sourceTree = "<group>"; };
+		244808812008D11900E41B49 /* TestWKWebViewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestWKWebViewVC.h; sourceTree = "<group>"; };
+		244808822008D11900E41B49 /* TestWKWebViewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestWKWebViewVC.m; sourceTree = "<group>"; };
 		245E03711F21EFEA00B73513 /* LFXHookGuard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFXHookGuard.h; sourceTree = "<group>"; };
 		245E03721F21EFEA00B73513 /* LFXHookGuard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFXHookGuard.m; sourceTree = "<group>"; };
 		24C5F6E31FFB7C6B006DF2DD /* MyTestBindScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyTestBindScrollView.h; sourceTree = "<group>"; };
@@ -214,6 +217,8 @@
 				2448087A2008671600E41B49 /* TestBindScrollViewVC.m */,
 				2448087C2008690B00E41B49 /* TestGetVC.h */,
 				2448087D2008690B00E41B49 /* TestGetVC.m */,
+				244808812008D11900E41B49 /* TestWKWebViewVC.h */,
+				244808822008D11900E41B49 /* TestWKWebViewVC.m */,
 			);
 			name = MyTestUIKit;
 			sourceTree = "<group>";
@@ -645,6 +650,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				244808832008D11900E41B49 /* TestWKWebViewVC.m in Sources */,
 				245E03731F21F04600B73513 /* LFXHookGuard.m in Sources */,
 				CA4647901CF18BA4006F2A54 /* EXTScope.m in Sources */,
 				CA56B0E91CF053220018B554 /* NSMutableArray+SafeAdd.m in Sources */,

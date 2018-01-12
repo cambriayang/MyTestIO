@@ -30,7 +30,7 @@ typedef NS_ENUM(NSUInteger, PureOCTestType) {
 };
 
 @interface PureOCViewController () <UITableViewDelegate, UITableViewDataSource>
-@property (nonatomic,strong) NSArray *ds;
+@property (nonatomic,strong) NSArray *dataSource;
 @property (nonatomic,strong) UITableView *tableView;
 @property (nonatomic,assign) PureOCTestType type;
 @end
@@ -41,7 +41,15 @@ typedef NS_ENUM(NSUInteger, PureOCTestType) {
     self = [super init];
     
     if (self) {
-        self.ds = @[@"showFlex", @"TestBindScrollViewVC", @"testIP2Int", @"testHookList", @"TestGetVC", @"testJKTest", @"AutolayoutViewController", @"TestLayoutAnimationViewController", @"TestWKWebViewVC"];
+        self.dataSource = @[@"showFlex",
+                            @"TestBindScrollViewVC",
+                            @"testIP2Int",
+                            @"testHookList",
+                            @"TestGetVC",
+                            @"testJKTest",
+                            @"AutolayoutViewController",
+                            @"TestLayoutAnimationViewController",
+                            @"TestWKWebViewVC"];
     }
     
     return self;
@@ -69,13 +77,13 @@ typedef NS_ENUM(NSUInteger, PureOCTestType) {
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.ds.count;
+    return self.dataSource.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     
-    cell.textLabel.text = self.ds[indexPath.row];
+    cell.textLabel.text = self.dataSource[indexPath.row];
     
     return cell;
 }
@@ -104,6 +112,7 @@ typedef NS_ENUM(NSUInteger, PureOCTestType) {
         case PureOCTestTypeTestGetVC:
         case PureOCTestTypeTestAutoLayout:
         case PureOCTestTypeTestLayoutAnimation:
+        case PureOCTestTypeTestWKWebView:
             [self gotoTestVC];
             break;
         default:
@@ -137,7 +146,7 @@ typedef NS_ENUM(NSUInteger, PureOCTestType) {
 }
 
 - (void)gotoTestVC {
-    NSString *name = self.ds[self.type];
+    NSString *name = self.dataSource[self.type];
     
     Class cls = NSClassFromString(name);
     
