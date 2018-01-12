@@ -7,15 +7,13 @@
 //
 
 #import "PureOCViewController.h"
-#import "JRSwizzle.h"
-#import "NSMutableArray+SafeAdd.h"
-#import <UIKit/UIActivityViewController.h>
-#import "MyTestBindScrollView.h"
 #import "LFXHookGuard.h"
 #import "JKTest.h"
 #import "AutolayoutViewController.h"
 #import "TestLayoutAnimationViewController.h"
 #import <FLEX/FLEX.h>
+#import "TestBindScrollViewVC.h"
+#import "TestGetVC.h"
 
 NSString *cellIdentifier = @"tableviewcell";
 
@@ -27,12 +25,14 @@ typedef NS_ENUM(NSUInteger, PureOCTestType) {
     PureOCTestTypeTestGetVC,
     PureOCTestTypeTestJKTest,
     PureOCTestTypeTestAutoLayout,
-    PureOCTestTypeTestLayoutAnimation
+    PureOCTestTypeTestLayoutAnimation,
+    PureOCTestTypeTestWKWebView
 };
 
 @interface PureOCViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic,strong) NSArray *ds;
 @property (nonatomic,strong) UITableView *tableView;
+@property (nonatomic,assign) PureOCTestType type;
 @end
 
 @implementation PureOCViewController
@@ -41,7 +41,7 @@ typedef NS_ENUM(NSUInteger, PureOCTestType) {
     self = [super init];
     
     if (self) {
-        self.ds = @[@"ShowFlex", @"testBindWebView", @"testIP2Int", @"testHookList", @"testGetVC", @"testJKTest", @"testAutoLayout", @"testLayoutAnimation"];
+        self.ds = @[@"showFlex", @"TestBindScrollViewVC", @"testIP2Int", @"testHookList", @"TestGetVC", @"testJKTest", @"AutolayoutViewController", @"TestLayoutAnimationViewController", @"TestWKWebViewVC"];
     }
     
     return self;
@@ -83,32 +83,28 @@ typedef NS_ENUM(NSUInteger, PureOCTestType) {
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    switch (indexPath.row) {
+    self.type = indexPath.row;
+    
+    switch (self.type) {
+        case PureOCTestTypeTestJKTest:
+            [self testJKTest];
+            break;
+        case PureOCTestTypeTestHookList:
+            [self testHookList];
+            break;
+        case PureOCTestTypeTestIP2Int:
+            [self testIP2Int];
+            break;
         case PureOCTestTypeShowFlex:
         {
             [[FLEXManager sharedManager] toggleExplorer];
         }
             break;
         case PureOCTestTypeTestBindScrollViews:
-            [self testBindScrollViews];
-            break;
-        case PureOCTestTypeTestIP2Int:
-            [self testIP2Int];
-            break;
-        case PureOCTestTypeTestHookList:
-            [self testHookList];
-            break;
         case PureOCTestTypeTestGetVC:
-            [self testGetVC];
-            break;
-        case PureOCTestTypeTestJKTest:
-            [self testJKTest];
-            break;
         case PureOCTestTypeTestAutoLayout:
-            [self testAutoLayout];
-            break;
         case PureOCTestTypeTestLayoutAnimation:
-            [self testLayoutAnimation];
+            [self gotoTestVC];
             break;
         default:
             break;
@@ -140,26 +136,16 @@ typedef NS_ENUM(NSUInteger, PureOCTestType) {
     [self testIP2Int:@"172. 168.5. 1"];
 }
 
-- (void)testBindScrollViews {
-    UIViewController *vc = [UIViewController new];
+- (void)gotoTestVC {
+    NSString *name = self.ds[self.type];
     
-    vc.view.backgroundColor = [UIColor grayColor];
+    Class cls = NSClassFromString(name);
     
-    MyTestBindScrollView *view = [MyTestBindScrollView new];
+    UIViewController *vc = [[cls alloc] init];
     
-    [vc.view addSubview:view];
-    
-    [view mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(vc.view);
-    }];
-    
-    [self.navigationController pushViewController:vc animated:YES];
-}
-
-- (void)testLayoutAnimation {
-    UIViewController *vc = [[TestLayoutAnimationViewController alloc] init];
-    
-    [self.navigationController pushViewController:vc animated:YES];
+    if (vc != nil) {
+        [self.navigationController pushViewController:vc animated:YES];
+    }
 }
 
 - (void)testIP2Int:(NSString *)ipv4 {
@@ -190,55 +176,6 @@ typedef NS_ENUM(NSUInteger, PureOCTestType) {
         if (sum > 0)
             NSLog(@"%lld", sum);
     }
-}
-
-- (void)testGetVC {
-    CGFloat viewWidth = CGRectGetWidth(self.view.frame);
-    CGFloat viewHeight = CGRectGetHeight(self.view.frame);
-    
-    self.title = NSStringFromClass([self class]);
-    
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake((viewWidth - 50)/2.0, (viewHeight - 50)/2.0, 50, 50)];
-    
-    view.backgroundColor = [UIColor redColor];
-    
-    [self.view addSubview:view];
-    
-    UIView *anotherView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 10, 10)];
-    
-    anotherView.backgroundColor = [UIColor blueColor];
-    
-    [view addSubview:anotherView];
-    
-    NSLog(@"%@", [[self getViewControllerOfView:anotherView] description]);
-}
-
-- (void)testAutoLayout {
-    UIViewController *vc = [[AutolayoutViewController alloc] init];
-    
-    [self.navigationController pushViewController:vc animated:YES];
-}
-
-/**
- Get the View 's father ViewController as long as the view is in the Viewcontroller's hierarchy
- 
- @param view targetView
- @return father ViewController
- */
-- (UIViewController *)getViewControllerOfView:(UIView *)view {
-    if ([view superview] == nil) {
-        UIResponder *nextResponder = [view nextResponder];
-        return  (UIViewController *)nextResponder;
-    }
-    
-    for (UIView* next = [view superview]; next; next = next.superview) {
-        UIResponder *nextResponder = [next nextResponder];
-        if ([nextResponder isKindOfClass:[UIViewController class]]) {
-            return (UIViewController *)nextResponder;
-        }
-    }
-    
-    return nil;
 }
 
 @end
