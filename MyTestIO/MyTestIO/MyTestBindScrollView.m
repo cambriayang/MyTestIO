@@ -49,8 +49,7 @@ CGFloat defaultSectionCount = 1;
     [self addSubview:web];
     
     [web mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.left.right.equalTo(self);
-        make.height.mas_equalTo(defaultTableH*2);
+        make.edges.equalTo(self);
     }];
     
     self.webView = web;
