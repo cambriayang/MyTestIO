@@ -13,6 +13,7 @@
 		2448087E2008690B00E41B49 /* TestGetVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2448087D2008690B00E41B49 /* TestGetVC.m */; };
 		244808832008D11900E41B49 /* TestWKWebViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 244808822008D11900E41B49 /* TestWKWebViewVC.m */; };
 		245E03731F21F04600B73513 /* LFXHookGuard.m in Sources */ = {isa = PBXBuildFile; fileRef = 245E03721F21EFEA00B73513 /* LFXHookGuard.m */; };
+		246D7B97201F425300EE2591 /* TestActivitiyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 246D7B96201F425300EE2591 /* TestActivitiyVC.m */; };
 		24C5F6E51FFB7C6B006DF2DD /* MyTestBindScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C5F6E41FFB7C6B006DF2DD /* MyTestBindScrollView.m */; };
 		24C9A5991FE1476C00A5B60D /* UIView+AIFAutoCollapse.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C9A5981FE1476C00A5B60D /* UIView+AIFAutoCollapse.m */; };
 		24C9A59C1FE1479600A5B60D /* MASViewConstraint+AIFCommonUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C9A59A1FE1479500A5B60D /* MASViewConstraint+AIFCommonUI.m */; };
@@ -88,6 +89,8 @@
 		244808822008D11900E41B49 /* TestWKWebViewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestWKWebViewVC.m; sourceTree = "<group>"; };
 		245E03711F21EFEA00B73513 /* LFXHookGuard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFXHookGuard.h; sourceTree = "<group>"; };
 		245E03721F21EFEA00B73513 /* LFXHookGuard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFXHookGuard.m; sourceTree = "<group>"; };
+		246D7B95201F425300EE2591 /* TestActivitiyVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestActivitiyVC.h; sourceTree = "<group>"; };
+		246D7B96201F425300EE2591 /* TestActivitiyVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestActivitiyVC.m; sourceTree = "<group>"; };
 		24C5F6E31FFB7C6B006DF2DD /* MyTestBindScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyTestBindScrollView.h; sourceTree = "<group>"; };
 		24C5F6E41FFB7C6B006DF2DD /* MyTestBindScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyTestBindScrollView.m; sourceTree = "<group>"; };
 		24C5F6E71FFB7F04006DF2DD /* MyTestIO-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MyTestIO-Prefix.pch"; sourceTree = "<group>"; };
@@ -219,6 +222,8 @@
 				2448087D2008690B00E41B49 /* TestGetVC.m */,
 				244808812008D11900E41B49 /* TestWKWebViewVC.h */,
 				244808822008D11900E41B49 /* TestWKWebViewVC.m */,
+				246D7B95201F425300EE2591 /* TestActivitiyVC.h */,
+				246D7B96201F425300EE2591 /* TestActivitiyVC.m */,
 			);
 			name = MyTestUIKit;
 			sourceTree = "<group>";
@@ -669,6 +674,7 @@
 				CA127F7B1CA7CA6A00DEE218 /* ViewController.m in Sources */,
 				24D57BDC1DE7F2D500A06318 /* LFMessageTask.m in Sources */,
 				CA4647911CF18BA4006F2A54 /* EXTSelectorChecking.m in Sources */,
+				246D7B97201F425300EE2591 /* TestActivitiyVC.m in Sources */,
 				CAD615421D8709B000804F1E /* MyInstance.swift in Sources */,
 				CA4647921CF18BA4006F2A54 /* NSInvocation+EXT.m in Sources */,
 				CA46476F1CF18B23006F2A54 /* JRSwizzle.m in Sources */,
