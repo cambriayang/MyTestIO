@@ -1,21 +1,33 @@
 PODS:
   - FBRetainCycleDetector (0.1.4)
   - FLEX (2.4.0)
+  - LSUtilities (0.0.1):
+    - OpenUDID (~> 1.0.0)
+    - Reachability (~> 3.2)
+    - SAMKeychain (~> 1.5.3)
   - Masonry (1.1.0)
   - MLeaksFinder (1.0.0):
     - FBRetainCycleDetector
+  - OpenUDID (1.0.0)
+  - Reachability (3.2)
+  - SAMKeychain (1.5.3)
 
 DEPENDENCIES:
   - FLEX
+  - LSUtilities
   - Masonry
   - MLeaksFinder
 
 SPEC CHECKSUMS:
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
   FLEX: bd1a39e55b56bb413b6f1b34b3c10a0dc44ef079
+  LSUtilities: d30e43a7e3674f125cc392c52fdfb57ebd4e61f3
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
+  OpenUDID: e7cb6984c7304906ad20f3a36bf087b025896b6b
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
+  SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
 
-PODFILE CHECKSUM: 45e796e15196bd3599497cedb4cfc90629727d6f
+PODFILE CHECKSUM: e9d9a77c7010b415b4bf3afdc5e43de83d82a14d
 
 COCOAPODS: 1.4.0
