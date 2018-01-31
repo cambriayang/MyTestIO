@@ -10,7 +10,7 @@ def app_pods
     pod 'FLEX', :configurations => ['Debug']
     pod 'Masonry'
     pod 'MLeaksFinder'
-    pod 'LSUtilities'
+#    pod 'LSUtilities'
 #    pod 'SDWebImage'
 #    pod 'SDWebImage/WebP'
 end
