@@ -1,4 +1,3 @@
-#source 'git@gitlab.51y5.net:LSNTouTiaoSDK/LSNTouTiaoSpec.git'
 source 'https://github.com/artsy/Specs.git'
 source 'https://github.com/CocoaPods/Specs.git'
 
@@ -10,7 +9,6 @@ def app_pods
     pod 'FLEX', :configurations => ['Debug']
     pod 'Masonry'
     pod 'MLeaksFinder'
-#    pod 'LSUtilities'
 #    pod 'SDWebImage'
 #    pod 'SDWebImage/WebP'
 end
