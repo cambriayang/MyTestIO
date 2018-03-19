@@ -607,11 +607,28 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MyTestIO/Pods-MyTestIO-resources.sh",
+				"${PODS_ROOT}/LSBaseServiceKit/Resources/LSBaseServiceKitResources-Info.plist",
+				"${PODS_ROOT}/LSBaseServiceKit/Resources/en.lproj",
+				"${PODS_ROOT}/LSBaseServiceKit/Resources/zh-Hant.lproj",
+				"${PODS_ROOT}/LSBaseServiceKit/Resources/zh.lproj",
+				"${PODS_ROOT}/LSVideoKit/SDK/Classes/Resources/en.lproj",
+				"${PODS_ROOT}/LSVideoKit/SDK/Classes/Resources/LSNAVPlayerConfig.bundle",
+				"${PODS_ROOT}/LSVideoKit/SDK/Classes/Resources/LSNAVPlayerImages.bundle",
+				"${PODS_ROOT}/LSVideoKit/SDK/Classes/Resources/zh-Hans.lproj",
 				"${PODS_ROOT}/SAMKeychain/Support/SAMKeychain.bundle",
+				"${PODS_ROOT}/WebViewJavascriptBridge/WebViewJavascriptBridge/WebViewJavascriptBridge.js.txt",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/LSBaseServiceKitResources-Info.plist",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/en.lproj",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/zh-Hant.lproj",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/zh.lproj",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/LSNAVPlayerConfig.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/LSNAVPlayerImages.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/zh-Hans.lproj",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SAMKeychain.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/WebViewJavascriptBridge.js.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
