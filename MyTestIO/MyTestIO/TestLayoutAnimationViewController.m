@@ -84,6 +84,11 @@
         self.blueBlockLeftOffset.offset = 50;
         self.label.alpha = 0.7;
         
+//        //下一个runloop可以改变frame，并且如果在动画block里面，可以直接用
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            self.label.frame = CGRectMake(0, 260, 100, 100);
+//        });
+        
         [self.view layoutIfNeeded];
     } completion:^(BOOL finished) {
         NSLog(@"Done");
