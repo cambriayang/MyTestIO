@@ -5,24 +5,35 @@ platform :ios, '8.0'
 
 inhibit_all_warnings!
 
-def app_pods
+
+#Have serveral targets may need this 'def
+def common_pods
     pod 'FLEX', :configurations => ['Debug']
     pod 'Masonry'
     pod 'MLeaksFinder'
-#    pod 'SDWebImage'
-#    pod 'SDWebImage/WebP'
+end
+
+def umenTest
+    pod 'UMCCommon'
+    pod 'UMCAnalytics'
+    pod 'UMCSecurityPlugins'
+end
+
+def sd_web_image
+    pod 'SDWebImage'
+    pod 'SDWebImage/WebP'
+end
+
+def app_pods
+    umenTest
+    common_pods
 end
 
 target 'MyTestIO' do
     app_pods
-    
     #Can add individual pods
 end
 
-#Have serveral targets may need this 'def
-def common_pods
-    
-end
 
 ### HOOK POST
 pre_install do |installer|
