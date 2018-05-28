@@ -6,11 +6,14 @@ platform :ios, '8.0'
 inhibit_all_warnings!
 
 
-#Have serveral targets may need this 'def
+#Have serveral targets may need this 'def'
 def common_pods
-    pod 'FLEX', :configurations => ['Debug']
     pod 'Masonry'
-    pod 'MLeaksFinder'
+end
+
+def debug_pods
+    pod 'FLEX', :configurations => ['Debug']
+    pod 'MLeaksFinder', :configurations => ['Debug']
 end
 
 def umenTest
@@ -24,14 +27,18 @@ def sd_web_image
     pod 'SDWebImage/WebP'
 end
 
+
+
+
 def app_pods
-    umenTest
     common_pods
+    umenTest
 end
 
 target 'MyTestIO' do
     app_pods
     #Can add individual pods
+    
 end
 
 
