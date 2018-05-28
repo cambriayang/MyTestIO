@@ -32,11 +32,13 @@ end
 
 def app_pods
     common_pods
+    debug_pods
     umenTest
 end
 
 target 'MyTestIO' do
     app_pods
+    
     #Can add individual pods
     
 end
