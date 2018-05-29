@@ -17,7 +17,7 @@ enum TestType: Int {
 }
 
 class MyTestRootVC: BaseViewController {
-    let testDataSource = [String(describing: "ARKitTestVC"), String(describing: "DecimalNumberPadForH5TestVC"), String(describing: "LFMessageTestVC"), String(describing: "PureSwiftTestVC"), String(describing: "PureOCViewController")];
+    let testDataSource = [String(describing: "ARKitTestVC"), String(describing: "DecimalNumberPadForH5TestVC"), String(describing: "LFMessageTestVC"), String(describing: "PureSwiftTestVC")];
     
     deinit {
         
@@ -83,7 +83,7 @@ class MyTestRootVC: BaseViewController {
             
             DispatchQueue.main.asyncAfter(deadline: .now()+5, execute:
             {
-                NSLog("===[swift ayncafter: PureOCViewController");
+                NSLog("===[swift after async");
             })
         }
     }
