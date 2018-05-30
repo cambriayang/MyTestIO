@@ -11,7 +11,11 @@
 #import "JKTest.h"
 #import "AutolayoutViewController.h"
 #import "TestLayoutAnimationViewController.h"
+
+#ifdef DEBUG
 #import <FLEX/FLEX.h>
+#endif
+
 #import "TestBindScrollViewVC.h"
 #import "TestGetVC.h"
 
@@ -107,7 +111,9 @@ typedef NS_ENUM(NSUInteger, PureOCTestType) {
             break;
         case PureOCTestTypeShowFlex:
         {
+#ifdef DEBUG
             [[FLEXManager sharedManager] toggleExplorer];
+#endif
         }
             break;
         case PureOCTestTypeTestBindScrollViews:
