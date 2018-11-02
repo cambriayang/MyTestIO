@@ -4,38 +4,25 @@ PODS:
   - Masonry (1.1.0)
   - MLeaksFinder (1.0.0):
     - FBRetainCycleDetector
-  - UMCAnalytics (5.5.0):
-    - UMCCommon
-  - UMCCommon (1.5.0)
-  - UMCSecurityPlugins (1.0.6)
 
 DEPENDENCIES:
   - FLEX
   - Masonry
   - MLeaksFinder
-  - UMCAnalytics
-  - UMCCommon
-  - UMCSecurityPlugins
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - FBRetainCycleDetector
     - FLEX
     - Masonry
     - MLeaksFinder
-    - UMCAnalytics
-    - UMCCommon
-    - UMCSecurityPlugins
 
 SPEC CHECKSUMS:
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
   FLEX: bd1a39e55b56bb413b6f1b34b3c10a0dc44ef079
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
-  UMCAnalytics: 4667788559a72f2fa5077117d1b8802a3b6eb6bb
-  UMCCommon: 82d21f4bb9532a5472cc533bbd8ed48aff376a14
-  UMCSecurityPlugins: 0831a08f3988f3cea9f1d3a7626cd9bee4fef150
 
-PODFILE CHECKSUM: c2b1d816839632abd9cc1ce2a31db9416abf7231
+PODFILE CHECKSUM: f00b6f61f5dd5621a5c81ad7da905375dc482d8d
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.3
