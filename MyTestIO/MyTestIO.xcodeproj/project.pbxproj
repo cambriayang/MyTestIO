@@ -14,6 +14,7 @@
 		244808832008D11900E41B49 /* TestWKWebViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 244808822008D11900E41B49 /* TestWKWebViewVC.m */; };
 		245E03731F21F04600B73513 /* LFXHookGuard.m in Sources */ = {isa = PBXBuildFile; fileRef = 245E03721F21EFEA00B73513 /* LFXHookGuard.m */; };
 		246D7B97201F425300EE2591 /* TestActivitiyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 246D7B96201F425300EE2591 /* TestActivitiyVC.m */; };
+		24BEF0E4218C46190039D9C8 /* TestIAPVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 24BEF0E3218C46190039D9C8 /* TestIAPVC.m */; };
 		24C5F6E51FFB7C6B006DF2DD /* MyTestBindScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C5F6E41FFB7C6B006DF2DD /* MyTestBindScrollView.m */; };
 		24C9A5991FE1476C00A5B60D /* UIView+AIFAutoCollapse.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C9A5981FE1476C00A5B60D /* UIView+AIFAutoCollapse.m */; };
 		24C9A59C1FE1479600A5B60D /* MASViewConstraint+AIFCommonUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C9A59A1FE1479500A5B60D /* MASViewConstraint+AIFCommonUI.m */; };
@@ -72,6 +73,8 @@
 		245E03721F21EFEA00B73513 /* LFXHookGuard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFXHookGuard.m; sourceTree = "<group>"; };
 		246D7B95201F425300EE2591 /* TestActivitiyVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestActivitiyVC.h; sourceTree = "<group>"; };
 		246D7B96201F425300EE2591 /* TestActivitiyVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestActivitiyVC.m; sourceTree = "<group>"; };
+		24BEF0E2218C46190039D9C8 /* TestIAPVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestIAPVC.h; sourceTree = "<group>"; };
+		24BEF0E3218C46190039D9C8 /* TestIAPVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestIAPVC.m; sourceTree = "<group>"; };
 		24C5F6E31FFB7C6B006DF2DD /* MyTestBindScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyTestBindScrollView.h; sourceTree = "<group>"; };
 		24C5F6E41FFB7C6B006DF2DD /* MyTestBindScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyTestBindScrollView.m; sourceTree = "<group>"; };
 		24C5F6E71FFB7F04006DF2DD /* MyTestIO-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MyTestIO-Prefix.pch"; sourceTree = "<group>"; };
@@ -185,6 +188,8 @@
 				244808822008D11900E41B49 /* TestWKWebViewVC.m */,
 				246D7B95201F425300EE2591 /* TestActivitiyVC.h */,
 				246D7B96201F425300EE2591 /* TestActivitiyVC.m */,
+				24BEF0E2218C46190039D9C8 /* TestIAPVC.h */,
+				24BEF0E3218C46190039D9C8 /* TestIAPVC.m */,
 			);
 			name = MyTestUIKit;
 			sourceTree = "<group>";
@@ -507,6 +512,7 @@
 				2440FCC61FFF9DA900AC685F /* AutolayoutViewController.m in Sources */,
 				24D57BDB1DE7F2D500A06318 /* LFMessageManager.m in Sources */,
 				24DED14F1DF661E6005C727F /* LFBlockQueue.m in Sources */,
+				24BEF0E4218C46190039D9C8 /* TestIAPVC.m in Sources */,
 				CA46478D1CF18BA4006F2A54 /* EXTNil.m in Sources */,
 				2440FCC91FFFA04200AC685F /* TestLayoutAnimationViewController.m in Sources */,
 				CA3E289D1CF196A80016081F /* NSObject+Swizzle.m in Sources */,
@@ -699,7 +705,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_GENERATE_MAP_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = yeio.ASDKTestOn4S;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yeio.xxx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -737,7 +743,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_GENERATE_MAP_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = yeio.ASDKTestOn4S;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yeio.xxx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_INCLUDE_PATHS = "";

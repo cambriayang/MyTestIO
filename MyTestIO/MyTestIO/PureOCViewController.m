@@ -31,7 +31,8 @@ typedef NS_ENUM(NSUInteger, PureOCTestType) {
     PureOCTestTypeTestAutoLayout,
     PureOCTestTypeTestLayoutAnimation,
     PureOCTestTypeTestWKWebView,
-    PureOCTestTypeTestActivitiyVC
+    PureOCTestTypeTestActivitiyVC,
+    PureOCTestTypeTestIAPVC
 };
 
 @interface PureOCViewController () <UITableViewDelegate, UITableViewDataSource>
@@ -55,7 +56,8 @@ typedef NS_ENUM(NSUInteger, PureOCTestType) {
                             @"AutolayoutViewController",
                             @"TestLayoutAnimationViewController",
                             @"TestWKWebViewVC",
-                            @"TestActivitiyVC"];
+                            @"TestActivitiyVC",
+                            @"TestIAPVC"];
     }
     
     return self;
@@ -122,6 +124,7 @@ typedef NS_ENUM(NSUInteger, PureOCTestType) {
         case PureOCTestTypeTestLayoutAnimation:
         case PureOCTestTypeTestWKWebView:
         case PureOCTestTypeTestActivitiyVC:
+        case PureOCTestTypeTestIAPVC:
             [self gotoTestVC];
             break;
         default:
