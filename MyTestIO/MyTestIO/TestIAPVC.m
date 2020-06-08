@@ -8,8 +8,8 @@
 
 #import "TestIAPVC.h"
 
-static NSString const *gold1 = @"lsof_00001";
-static NSString const *gold2 = @"gold00002";
+NSString *gold1 = @"lsof_00001";
+NSString *gold2 = @"gold00002";
 
 typedef NS_ENUM(NSUInteger, coinType) {
     coinType1,
@@ -185,7 +185,7 @@ typedef NS_ENUM(NSUInteger, coinType) {
 // 苹果内购支付成功
 - (void)buyAppleStoreProductSucceedWithPaymentTransactionp:(SKPaymentTransaction *)paymentTransactionp {
     
-    NSString * productIdentifier = paymentTransactionp.payment.productIdentifier;
+    __unused NSString *productIdentifier = paymentTransactionp.payment.productIdentifier;
     // NSLog(@"productIdentifier Product id：%@", productIdentifier);
     NSString *transactionReceiptString= nil;
     
@@ -195,12 +195,14 @@ typedef NS_ENUM(NSUInteger, coinType) {
         // 验证凭据，获取到苹果返回的交易凭据
         // appStoreReceiptURL iOS7.0增加的，购买交易完成后，会将凭据存放在该地址
         NSURLRequest * appstoreRequest = [NSURLRequest requestWithURL:[[NSBundle mainBundle]appStoreReceiptURL]];
-        NSError *error = nil;
-        NSData * receiptData = [NSURLConnection sendSynchronousRequest:appstoreRequest returningResponse:nil error:&error];
+        __unused NSError *error = nil;
+        NSData *receiptData = [NSData dataWithContentsOfURL:[[NSBundle mainBundle] appStoreReceiptURL]];
+        [[NSURLSession sharedSession] dataTaskWithRequest:appstoreRequest completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+            
+        }];
         transactionReceiptString = [receiptData base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithLineFeed];
-    }else{
-        
-        NSData * receiptData = paymentTransactionp.transactionReceipt;
+    } else {
+        NSData *receiptData = [NSData dataWithContentsOfURL:[[NSBundle mainBundle] appStoreReceiptURL]];
         //  transactionReceiptString = [receiptData base64EncodedString];
         transactionReceiptString = [receiptData base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithLineFeed];
     }
@@ -298,31 +300,30 @@ typedef NS_ENUM(NSUInteger, coinType) {
     [storeRequest setHTTPMethod:@"POST"];
     [storeRequest setHTTPBody:requestData];
     
-    // 在后台对列中提交验证请求，并获得官方的验证JSON结果
-    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
-    [NSURLConnection sendAsynchronousRequest:storeRequest queue:queue
-                           completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-                               if (connectionError) {
-                                   NSLog(@"链接失败");
-                               } else {
-                                   NSError *error;
-                                   NSDictionary *jsonResponse = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
-                                   if (!jsonResponse) {
-                                       NSLog(@"验证失败");
-                                   }
-                                   
-                                   // 比对 jsonResponse 中以下信息基本上可以保证数据安全
-                                   /*
-                                    bundle_id
-                                    application_version
-                                    product_id
-                                    transaction_id
-                                    */
-                                   
-                                   NSLog(@"验证成功");
-                               }
-                           }];
+    //在后台对列中提交验证请求，并获得官方的验证JSON结果
+    __unused NSOperationQueue *queue = [[NSOperationQueue alloc] init];
     
+    [[NSURLSession sharedSession] dataTaskWithRequest:storeRequest completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        if (error) {
+            NSLog(@"链接失败");
+        } else {
+            NSError *error;
+            NSDictionary *jsonResponse = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+            if (!jsonResponse) {
+                NSLog(@"验证失败");
+            }
+
+            // 比对 jsonResponse 中以下信息基本上可以保证数据安全
+            /*
+             bundle_id
+             application_version
+             product_id
+             transaction_id
+             */
+
+            NSLog(@"验证成功");
+        }
+    }];
 }
 
 - (void)failedTransaction: (SKPaymentTransaction *)transaction{
