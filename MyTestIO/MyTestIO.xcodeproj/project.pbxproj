@@ -441,7 +441,7 @@
 					CA127F6F1CA7CA6A00DEE218 = {
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = 2RL2W46M7J;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1150;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -715,7 +715,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "MyTestIO/MyTestIO-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -751,7 +751,7 @@
 				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "MyTestIO/MyTestIO-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
