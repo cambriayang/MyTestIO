@@ -305,6 +305,47 @@ class Solution {
         
         return list
     }
+    
+    //获取[9,35]
+    func findTree(tree: BinarySearchTree<Int>) {
+        if tree.value <= 9 {
+            //在右边找
+            if tree.value == 9 {
+                print(tree.value, terminator: " ")
+            }
+            
+            if tree.hasRightChild {
+                findTree(tree: tree.right!)
+            }
+        } else if tree.value >= 35 {
+            //在左边找
+            if tree.value == 35 {
+                print(tree.value, terminator: " ")
+            }
+            
+            if tree.hasLeftChild {
+                findTree(tree: tree.left!)
+            }
+        } else if tree.value > 9 && tree.value < 35 {
+            print(tree.value, terminator: " ")
+            if tree.hasLeftChild {
+                findTree(tree: tree.left!)
+            }
+            if tree.hasRightChild {
+                findTree(tree: tree.right!)
+            }
+        }
+    }
+    
+    func trailing_zero_num(number: Int) -> Int {
+        var num = 0
+        var n = number
+        while Bool(truncating: n as NSNumber) {
+            num += n/5
+            n = n/5
+        }
+        return num
+    }
 }
 
 let array6 = [8,8,8,8,8,8,8,8,8,8,8,8,8,7,7,1,1,6,6,1,1,1,2,1,2,4,4,3,3,5,5]
@@ -372,3 +413,93 @@ extension TreeNode where T: Equatable {
         return nil
     }
 }
+
+extension BinarySearchTree: CustomStringConvertible {
+  public var description: String {
+    var s = ""
+    if let left = left {
+      s += "(\(left.description)) <- "
+    }
+    s += "\(value)"
+    if let right = right {
+      s += " -> (\(right.description))"
+    }
+    return s
+  }
+}
+
+class BinarySearchTree<T: Comparable> {
+    private(set) public var value: T
+    private(set) public var parent: BinarySearchTree?
+    private(set) public var left: BinarySearchTree?
+    private(set) public var right: BinarySearchTree?
+    
+    init(value: T) {
+        self.value = value
+    }
+    
+    var isRoot: Bool {
+        return parent == nil
+    }
+    
+    var isLeaf: Bool {
+        return left == nil && right == nil
+    }
+    
+    var isLeftChild: Bool {
+        return parent?.left === self
+    }
+    
+    var isRightChild: Bool {
+        return parent?.right === self
+    }
+    
+    var hasLeftChild: Bool {
+        return left != nil
+    }
+    
+    var hasRightChild: Bool {
+        return right != nil
+    }
+    
+    var hasBothChildren: Bool {
+        return hasLeftChild && hasRightChild
+    }
+    
+    var count: Int {
+        return (left?.count ?? 0)+1+(right?.count ?? 0)
+    }
+    
+    func insert(value: T) {
+        if value < self.value {
+            if let left = left {
+                left.insert(value: value)
+            } else {
+                left = BinarySearchTree(value: value)
+                left?.parent = self
+            }
+        } else {
+            if let right = right {
+                right.insert(value: value)
+            } else {
+                right = BinarySearchTree(value: value)
+                right?.parent = self
+            }
+        }
+    }
+}
+
+let tree = BinarySearchTree<Int>(value: 7)
+tree.insert(value: 20)
+tree.insert(value: 9)
+tree.insert(value: 10)
+tree.insert(value: 25)
+tree.insert(value: 2)
+tree.insert(value: 40)
+tree.insert(value: 16)
+print(tree)
+
+solution.findTree(tree: tree)
+print("")
+//let n = solution.trailing_zero_num(number: 30)
+//print(n)
