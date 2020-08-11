@@ -5,6 +5,23 @@ import PlaygroundSupport
 
 var solution = Solution()
 
+let r15 = solution.findMaxInWindow(3, [1,3,-1,-3,5,3,6])
+print(r15)
+
+let list3 = IntLinkList()
+list3.append(value: 10)
+list3.append(value: 12)
+list3.append(value: 4)
+list3.append(value: 5)
+list3.append(value: 2)
+
+var prev = solution.reverseList(list3.head)
+
+while prev?.next != nil  {
+    print(prev!.value as Any, terminator: " ")
+    prev = prev!.next
+}
+print(prev!.value)
 print(solution.maxProfit([7,1,5,3,6,4]))
 print(solution.maxProfitII([7,1,5,3,6,4]))
 
@@ -879,22 +896,49 @@ class Solution {
         
         return last
     }
+    
+    func findMaxInWindow(_ count: Int, _ nums: [Int]) -> [Int] {
+        var res = [Int]()
+        
+        if nums.count < 0 {
+            return []
+        }
+        
+        var maxNum = Int.min
+        
+        if nums.count < count {
+            for i in 0..<nums.count {
+                if nums[i] > maxNum {
+                    maxNum = nums[i]
+                }
+            }
+            
+            res.append(maxNum)
+            
+            return res
+        }
+                
+        for i in 0..<count {
+            if nums[i] > maxNum {
+                maxNum = nums[i]
+            }
+        }
+        
+        res.append(maxNum)
+        
+        for j in (nums.count-count-1)..<nums.count {
+            if nums[j] > maxNum {
+                maxNum = nums[j]
+            }
+            
+            res.append(maxNum)
+        }
+        
+        return res
+    }
 }
 
-let list3 = IntLinkList()
-list3.append(value: 10)
-list3.append(value: 12)
-list3.append(value: 4)
-list3.append(value: 5)
-list3.append(value: 2)
 
-var prev = solution.reverseList(list3.head)
-
-while prev?.next != nil  {
-    print(prev!.value as Any, terminator: " ")
-    prev = prev!.next
-}
-print(prev!.value)
 
 
 
