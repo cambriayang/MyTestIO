@@ -5,6 +5,9 @@ import PlaygroundSupport
 
 var solution = Solution()
 
+let r16 = solution.generateParenthesis(3)
+print(r16)
+
 let r15 = solution.findMaxInWindow(3, [1,3,-1,-3,5,3,6])
 print(r15)
 
@@ -935,6 +938,27 @@ class Solution {
         }
         
         return res
+    }
+    
+    func generateParenthesis(_ count: Int) -> [String] {
+        var res: [String] = [String]()
+        _gen(0, 0, count, "", &res)
+        return res
+    }
+    
+    func _gen(_ left: Int, _ right: Int, _ count: Int, _ result: String, _ res: inout [String]) {
+        //递归出口
+        if left == count && right == count {
+            res.append(result)
+        }
+        
+        if left < count {
+            _gen(left+1, right, count, result+"(", &res)
+        }
+        
+        if left > right && right < count {
+            _gen(left, right+1, count, result+")", &res)
+        }
     }
 }
 
