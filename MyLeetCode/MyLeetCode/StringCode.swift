@@ -19,10 +19,13 @@ func printStringSeperator() -> Void {
 }
 
 class StringCode: NSObject {
-    let r: Void = printStringSeperator()
-    let r1 = longestCommonPrefix(["abcdfj", "abc", "abcmnihiuh", "abcmunh"])
-    let r2 = multiply("123", "3128")
-    let r3 = lengthOfLongestSubstring("adbdeacdmmm")
+    public func test() {
+        let _: Void = printStringSeperator()
+        
+        let _ = longestCommonPrefix(["abcdfj", "abc", "abcmnihiuh", "abcmunh"])
+        let _ = multiply("123", "3128")
+        let _ = lengthOfLongestSubstring("adbdeacdmmm")
+    }
 }
 
 func longestCommonPrefix(_ strs: [String]) -> String {

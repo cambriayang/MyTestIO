@@ -127,3 +127,9 @@ class BinarySearchTree<T: Comparable> {
         }
     }
 }
+
+
+
+class TestTree: NSObject {
+    
+}

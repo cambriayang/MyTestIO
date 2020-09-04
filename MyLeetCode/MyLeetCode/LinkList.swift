@@ -22,7 +22,29 @@ func printLinkListSeperator() -> Void {
 }
 
 class LinkList: NSObject {
-
+    public func test() {
+        let _: Void = printLinkListSeperator()
+        reverseLinkList()
+    }
+    
+    func reverseLinkList() -> Void {
+        let list3 = IntLinkList()
+        list3.append(value: 10)
+        list3.append(value: 12)
+        list3.append(value: 4)
+        list3.append(value: 5)
+        list3.append(value: 2)
+        
+        var prev = reverseList(list3.head)
+        
+        while prev?.next != nil  {
+            print(prev!.value as Any, terminator: " ")
+            prev = prev!.next
+        }
+        print(prev!.value)
+    }
+        
+    
 }
 
 class IntLinkList {
@@ -40,7 +62,7 @@ class IntLinkList {
         }
     }
     
-    func append(value: Int) {
+    public func append(value: Int) {
         let node = Node(value)
         if tail == nil {
             tail = node
@@ -51,7 +73,7 @@ class IntLinkList {
         }
     }
     
-    func appendToHead(value: Int) {
+    public func appendToHead(value: Int) {
         let node = Node(value)
         if head == nil {
             head = node
@@ -62,7 +84,7 @@ class IntLinkList {
         }
     }
     
-    func insertAt(index: Int, value: Int) {
+    public func insertAt(index: Int, value: Int) {
         if index == 0 {
             self.appendToHead(value: value)
         }
@@ -85,4 +107,19 @@ class IntLinkList {
             self.append(value: value)
         }
     }
+}
+
+func reverseList(_ head: Node<Int>?) -> Node<Int>? {
+    var cur = head
+    var last: Node<Int>?
+    var next: Node<Int>?
+    
+    while (cur != nil) {
+        next = cur?.next
+        cur?.next = last
+        last = cur
+        cur = next
+    }
+    
+    return last
 }

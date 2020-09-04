@@ -9,10 +9,12 @@
 import UIKit
 
 class ArrayCode: NSObject {
-    let r: Void = printArraySeperator()
-    let r1 = findTheMidNumber([4,3,2,7,8,10,11,18,9])
-    let r2 = maxProfit([7,1,5,3,6,4])
-    let r3 = maxProfitII([7,1,5,3,6,4])
+    public func test() {
+        let _: Void = printArraySeperator()
+        let _ = findTheMidNumber([4,3,2,7,8,10,11,18,9])
+        let _ = maxProfit([7,1,5,3,6,4])
+        let _ = maxProfitII([7,1,5,3,6,4])
+    }
 }
 
 func printArraySeperator() -> Void {

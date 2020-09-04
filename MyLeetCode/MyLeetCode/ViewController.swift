@@ -11,8 +11,10 @@ import UIKit
 class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        let _ = ArrayCode()
-        let _ = StringCode()
+        
+        let _ = ArrayCode().test()
+        let _ = StringCode().test()
+        let _ = LinkList().test()
     }
 }
 
