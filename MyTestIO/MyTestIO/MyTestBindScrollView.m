@@ -7,6 +7,7 @@
 //
 
 #import "MyTestBindScrollView.h"
+#import <WebKit/WebKit.h>
 
 CGFloat defaultRowCount = 10;
 CGFloat defaultRowHeight = 20;
@@ -14,16 +15,16 @@ CGFloat defaultSectionCount = 1;
 
 #define defaultTableH ((defaultRowCount)*(defaultRowHeight))
 
-@interface MyTestBindScrollView () <UIWebViewDelegate, UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate>
+@interface MyTestBindScrollView () <WKUIDelegate, UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate>
 @property (nonatomic,strong) UIView *containerView;
-@property (nonatomic,strong) UIWebView *webView;
+@property (nonatomic,strong) WKWebView *webView;
 @property (nonatomic,strong) UITableView *tableView;
 @end
 
 @implementation MyTestBindScrollView
 
 - (void)dealloc {
-    self.webView.delegate = nil;
+    self.webView.UIDelegate = nil;
     self.containerView = nil;
 }
 
@@ -44,7 +45,7 @@ CGFloat defaultSectionCount = 1;
 }
 
 - (void)renderView {
-    UIWebView *web = [[UIWebView alloc] init];
+    WKWebView *web = [[WKWebView alloc] init];
     
     [self addSubview:web];
     
@@ -64,7 +65,7 @@ CGFloat defaultSectionCount = 1;
     
     [web loadRequest:request];
     
-    web.delegate = self;
+    web.UIDelegate = self;
     
     UIScrollView *myScrollView = self.webView.scrollView;
     
@@ -118,32 +119,6 @@ CGFloat defaultSectionCount = 1;
     cell.textLabel.text = [NSString stringWithFormat:@"%ld", (long)commandId];
     
     return cell;
-}
-
-- (void)webViewDidStartLoad:(UIWebView *)webView {
-}
-
-- (void)webViewDidFinishLoad:(UIWebView *)webView {
-    //获取页面高度（像素）
-    NSString * clientheight_str = [webView stringByEvaluatingJavaScriptFromString: @"document.body.offsetHeight"];
-    float contentH = [clientheight_str floatValue];
-
-    [self resizeWebContentHeight:contentH];
-    
-    @weakify(self);
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        @strongify(self);
-        defaultRowCount = 20;
-        defaultRowHeight = 60;
-        [self.tableView reloadData];
-        
-        [self resizeWebContentHeight:contentH];
-    });
-}
-
-- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
-    NSLog(@"******did fail======");
-    NSLog(@"******ERROR:%@", error);
 }
 
 - (void)resizeWebContentHeight:(CGFloat)contentHeight {
