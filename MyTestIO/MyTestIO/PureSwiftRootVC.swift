@@ -13,7 +13,6 @@ enum TestType: Int {
     case DecimalNumberPadForH5
     case LFMessage
     case PureSwift
-    case PureOC
 }
 
 class PureSwiftRootVC: BaseViewController {
@@ -75,16 +74,6 @@ class PureSwiftRootVC: BaseViewController {
             
             vc.title = testCase
             self.navigationController?.pushViewController(vc, animated: true)
-        case .PureOC:
-            let vc = PureOCViewController.init()
-            vc.title = testCase
-            
-            self.navigationController?.pushViewController(vc, animated: true)
-            
-            DispatchQueue.main.asyncAfter(deadline: .now()+5, execute:
-            {
-                NSLog("===[swift after async");
-            })
         }
     }
     

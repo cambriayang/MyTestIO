@@ -18,6 +18,7 @@
 
 #import "TestBindScrollViewVC.h"
 #import "TestGetVC.h"
+#import <Flutter/Flutter.h>
 
 NSString *cellIdentifier = @"tableviewcell";
 
@@ -33,6 +34,7 @@ typedef NS_ENUM(NSUInteger, PureOCTestType) {
     PureOCTestTypeTestWKWebView,
     PureOCTestTypeTestActivitiyVC,
     PureOCTestTypeTestIAPVC,
+    TestTypeFlutterVC,
 };
 
 @interface PureOCViewController () <UITableViewDelegate, UITableViewDataSource>
@@ -57,7 +59,8 @@ typedef NS_ENUM(NSUInteger, PureOCTestType) {
                             @"TestLayoutAnimationViewController",
                             @"TestWKWebViewVC",
                             @"TestActivitiyVC",
-                            @"TestIAPVC"];
+                            @"TestIAPVC",
+                            @"TestTypeFlutterVC"];
     }
     
     self.title = NSStringFromClass([self class]);
@@ -103,6 +106,9 @@ typedef NS_ENUM(NSUInteger, PureOCTestType) {
     self.type = indexPath.row;
     
     switch (self.type) {
+        case TestTypeFlutterVC:
+            [self testFlutter];
+            break;;
         case PureOCTestTypeTestJKTest:
             [self testJKTest];
             break;
@@ -131,6 +137,12 @@ typedef NS_ENUM(NSUInteger, PureOCTestType) {
         default:
             break;
     }
+}
+
+- (void)testFlutter {
+    FlutterViewController *vc = [[FlutterViewController alloc] init];
+    
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)testJKTest {

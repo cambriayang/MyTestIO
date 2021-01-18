@@ -1,6 +1,6 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
-@target_version = '9.0'
+@target_version = '10.0'
 
 platform :ios, @target_version
 
