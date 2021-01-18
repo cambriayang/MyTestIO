@@ -8,7 +8,7 @@
 
 import Foundation
 
-class MyTestRootVCCell: UITableViewCell {
+class PureSwiftRootVCCell: UITableViewCell {
     //MARK --- Life Cycle
     deinit {
         

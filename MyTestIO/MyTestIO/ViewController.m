@@ -33,7 +33,7 @@
 
 #pragma mark --- Button Clicked
 - (IBAction)gotoMyTestRootV:(id)sender {
-    MyTestRootVC *vc = [[MyTestRootVC alloc] init];
+    PureSwiftRootVC *vc = [[PureSwiftRootVC alloc] init];
     
     [self.navigationController pushViewController:vc animated:YES];
 }

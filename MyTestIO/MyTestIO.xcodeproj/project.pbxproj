@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		14DD815925B588DC00D67B2A /* MyTestRootVCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14DD815725B588DC00D67B2A /* MyTestRootVCCell.xib */; };
-		14DD815A25B588DC00D67B2A /* MyTestRootVCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DD815825B588DC00D67B2A /* MyTestRootVCCell.swift */; };
+		14DD815925B588DC00D67B2A /* PureSwiftRootVCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14DD815725B588DC00D67B2A /* PureSwiftRootVCCell.xib */; };
+		14DD815A25B588DC00D67B2A /* PureSwiftRootVCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DD815825B588DC00D67B2A /* PureSwiftRootVCCell.swift */; };
 		2440FCC61FFF9DA900AC685F /* AutolayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2440FCC51FFF9DA900AC685F /* AutolayoutViewController.m */; };
 		2440FCC91FFFA04200AC685F /* TestLayoutAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2440FCC81FFFA04200AC685F /* TestLayoutAnimationViewController.m */; };
 		2448087B2008671600E41B49 /* TestBindScrollViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2448087A2008671600E41B49 /* TestBindScrollViewVC.m */; };
@@ -57,8 +57,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		14DD815725B588DC00D67B2A /* MyTestRootVCCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyTestRootVCCell.xib; sourceTree = "<group>"; };
-		14DD815825B588DC00D67B2A /* MyTestRootVCCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTestRootVCCell.swift; sourceTree = "<group>"; };
+		14DD815725B588DC00D67B2A /* PureSwiftRootVCCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PureSwiftRootVCCell.xib; sourceTree = "<group>"; };
+		14DD815825B588DC00D67B2A /* PureSwiftRootVCCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PureSwiftRootVCCell.swift; sourceTree = "<group>"; };
 		2440FCC41FFF9DA900AC685F /* AutolayoutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AutolayoutViewController.h; sourceTree = "<group>"; };
 		2440FCC51FFF9DA900AC685F /* AutolayoutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AutolayoutViewController.m; sourceTree = "<group>"; };
 		2440FCC71FFFA04200AC685F /* TestLayoutAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestLayoutAnimationViewController.h; sourceTree = "<group>"; };
@@ -311,7 +311,7 @@
 				CA0417DE1E06DF73007D8B54 /* Scripts */,
 				CA4647721CF18B69006F2A54 /* Extobjc */,
 				CACE29301D856795009B4A69 /* MainVC */,
-				CACE29331D85A707009B4A69 /* MyTestRoot */,
+				CACE29331D85A707009B4A69 /* RootVC */,
 				CACE293E1D85B04E009B4A69 /* MyTest */,
 				CA127F761CA7CA6A00DEE218 /* AppDelegate.h */,
 				CA127F771CA7CA6A00DEE218 /* AppDelegate.m */,
@@ -385,14 +385,17 @@
 			name = MainVC;
 			sourceTree = "<group>";
 		};
-		CACE29331D85A707009B4A69 /* MyTestRoot */ = {
+		CACE29331D85A707009B4A69 /* RootVC */ = {
 			isa = PBXGroup;
 			children = (
-				14DD815825B588DC00D67B2A /* MyTestRootVCCell.swift */,
-				14DD815725B588DC00D67B2A /* MyTestRootVCCell.xib */,
+				14DD815825B588DC00D67B2A /* PureSwiftRootVCCell.swift */,
+				14DD815725B588DC00D67B2A /* PureSwiftRootVCCell.xib */,
 				CACE29341D85A748009B4A69 /* PureSwiftRootVC.swift */,
+				CA0417DA1DF45152007D8B54 /* PureSwiftTestVC.swift */,
+				24FCFD5E1E821F0F001334DE /* PureOCViewController.h */,
+				24FCFD5F1E821F0F001334DE /* PureOCViewController.m */,
 			);
-			name = MyTestRoot;
+			name = RootVC;
 			sourceTree = "<group>";
 		};
 		CACE293E1D85B04E009B4A69 /* MyTest */ = {
@@ -400,9 +403,6 @@
 			children = (
 				24C5F6E61FFB7D7C006DF2DD /* MyTestKit */,
 				24C5F6E21FFB7B53006DF2DD /* MyTestUIKit */,
-				CA0417DA1DF45152007D8B54 /* PureSwiftTestVC.swift */,
-				24FCFD5E1E821F0F001334DE /* PureOCViewController.h */,
-				24FCFD5F1E821F0F001334DE /* PureOCViewController.m */,
 			);
 			name = MyTest;
 			sourceTree = "<group>";
@@ -471,7 +471,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14DD815925B588DC00D67B2A /* MyTestRootVCCell.xib in Resources */,
+				14DD815925B588DC00D67B2A /* PureSwiftRootVCCell.xib in Resources */,
 				CA127F831CA7CA6A00DEE218 /* LaunchScreen.storyboard in Resources */,
 				CA0417E01E070C63007D8B54 /* findXibsAndAdjustingForXcode7.py in Resources */,
 				CA127F801CA7CA6A00DEE218 /* Assets.xcassets in Resources */,
@@ -554,7 +554,7 @@
 				CA46478D1CF18BA4006F2A54 /* EXTNil.m in Sources */,
 				2440FCC91FFFA04200AC685F /* TestLayoutAnimationViewController.m in Sources */,
 				CA3E289D1CF196A80016081F /* NSObject+Swizzle.m in Sources */,
-				14DD815A25B588DC00D67B2A /* MyTestRootVCCell.swift in Sources */,
+				14DD815A25B588DC00D67B2A /* PureSwiftRootVCCell.swift in Sources */,
 				CA4647931CF18BA4006F2A54 /* NSMethodSignature+EXT.m in Sources */,
 				24C5F6E51FFB7C6B006DF2DD /* MyTestBindScrollView.m in Sources */,
 				24FCFD601E821F0F001334DE /* PureOCViewController.m in Sources */,
@@ -745,7 +745,7 @@
 					"./ASDKTestOn4S/**",
 				);
 				INFOPLIST_FILE = MyTestIO/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_GENERATE_MAP_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yeio.example.myFlutter;
@@ -784,7 +784,7 @@
 					"./ASDKTestOn4S/**",
 				);
 				INFOPLIST_FILE = MyTestIO/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_GENERATE_MAP_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yeio.example.myFlutter;

@@ -60,6 +60,7 @@ typedef NS_ENUM(NSUInteger, PureOCTestType) {
                             @"TestIAPVC"];
     }
     
+    self.title = NSStringFromClass([self class]);
     return self;
 }
 

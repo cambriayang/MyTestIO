@@ -16,7 +16,7 @@ enum TestType: Int {
     case PureOC
 }
 
-class MyTestRootVC: BaseViewController {
+class PureSwiftRootVC: BaseViewController {
     let testDataSource = [String(describing: "ARKitTestVC"), String(describing: "DecimalNumberPadForH5TestVC"), String(describing: "LFMessageTestVC"), String(describing: "PureSwiftTestVC")];
     
     deinit {
@@ -26,9 +26,9 @@ class MyTestRootVC: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.baseTableView.register(UINib.init(nibName: "MyTestRootVCCell", bundle: nil), forCellReuseIdentifier: "MyTestRootVCCell")
+        self.baseTableView.register(UINib.init(nibName: "PureSwiftRootVCCell", bundle: nil), forCellReuseIdentifier: "PureSwiftRootVCCell")
         
-        self.title = "MyTestRootVC"
+        self.title = String(describing: type(of: self))
     }
     
     override func viewWillLayoutSubviews() {
@@ -49,7 +49,7 @@ class MyTestRootVC: BaseViewController {
     
     //MARK: --- Table View Delegate
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MyTestRootVCCell", for: indexPath) as! MyTestRootVCCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PureSwiftRootVCCell", for: indexPath) as! PureSwiftRootVCCell
 
         cell.textLabel?.text = testDataSource[indexPath.row]
         
@@ -97,7 +97,7 @@ class MyTestRootVC: BaseViewController {
     }
 }
 
-extension MyTestRootVC {
+extension PureSwiftRootVC {
     func swiftClassFromString(_ className: String) -> UIViewController? {
         //方法 NSClassFromString 在Swift中已经不起作用了no effect，需要适当更改
         //官方文档方法：let myPersonClass: AnyClass? = NSClassFromString("MyGreatApp.Person")
