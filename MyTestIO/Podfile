@@ -36,6 +36,12 @@ def app_pods
 end
 
 target 'MyTestIO' do
+    flutter_application_path = './my_flutter'
+    load File.join(flutter_application_path, '.ios', 'Flutter', 'podhelper.rb')
+
+  # 对于每个需要集成Flutter的Podfile target，添加如下内容
+    install_all_flutter_pods(flutter_application_path)
+  
     app_pods
     
     #Can add individual pods

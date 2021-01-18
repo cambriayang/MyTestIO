@@ -1,14 +1,22 @@
 PODS:
   - FBRetainCycleDetector (0.1.4)
   - FLEX (4.3.0)
+  - Flutter (1.0.0)
+  - FlutterPluginRegistrant (0.0.1):
+    - Flutter
   - Masonry (1.1.0)
   - MLeaksFinder (1.0.0):
     - FBRetainCycleDetector
+  - my_flutter (0.0.1):
+    - Flutter
 
 DEPENDENCIES:
   - FLEX
+  - Flutter (from `my_flutter/.ios/Flutter/engine`)
+  - FlutterPluginRegistrant (from `my_flutter/.ios/Flutter/FlutterPluginRegistrant`)
   - Masonry
   - MLeaksFinder
+  - my_flutter (from `my_flutter/.ios/Flutter`)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -17,12 +25,23 @@ SPEC REPOS:
     - Masonry
     - MLeaksFinder
 
+EXTERNAL SOURCES:
+  Flutter:
+    :path: my_flutter/.ios/Flutter/engine
+  FlutterPluginRegistrant:
+    :path: my_flutter/.ios/Flutter/FlutterPluginRegistrant
+  my_flutter:
+    :path: my_flutter/.ios/Flutter
+
 SPEC CHECKSUMS:
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
   FLEX: 58820af8881284bdd44e36141c607b8199cca45d
+  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
+  FlutterPluginRegistrant: 2afd5ea46d3a949472c9b7da6462d8fbf7d8b16e
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
+  my_flutter: 5f71a42a61a499a9f322f2c0f62fc185a5807c9b
 
-PODFILE CHECKSUM: 6a1f8fcc80fd644702c461972ef1b00f8c8aab95
+PODFILE CHECKSUM: 49dc9e9083655610b4c4a2fc008033f79c0fc7ec
 
 COCOAPODS: 1.10.0

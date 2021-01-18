@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14DD815925B588DC00D67B2A /* MyTestRootVCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14DD815725B588DC00D67B2A /* MyTestRootVCCell.xib */; };
+		14DD815A25B588DC00D67B2A /* MyTestRootVCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DD815825B588DC00D67B2A /* MyTestRootVCCell.swift */; };
 		2440FCC61FFF9DA900AC685F /* AutolayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2440FCC51FFF9DA900AC685F /* AutolayoutViewController.m */; };
 		2440FCC91FFFA04200AC685F /* TestLayoutAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2440FCC81FFFA04200AC685F /* TestLayoutAnimationViewController.m */; };
 		2448087B2008671600E41B49 /* TestBindScrollViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2448087A2008671600E41B49 /* TestBindScrollViewVC.m */; };
@@ -45,9 +47,7 @@
 		CA4647921CF18BA4006F2A54 /* NSInvocation+EXT.m in Sources */ = {isa = PBXBuildFile; fileRef = CA4647881CF18BA4006F2A54 /* NSInvocation+EXT.m */; };
 		CA4647931CF18BA4006F2A54 /* NSMethodSignature+EXT.m in Sources */ = {isa = PBXBuildFile; fileRef = CA46478A1CF18BA4006F2A54 /* NSMethodSignature+EXT.m */; };
 		CA56B0E91CF053220018B554 /* NSMutableArray+SafeAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = CA56B0E81CF053220018B554 /* NSMutableArray+SafeAdd.m */; };
-		CACE29351D85A748009B4A69 /* MyTestRootVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACE29341D85A748009B4A69 /* MyTestRootVC.swift */; };
-		CACE29391D85A8D7009B4A69 /* MyTestRootVCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACE29381D85A8D7009B4A69 /* MyTestRootVCCell.swift */; };
-		CACE293B1D85A9F1009B4A69 /* MyTestRootVCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CACE293A1D85A9F1009B4A69 /* MyTestRootVCCell.xib */; };
+		CACE29351D85A748009B4A69 /* PureSwiftRootVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACE29341D85A748009B4A69 /* PureSwiftRootVC.swift */; };
 		CACE293D1D85B021009B4A69 /* DecimalNumberPadForH5TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACE293C1D85B021009B4A69 /* DecimalNumberPadForH5TestVC.swift */; };
 		CACE29411D86F947009B4A69 /* JKTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CACE29401D86F947009B4A69 /* JKTest.m */; };
 		CAD615421D8709B000804F1E /* MyInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD615411D8709B000804F1E /* MyInstance.swift */; };
@@ -57,6 +57,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14DD815725B588DC00D67B2A /* MyTestRootVCCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyTestRootVCCell.xib; sourceTree = "<group>"; };
+		14DD815825B588DC00D67B2A /* MyTestRootVCCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTestRootVCCell.swift; sourceTree = "<group>"; };
 		2440FCC41FFF9DA900AC685F /* AutolayoutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AutolayoutViewController.h; sourceTree = "<group>"; };
 		2440FCC51FFF9DA900AC685F /* AutolayoutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AutolayoutViewController.m; sourceTree = "<group>"; };
 		2440FCC71FFFA04200AC685F /* TestLayoutAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestLayoutAnimationViewController.h; sourceTree = "<group>"; };
@@ -143,9 +145,7 @@
 		CA56B0E71CF053220018B554 /* NSMutableArray+SafeAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+SafeAdd.h"; sourceTree = "<group>"; };
 		CA56B0E81CF053220018B554 /* NSMutableArray+SafeAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+SafeAdd.m"; sourceTree = "<group>"; };
 		CA79C4F31D748FCF00D043E3 /* MyTestIO-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MyTestIO-Bridging-Header.h"; sourceTree = "<group>"; };
-		CACE29341D85A748009B4A69 /* MyTestRootVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTestRootVC.swift; sourceTree = "<group>"; };
-		CACE29381D85A8D7009B4A69 /* MyTestRootVCCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTestRootVCCell.swift; sourceTree = "<group>"; };
-		CACE293A1D85A9F1009B4A69 /* MyTestRootVCCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyTestRootVCCell.xib; sourceTree = "<group>"; };
+		CACE29341D85A748009B4A69 /* PureSwiftRootVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PureSwiftRootVC.swift; sourceTree = "<group>"; };
 		CACE293C1D85B021009B4A69 /* DecimalNumberPadForH5TestVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecimalNumberPadForH5TestVC.swift; sourceTree = "<group>"; };
 		CACE293F1D86F947009B4A69 /* JKTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKTest.h; sourceTree = "<group>"; };
 		CACE29401D86F947009B4A69 /* JKTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKTest.m; sourceTree = "<group>"; };
@@ -388,9 +388,9 @@
 		CACE29331D85A707009B4A69 /* MyTestRoot */ = {
 			isa = PBXGroup;
 			children = (
-				CACE29341D85A748009B4A69 /* MyTestRootVC.swift */,
-				CACE29381D85A8D7009B4A69 /* MyTestRootVCCell.swift */,
-				CACE293A1D85A9F1009B4A69 /* MyTestRootVCCell.xib */,
+				14DD815825B588DC00D67B2A /* MyTestRootVCCell.swift */,
+				14DD815725B588DC00D67B2A /* MyTestRootVCCell.xib */,
+				CACE29341D85A748009B4A69 /* PureSwiftRootVC.swift */,
 			);
 			name = MyTestRoot;
 			sourceTree = "<group>";
@@ -415,9 +415,11 @@
 			buildConfigurationList = CA127F9D1CA7CA6A00DEE218 /* Build configuration list for PBXNativeTarget "MyTestIO" */;
 			buildPhases = (
 				513F9D7025F53CBDD1C80A9F /* [CP] Check Pods Manifest.lock */,
+				C43289F6A6113FDE6401C807 /* [CP-User] Run Flutter Build my_flutter Script */,
 				CA127F6C1CA7CA6A00DEE218 /* Sources */,
 				CA127F6D1CA7CA6A00DEE218 /* Frameworks */,
 				CA127F6E1CA7CA6A00DEE218 /* Resources */,
+				54E1BA8776F25A12EF09AC09 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -440,7 +442,7 @@
 				TargetAttributes = {
 					CA127F6F1CA7CA6A00DEE218 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = 2RL2W46M7J;
+						DevelopmentTeam = 22Z6L9EF9F;
 						LastSwiftMigration = 1150;
 						ProvisioningStyle = Automatic;
 					};
@@ -469,7 +471,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CACE293B1D85A9F1009B4A69 /* MyTestRootVCCell.xib in Resources */,
+				14DD815925B588DC00D67B2A /* MyTestRootVCCell.xib in Resources */,
 				CA127F831CA7CA6A00DEE218 /* LaunchScreen.storyboard in Resources */,
 				CA0417E01E070C63007D8B54 /* findXibsAndAdjustingForXcode7.py in Resources */,
 				CA127F801CA7CA6A00DEE218 /* Assets.xcassets in Resources */,
@@ -498,6 +500,42 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		54E1BA8776F25A12EF09AC09 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyTestIO/Pods-MyTestIO-frameworks.sh",
+				"${PODS_ROOT}/../my_flutter/.ios/Flutter/engine/Flutter.framework",
+				"${PODS_ROOT}/../my_flutter/.ios/Flutter/App.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Flutter.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/App.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyTestIO/Pods-MyTestIO-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C43289F6A6113FDE6401C807 /* [CP-User] Run Flutter Build my_flutter Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/./my_flutter/.metadata",
+				"${SRCROOT}/my_flutter/.ios/Flutter/App.framework/App",
+				"${SRCROOT}/my_flutter/.ios/Flutter/engine/Flutter.framework/Flutter",
+				"${SRCROOT}/my_flutter/.ios/Flutter/flutter_export_environment.sh",
+			);
+			name = "[CP-User] Run Flutter Build my_flutter Script";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/my_flutter/.ios/Flutter/flutter_export_environment.sh\"\n\"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh build";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -516,12 +554,13 @@
 				CA46478D1CF18BA4006F2A54 /* EXTNil.m in Sources */,
 				2440FCC91FFFA04200AC685F /* TestLayoutAnimationViewController.m in Sources */,
 				CA3E289D1CF196A80016081F /* NSObject+Swizzle.m in Sources */,
+				14DD815A25B588DC00D67B2A /* MyTestRootVCCell.swift in Sources */,
 				CA4647931CF18BA4006F2A54 /* NSMethodSignature+EXT.m in Sources */,
 				24C5F6E51FFB7C6B006DF2DD /* MyTestBindScrollView.m in Sources */,
 				24FCFD601E821F0F001334DE /* PureOCViewController.m in Sources */,
 				CA46478C1CF18BA4006F2A54 /* EXTConcreteProtocol.m in Sources */,
 				2448087B2008671600E41B49 /* TestBindScrollViewVC.m in Sources */,
-				CACE29351D85A748009B4A69 /* MyTestRootVC.swift in Sources */,
+				CACE29351D85A748009B4A69 /* PureSwiftRootVC.swift in Sources */,
 				CA127F7B1CA7CA6A00DEE218 /* ViewController.m in Sources */,
 				24D57BDC1DE7F2D500A06318 /* LFMessageTask.m in Sources */,
 				CA4647911CF18BA4006F2A54 /* EXTSelectorChecking.m in Sources */,
@@ -544,7 +583,6 @@
 				CA127F781CA7CA6A00DEE218 /* AppDelegate.m in Sources */,
 				24D57BDA1DE7F2D500A06318 /* LFMessage.m in Sources */,
 				2FF5CEA41F43EBF80060C0DF /* ARKitTestVC.swift in Sources */,
-				CACE29391D85A8D7009B4A69 /* MyTestRootVCCell.swift in Sources */,
 				CA127F751CA7CA6A00DEE218 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -620,7 +658,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "3dd045cd-acd2-4d31-8343-66942be1aada";
@@ -673,7 +711,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PROVISIONING_PROFILE = "3dd045cd-acd2-4d31-8343-66942be1aada";
 				SDKROOT = iphoneos;
@@ -690,9 +728,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2RL2W46M7J;
+				DEVELOPMENT_TEAM = 22Z6L9EF9F;
 				ENABLE_BITCODE = NO;
 				EXCLUDED_SOURCE_FILE_NAMES = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -709,7 +748,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_GENERATE_MAP_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yeio.xxx;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yeio.example.myFlutter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -728,9 +767,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2RL2W46M7J;
+				DEVELOPMENT_TEAM = 22Z6L9EF9F;
 				ENABLE_BITCODE = NO;
 				EXCLUDED_SOURCE_FILE_NAMES = "FLEX*";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -747,7 +787,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_GENERATE_MAP_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yeio.xxx;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yeio.example.myFlutter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_INCLUDE_PATHS = "";

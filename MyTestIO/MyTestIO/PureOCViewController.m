@@ -32,7 +32,7 @@ typedef NS_ENUM(NSUInteger, PureOCTestType) {
     PureOCTestTypeTestLayoutAnimation,
     PureOCTestTypeTestWKWebView,
     PureOCTestTypeTestActivitiyVC,
-    PureOCTestTypeTestIAPVC
+    PureOCTestTypeTestIAPVC,
 };
 
 @interface PureOCViewController () <UITableViewDelegate, UITableViewDataSource>

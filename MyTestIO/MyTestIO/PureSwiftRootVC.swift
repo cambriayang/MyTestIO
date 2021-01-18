@@ -16,7 +16,7 @@ enum TestType: Int {
     case PureOC
 }
 
-class PureSwiftRootVC: BaseViewController {
+class MyTestRootVC: BaseViewController {
     let testDataSource = [String(describing: "ARKitTestVC"), String(describing: "DecimalNumberPadForH5TestVC"), String(describing: "LFMessageTestVC"), String(describing: "PureSwiftTestVC")];
     
     deinit {
@@ -97,7 +97,7 @@ class PureSwiftRootVC: BaseViewController {
     }
 }
 
-extension PureSwiftRootVC {
+extension MyTestRootVC {
     func swiftClassFromString(_ className: String) -> UIViewController? {
         //方法 NSClassFromString 在Swift中已经不起作用了no effect，需要适当更改
         //官方文档方法：let myPersonClass: AnyClass? = NSClassFromString("MyGreatApp.Person")
