@@ -48,32 +48,31 @@ final List<DemoViewModal> demos = [
 class SliverWidgetsDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Sliver系列组件'),
-      ),
-      body: ListView.builder(
-        itemBuilder: (context, index) {
-          return Padding(
-            padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
-            child: RaisedButton(
-              padding: EdgeInsets.symmetric(vertical: 13),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(4),
+    return SafeArea(
+      child: Scaffold(
+        body: ListView.builder(
+          itemBuilder: (context, index) {
+            return Padding(
+              padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
+              child: RaisedButton(
+                padding: EdgeInsets.symmetric(vertical: 13),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(4),
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => demos[index].demo,
+                    ),
+                  );
+                },
+                child: Text(demos[index].title),
               ),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => demos[index].demo,
-                  ),
-                );
-              },
-              child: Text(demos[index].title),
-            ),
-          );
-        },
-        itemCount: demos.length,
+            );
+          },
+          itemCount: demos.length,
+        ),
       ),
     );
   }
