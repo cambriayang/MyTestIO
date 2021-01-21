@@ -50,6 +50,9 @@ class SliverWidgetsDemo extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        appBar: AppBar(
+          title: Text('Sliver系列组件'),
+        ),
         body: ListView.builder(
           itemBuilder: (context, index) {
             return Padding(

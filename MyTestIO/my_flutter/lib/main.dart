@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:my_flutter/business/defines/common_defines.dart';
 
+import 'business/basic_widgets/index.dart';
+import 'business/custom_icon/index.dart';
+import 'business/grid_view/index.dart';
+import 'business/list_view/index.dart';
 import 'business/sliver_widgets/index.dart';
 
 void main() => runApp(MyApp());
@@ -16,10 +20,10 @@ class MyApp extends StatelessWidget {
       ),
       home: MyHomePage(),
       routes: {
-        // 'basic_widgets': (context) => BasicWidgetsDemo(),
-        // 'list_view': (context) => ListViewDemo(),
-        // 'grid_view': (context) => GridViewDemo(),
-        // 'custom_icons': (context) => CustomIconsDemo(),
+        'basic_widgets': (context) => BasicWidgetsDemo(),
+        'list_view': (context) => ListViewDemo(),
+        'grid_view': (context) => GridViewDemo(),
+        'custom_icons': (context) => CustomIconsDemo(),
         'sliver_widgets': (context) => SliverWidgetsDemo(),
       },
     );
