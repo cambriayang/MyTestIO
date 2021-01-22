@@ -1,5 +1,7 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
+require 'fileutils'
+
 @target_version = '10.0'
 
 platform :ios, @target_version
@@ -38,16 +40,35 @@ def app_pods
 end
 
 target 'MyTestIO' do
-    flutter_application_path = './my_flutter'
-    load File.join(flutter_application_path, '.ios', 'Flutter', 'podhelper.rb')
+  #flutter_application_path = './my_flutter'
+  #load File.join(flutter_application_path, '.ios', 'Flutter', 'podhelper.rb')
 
-  # 对于每个需要集成Flutter的Podfile target，添加如下内容
-    install_all_flutter_pods(flutter_application_path)
+  #对于每个需要集成Flutter的Podfile target，添加如下内容
+  #install_all_flutter_pods(flutter_application_path)
+  MYFLUTTER_FOLDER = 'myflutter'
   
-    app_pods
-    
-    #Can add individual pods
-    
+  if File.exist?(MYFLUTTER_FOLDER)
+    then `rm -rf #{MYFLUTTER_FOLDER}`
+  end
+  
+  `git clone https://github.com/cambriayang/myflutter.git`
+  flutter_application_path = __dir__ + "/#{MYFLUTTER_FOLDER}"
+  
+#  unless Flie.exist?(MYFLUTTER_FOLDER)
+#    raise "ERROR: 找不到文件夹#{MYFLUTTER_FOLDER}"
+#  end
+  
+  FileUtils.cd MYFLUTTER_FOLDER
+  `flutter build ios > /dev/tty`
+     
+  # 如果想要调试本地的 Flutter 工程，就把下面这行注释放开
+  # flutter_application_path = "xxx/xxx/my_flutter"
+  
+  eval(File.read(File.join(flutter_application_path, '.ios', 'Flutter', 'podhelper.rb')), binding)
+  
+  app_pods
+  
+  #Can add individual pods
 end
 
 
