@@ -17,6 +17,12 @@ class Node<T> {
     }
 }
 
+extension Node where T: Equatable {
+    static func != (lhs: Node<T>, rhs: Node<T>)-> Bool {
+        return (lhs.value == rhs.value)
+    }
+}
+
 func printLinkListSeperator() -> Void {
     print("========LeetCode: LinkList=========")
 }
@@ -42,6 +48,14 @@ class LinkList: NSObject {
             prev = prev!.next
         }
         print(prev!.value)
+        
+        var h = reverseList(prev, 0, 3)
+        
+        while h?.next != nil  {
+            print(h!.value as Any, terminator: " ")
+            h = h!.next
+        }
+        print(h!.value)
     }
         
     
@@ -122,4 +136,43 @@ func reverseList(_ head: Node<Int>?) -> Node<Int>? {
     }
     
     return last
+}
+
+func reverseList(_ head: Node<Int>?, _ from: Int, _ to: Int) -> Node<Int>? {
+    var len = 0
+    var cur = head
+    var fpre: Node<Int>?
+    var tpos: Node<Int>?
+    
+    while cur != nil {
+        len = len+1 //自增往前移动
+        fpre = (len == from-1) ? cur : fpre
+        tpos = (len == to+1) ? cur : tpos
+        cur = cur?.next
+    }
+    
+    if from > to || from < 1 || to > len {
+        return head
+    }
+    
+    cur = fpre == nil ? head : fpre?.next
+    
+    var node2: Node<Int> = (cur?.next)! //这里的cur和node2是用于链表反转部分的两个指针
+    
+    cur?.next = tpos //反转部分的头结点必然指向tpos
+    var next: Node<Int>? //第三个辅助指针
+    while node2 != tpos! {//这两个指针向前移动反转的条件是node2还没有到达tpos
+        next = node2.next//分割
+        node2.next = cur//反转
+        cur = node2//前移：过了这里cur会指向to坐标的节点
+        node2 = next!//前移：过了这里node2会指向tpos
+    }
+    
+    if fpre != nil {
+        //如果不是从头节点开始反转（即从中间某个节点开始反转）。需要将fpre与反转结束后的cur接起来
+        fpre?.next = cur
+        return head
+    }
+    
+    return cur
 }
