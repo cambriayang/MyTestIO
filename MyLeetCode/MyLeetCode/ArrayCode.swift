@@ -23,7 +23,7 @@ func printArraySeperator() -> Void {
 
 //寻找最长上升子序列（不需要连续),10，9，2，5，3，7，101，18，20->2,3,7,18,20
 func findLongestIncreasingSubsequence(source: [Int]) -> [Int] {
-    var lis = [Int]()
+    let lis = [Int]()
     
     return lis
 }
