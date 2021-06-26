@@ -12,9 +12,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let _ = ArrayCode().test()
-        let _ = StringCode().test()
-        let _ = LinkList().test()
+        ArrayCode().test()
+        StringCode().test()
+        LinkListCode().test()
+        TreeCode().test()
     }
 }
 

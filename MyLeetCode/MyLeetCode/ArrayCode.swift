@@ -9,8 +9,11 @@
 import UIKit
 
 class ArrayCode: NSObject {
-    public func test() {
+    override init() {
         let _: Void = printArraySeperator()
+    }
+    
+    public func test() {
         let _ = findTheMidNumber([4,3,2,7,8,10,11,18,9])
         let _ = maxProfit([7,1,5,3,6,4])
         let _ = maxProfitII([7,1,5,3,6,4])

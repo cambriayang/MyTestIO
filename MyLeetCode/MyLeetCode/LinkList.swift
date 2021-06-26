@@ -27,9 +27,12 @@ func printLinkListSeperator() -> Void {
     print("========LeetCode: LinkList=========")
 }
 
-class LinkList: NSObject {
-    public func test() {
+class LinkListCode: NSObject {
+    override init() {
         let _: Void = printLinkListSeperator()
+    }
+    
+    public func test() {
         reverseLinkList()
     }
     
