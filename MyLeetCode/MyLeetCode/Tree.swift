@@ -52,13 +52,17 @@ extension TreeNode where T: Equatable {
 extension BinaryTree: CustomStringConvertible {
   public var description: String {
     var s = ""
+
     if let left = left {
       s += "(\(left.description)) <- "
     }
+
     s += "\(value)"
+
     if let right = right {
       s += " -> (\(right.description))"
     }
+
     return s
   }
 }
@@ -68,7 +72,8 @@ class BinaryTree<T: Comparable> {
     public var parent: BinaryTree?
     public var left: BinaryTree?
     public var right: BinaryTree?
-    
+    public var root: BinaryTree?
+
     init(value: T) {
         self.value = value
     }
@@ -109,15 +114,15 @@ class BinaryTree<T: Comparable> {
 class BinarySearchTree<T: Comparable> : BinaryTree<T> {
     func insert(value: T) {
         if value < self.value {
-            if case let left as BinarySearchTree = left {
-                left.insert(value: value)
+            if hasLeftChild {
+                (left as! BinarySearchTree).insert(value: value)
             } else {
                 left = BinarySearchTree(value: value)
                 left?.parent = self
             }
         } else {
-            if case let right as BinarySearchTree = right {
-                right.insert(value: value)
+            if hasRightChild {
+                (right as! BinarySearchTree).insert(value: value)
             } else {
                 right = BinarySearchTree(value: value)
                 right?.parent = self
@@ -166,7 +171,7 @@ class TreeCode: NSObject {
         }
     }
 
-    public func test() {
+    public func generateBSTree() -> BinarySearchTree<Int> {
         let bsTree = BinarySearchTree(value: 7)
         bsTree.insert(value: 20)
         bsTree.insert(value: 9)
@@ -175,11 +180,70 @@ class TreeCode: NSObject {
         bsTree.insert(value: 2)
         bsTree.insert(value: 40)
         bsTree.insert(value: 16)
-        
+        bsTree.insert(value: 6)
+
         print("bsTree is: ")
         print(bsTree)
 
         print("find 9-35: ")
         findTree(tree: bsTree)
+
+        print("\r")
+
+        return bsTree
+    }
+
+    public func generateBTree() -> BinaryTree<Int> {
+        let bTree = BinaryTree(value: 1)
+
+        bTree.right = BinaryTree(value: 3)
+
+        let bl = BinaryTree(value: 2)
+        bl.right = BinaryTree(value: 5)
+
+        bTree.left = bl
+
+        print("binary tree is: ")
+        print(bTree)
+        print("\r")
+
+        return bTree
+    }
+
+    public func outputAllPathInBTree(root: BinaryTree<Int>?, path: String, paths: inout [String]) -> Void {
+        if root == nil {
+            return
+        }
+
+        var p = path.appending(String(root!.value))
+
+        if root?.left == nil && root?.right == nil {
+            paths.append(p)
+        } else {
+            p = p.appending("->")
+            outputAllPathInBTree(root: root?.left, path: p, paths: &paths)
+            outputAllPathInBTree(root: root?.right, path: p, paths: &paths)
+        }
+    }
+
+    public func test() {
+        let bsTree = generateBSTree()
+        let bTree = generateBTree()
+
+        let bstpath = ""
+        var bstpaths: [String] = []
+
+        outputAllPathInBTree(root: bsTree, path: bstpath, paths: &bstpaths)
+
+        print("outputAllPathInBTree is: ")
+        print(bstpaths)
+
+        let btpath = ""
+        var btpaths: [String] = []
+
+        outputAllPathInBTree(root: bTree, path: btpath, paths: &btpaths)
+
+        print("outputAllPathInBTree is: ")
+        print(btpaths)
     }
 }
