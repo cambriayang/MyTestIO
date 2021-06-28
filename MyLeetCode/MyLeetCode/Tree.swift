@@ -72,7 +72,6 @@ class BinaryTree<T: Comparable> {
     public var parent: BinaryTree?
     public var left: BinaryTree?
     public var right: BinaryTree?
-    public var root: BinaryTree?
 
     init(value: T) {
         self.value = value
