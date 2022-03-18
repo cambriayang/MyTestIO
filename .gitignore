@@ -59,3 +59,18 @@ fastlane/screenshots
 
 iOSInjectionProject/
 *.DS_Store
+
+# Visual Studio Code related
+.vscode/
+
+# Flutter/Dart/Pub related
+**/doc/api/
+./Flutter/BasicTest/.dart_tool/
+./Flutter/BasicTest/.flutter-plugins
+./Flutter/BasicTest/.packages
+.pub-cache/
+.pub/
+./Flutter/BasicTest/.flutter-plugins-dependencies
+/build/
+./Flutter/BasicTest/.idea/
+./Flutter/BasicTest/.vscode/
