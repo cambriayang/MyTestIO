@@ -14,16 +14,10 @@ extension String {
     }
 }
 
-func printStringSeperator() -> Void {
-    print("========LeetCode: String=========")
-}
-
-class StringCode: NSObject {
-    override init() {
-        let _: Void = printStringSeperator()
-    }
-    
-    public func test() {
+class StringCode: LeetCode {
+    override func run() {
+        super.run()
+        
         let _ = longestCommonPrefix(["abcdfj", "abc", "abcmnihiuh", "abcmunh"])
         let _ = multiply("123", "3128")
         let _ = lengthOfLongestSubstring("adbdeacdmmm")

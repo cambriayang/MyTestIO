@@ -12,10 +12,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        ArrayCode().test()
-        StringCode().test()
-        LinkListCode().test()
-        TreeCode().test()
+        let codes: [LeetCode] = [ArrayCode(), StringCode(), LinkListCode(), TreeCode()];
+        
+        for code in codes {
+            code.run()
+        }
     }
 }
 

@@ -23,45 +23,12 @@ extension Node where T: Equatable {
     }
 }
 
-func printLinkListSeperator() -> Void {
-    print("========LeetCode: LinkList=========")
-}
-
-class LinkListCode: NSObject {
-    override init() {
-        let _: Void = printLinkListSeperator()
-    }
-    
-    public func test() {
+class LinkListCode: LeetCode {
+    override func run() {
+        super.run()
+        
         reverseLinkList()
     }
-    
-    func reverseLinkList() -> Void {
-        let list3 = IntLinkList()
-        list3.append(value: 10)
-        list3.append(value: 12)
-        list3.append(value: 4)
-        list3.append(value: 5)
-        list3.append(value: 2)
-        
-        var prev = reverseList(list3.head)
-        
-        while prev?.next != nil  {
-            print(prev!.value as Any, terminator: " ")
-            prev = prev!.next
-        }
-        print(prev!.value)
-        
-        var h = reverseList(prev, 0, 3)
-        
-        while h?.next != nil  {
-            print(h!.value as Any, terminator: " ")
-            h = h!.next
-        }
-        print(h!.value)
-    }
-        
-    
 }
 
 class IntLinkList {
@@ -124,6 +91,31 @@ class IntLinkList {
             self.append(value: value)
         }
     }
+}
+
+func reverseLinkList() -> Void {
+    let list3 = IntLinkList()
+    list3.append(value: 10)
+    list3.append(value: 12)
+    list3.append(value: 4)
+    list3.append(value: 5)
+    list3.append(value: 2)
+    
+    var prev = reverseList(list3.head)
+    
+    while prev?.next != nil  {
+        print(prev!.value as Any, terminator: " ")
+        prev = prev!.next
+    }
+    print(prev!.value)
+    
+    var h = reverseList(prev, 0, 3)
+    
+    while h?.next != nil  {
+        print(h!.value as Any, terminator: " ")
+        h = h!.next
+    }
+    print(h!.value)
 }
 
 func reverseList(_ head: Node<Int>?) -> Node<Int>? {

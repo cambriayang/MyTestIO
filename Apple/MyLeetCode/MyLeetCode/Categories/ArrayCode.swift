@@ -8,20 +8,14 @@
 
 import UIKit
 
-class ArrayCode: NSObject {
-    override init() {
-        let _: Void = printArraySeperator()
-    }
-    
-    public func test() {
+class ArrayCode: LeetCode {
+    override func run() {
+        super.run()
+        
         let _ = findTheMidNumber([4,3,2,7,8,10,11,18,9])
         let _ = maxProfit([7,1,5,3,6,4])
         let _ = maxProfitII([7,1,5,3,6,4])
     }
-}
-
-func printArraySeperator() -> Void {
-    print("========LeetCode: Array=========")
 }
 
 //寻找最长上升子序列（不需要连续),10，9，2，5，3，7，101，18，20->2,3,7,18,20
