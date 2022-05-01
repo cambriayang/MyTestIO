@@ -23,14 +23,6 @@ extension Node where T: Equatable {
     }
 }
 
-class LinkListCode: LeetCode {
-    override func run() {
-        super.run()
-        
-        reverseLinkList()
-    }
-}
-
 class IntLinkList {
     var head: Node<Int>?
     var tail: Node<Int>?
@@ -93,81 +85,93 @@ class IntLinkList {
     }
 }
 
-func reverseLinkList() -> Void {
-    let list3 = IntLinkList()
-    list3.append(value: 10)
-    list3.append(value: 12)
-    list3.append(value: 4)
-    list3.append(value: 5)
-    list3.append(value: 2)
-    
-    var prev = reverseList(list3.head)
-    
-    while prev?.next != nil  {
-        print(prev!.value as Any, terminator: " ")
-        prev = prev!.next
+class LinkListCode: LeetCode {
+    override func run() {
+        super.run()
+        
+        reverseLinkList()
     }
-    print(prev!.value)
     
-    var h = reverseList(prev, 0, 3)
-    
-    while h?.next != nil  {
-        print(h!.value as Any, terminator: " ")
-        h = h!.next
+    func reverseLinkList() -> Void {
+        let list3 = IntLinkList()
+        list3.append(value: 10)
+        list3.append(value: 12)
+        list3.append(value: 4)
+        list3.append(value: 5)
+        list3.append(value: 2)
+        
+        var prev = reverseList(list3.head)
+        
+        while prev?.next != nil  {
+            print(prev!.value as Any, terminator: " ")
+            prev = prev!.next
+        }
+        print(prev!.value)
+        
+        var h = reverseList(prev, 0, 3)
+        
+        while h?.next != nil  {
+            print(h!.value as Any, terminator: " ")
+            h = h!.next
+        }
+        print(h!.value)
     }
-    print(h!.value)
+
+    func reverseList(_ head: Node<Int>?) -> Node<Int>? {
+        var cur = head
+        var last: Node<Int>?
+        var next: Node<Int>?
+        
+        while (cur != nil) {
+            next = cur?.next
+            cur?.next = last
+            last = cur
+            cur = next
+        }
+        
+        return last
+    }
+
+    func reverseList(_ head: Node<Int>?, _ from: Int, _ to: Int) -> Node<Int>? {
+        var len = 0
+        var cur = head
+        var fpre: Node<Int>?
+        var tpos: Node<Int>?
+        
+        while cur != nil {
+            len = len+1 //自增往前移动
+            fpre = (len == from-1) ? cur : fpre
+            tpos = (len == to+1) ? cur : tpos
+            cur = cur?.next
+        }
+        
+        if from > to || from < 1 || to > len {
+            return head
+        }
+        
+        cur = fpre == nil ? head : fpre?.next
+        
+        var node2: Node<Int> = (cur?.next)! //这里的cur和node2是用于链表反转部分的两个指针
+        
+        cur?.next = tpos //反转部分的头结点必然指向tpos
+        var next: Node<Int>? //第三个辅助指针
+        while node2 != tpos! {//这两个指针向前移动反转的条件是node2还没有到达tpos
+            next = node2.next//分割
+            node2.next = cur//反转
+            cur = node2//前移：过了这里cur会指向to坐标的节点
+            node2 = next!//前移：过了这里node2会指向tpos
+        }
+        
+        if fpre != nil {
+            //如果不是从头节点开始反转（即从中间某个节点开始反转）。需要将fpre与反转结束后的cur接起来
+            fpre?.next = cur
+            return head
+        }
+        
+        return cur
+    }
 }
 
-func reverseList(_ head: Node<Int>?) -> Node<Int>? {
-    var cur = head
-    var last: Node<Int>?
-    var next: Node<Int>?
-    
-    while (cur != nil) {
-        next = cur?.next
-        cur?.next = last
-        last = cur
-        cur = next
-    }
-    
-    return last
-}
 
-func reverseList(_ head: Node<Int>?, _ from: Int, _ to: Int) -> Node<Int>? {
-    var len = 0
-    var cur = head
-    var fpre: Node<Int>?
-    var tpos: Node<Int>?
-    
-    while cur != nil {
-        len = len+1 //自增往前移动
-        fpre = (len == from-1) ? cur : fpre
-        tpos = (len == to+1) ? cur : tpos
-        cur = cur?.next
-    }
-    
-    if from > to || from < 1 || to > len {
-        return head
-    }
-    
-    cur = fpre == nil ? head : fpre?.next
-    
-    var node2: Node<Int> = (cur?.next)! //这里的cur和node2是用于链表反转部分的两个指针
-    
-    cur?.next = tpos //反转部分的头结点必然指向tpos
-    var next: Node<Int>? //第三个辅助指针
-    while node2 != tpos! {//这两个指针向前移动反转的条件是node2还没有到达tpos
-        next = node2.next//分割
-        node2.next = cur//反转
-        cur = node2//前移：过了这里cur会指向to坐标的节点
-        node2 = next!//前移：过了这里node2会指向tpos
-    }
-    
-    if fpre != nil {
-        //如果不是从头节点开始反转（即从中间某个节点开始反转）。需要将fpre与反转结束后的cur接起来
-        fpre?.next = cur
-        return head
-    }
-    
-    return cur
-}
+
+
