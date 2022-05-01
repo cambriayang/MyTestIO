@@ -11,7 +11,7 @@ import Foundation
 //入口类
 class GreedyCode : LeetCode {
     override func run() {
-        
+        super.run()
     }
 }
 

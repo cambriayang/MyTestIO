@@ -17,10 +17,11 @@
 		041C01DE24FE567100E6CC95 /* MyLeetCodeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041C01DD24FE567100E6CC95 /* MyLeetCodeUITests.swift */; };
 		041C01EC2501C42F00E6CC95 /* ArrayCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041C01EB2501C42F00E6CC95 /* ArrayCode.swift */; };
 		041C01EE250206ED00E6CC95 /* StringCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041C01ED250206ED00E6CC95 /* StringCode.swift */; };
-		041C01F025022F9500E6CC95 /* LinkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041C01EF25022F9500E6CC95 /* LinkList.swift */; };
-		041C01F2250231C300E6CC95 /* Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041C01F1250231C300E6CC95 /* Tree.swift */; };
-		3A06007B281D2E34004D8C27 /* Greedy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A06007A281D2E34004D8C27 /* Greedy.swift */; };
+		041C01F025022F9500E6CC95 /* LinkListCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041C01EF25022F9500E6CC95 /* LinkListCode.swift */; };
+		041C01F2250231C300E6CC95 /* TreeCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041C01F1250231C300E6CC95 /* TreeCode.swift */; };
+		3A06007B281D2E34004D8C27 /* GreedyCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A06007A281D2E34004D8C27 /* GreedyCode.swift */; };
 		3A06007F281D302F004D8C27 /* LeetCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A06007E281D302F004D8C27 /* LeetCode.swift */; };
+		3A060082281E3F2C004D8C27 /* CodesList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A060081281E3F2C004D8C27 /* CodesList.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,10 +58,11 @@
 		041C01DF24FE567100E6CC95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		041C01EB2501C42F00E6CC95 /* ArrayCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayCode.swift; sourceTree = "<group>"; };
 		041C01ED250206ED00E6CC95 /* StringCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringCode.swift; sourceTree = "<group>"; };
-		041C01EF25022F9500E6CC95 /* LinkList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkList.swift; sourceTree = "<group>"; };
-		041C01F1250231C300E6CC95 /* Tree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tree.swift; sourceTree = "<group>"; };
-		3A06007A281D2E34004D8C27 /* Greedy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Greedy.swift; sourceTree = "<group>"; };
+		041C01EF25022F9500E6CC95 /* LinkListCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkListCode.swift; sourceTree = "<group>"; };
+		041C01F1250231C300E6CC95 /* TreeCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeCode.swift; sourceTree = "<group>"; };
+		3A06007A281D2E34004D8C27 /* GreedyCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreedyCode.swift; sourceTree = "<group>"; };
 		3A06007E281D302F004D8C27 /* LeetCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCode.swift; sourceTree = "<group>"; };
+		3A060081281E3F2C004D8C27 /* CodesList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = CodesList.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 				041C01C424FE567100E6CC95 /* Assets.xcassets */,
 				041C01C624FE567100E6CC95 /* LaunchScreen.storyboard */,
 				041C01C924FE567100E6CC95 /* Info.plist */,
+				3A060081281E3F2C004D8C27 /* CodesList.plist */,
 			);
 			path = MyLeetCode;
 			sourceTree = "<group>";
@@ -147,9 +150,9 @@
 			children = (
 				041C01EB2501C42F00E6CC95 /* ArrayCode.swift */,
 				041C01ED250206ED00E6CC95 /* StringCode.swift */,
-				041C01EF25022F9500E6CC95 /* LinkList.swift */,
-				041C01F1250231C300E6CC95 /* Tree.swift */,
-				3A06007A281D2E34004D8C27 /* Greedy.swift */,
+				041C01EF25022F9500E6CC95 /* LinkListCode.swift */,
+				041C01F1250231C300E6CC95 /* TreeCode.swift */,
+				3A06007A281D2E34004D8C27 /* GreedyCode.swift */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				041C01C824FE567100E6CC95 /* LaunchScreen.storyboard in Resources */,
 				041C01C524FE567100E6CC95 /* Assets.xcassets in Resources */,
 				041C01C324FE566D00E6CC95 /* Main.storyboard in Resources */,
+				3A060082281E3F2C004D8C27 /* CodesList.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,15 +289,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				041C01F2250231C300E6CC95 /* Tree.swift in Sources */,
+				041C01F2250231C300E6CC95 /* TreeCode.swift in Sources */,
 				041C01EC2501C42F00E6CC95 /* ArrayCode.swift in Sources */,
-				041C01F025022F9500E6CC95 /* LinkList.swift in Sources */,
+				041C01F025022F9500E6CC95 /* LinkListCode.swift in Sources */,
 				041C01C024FE566D00E6CC95 /* ViewController.swift in Sources */,
 				041C01BC24FE566D00E6CC95 /* AppDelegate.swift in Sources */,
 				3A06007F281D302F004D8C27 /* LeetCode.swift in Sources */,
 				041C01EE250206ED00E6CC95 /* StringCode.swift in Sources */,
 				041C01BE24FE566D00E6CC95 /* SceneDelegate.swift in Sources */,
-				3A06007B281D2E34004D8C27 /* Greedy.swift in Sources */,
+				3A06007B281D2E34004D8C27 /* GreedyCode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

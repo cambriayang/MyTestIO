@@ -15,6 +15,12 @@ class LeetCode : NSObject {
         print("========================LeetCode: \(myName)=========================")
     }
     
+    required override init() {
+        super.init()
+        
+        self.run()
+    }
+    
     public func run() {
         let _: Void = self.printSeperator()
     }
