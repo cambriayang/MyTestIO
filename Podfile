@@ -16,7 +16,8 @@ end
 
 def debug_pods
     pod 'FLEX', :configurations => ['Debug']
-    pod 'MLeaksFinder', :configurations => ['Debug']
+    # pod 'MLeaksFinder', :configurations => ['Debug']
+    # pod 'FBRetainCycleDetector'
 end
 
 def umenTest
@@ -51,20 +52,20 @@ target 'MyTestIO' do
     then `rm -rf #{MYFLUTTER_FOLDER}`
   end
   
-  `git clone https://github.com/cambriayang/myflutter.git`
-  flutter_application_path = __dir__ + "/#{MYFLUTTER_FOLDER}"
+#   `git clone https://github.com/cambriayang/myflutter.git`
+#   flutter_application_path = __dir__ + "/#{MYFLUTTER_FOLDER}"
   
 #  unless Flie.exist?(MYFLUTTER_FOLDER)
 #    raise "ERROR: 找不到文件夹#{MYFLUTTER_FOLDER}"
 #  end
   
-  FileUtils.cd MYFLUTTER_FOLDER
-  `flutter build ios > /dev/tty`
+#   FileUtils.cd MYFLUTTER_FOLDER
+#   `flutter build ios > /dev/tty`
      
   # 如果想要调试本地的 Flutter 工程，就把下面这行注释放开
   # flutter_application_path = "xxx/xxx/my_flutter"
   
-  eval(File.read(File.join(flutter_application_path, '.ios', 'Flutter', 'podhelper.rb')), binding)
+#   eval(File.read(File.join(flutter_application_path, '.ios', 'Flutter', 'podhelper.rb')), binding)
   
   app_pods
   

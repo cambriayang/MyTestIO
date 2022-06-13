@@ -18,7 +18,7 @@
 
 #import "TestBindScrollViewVC.h"
 #import "TestGetVC.h"
-#import <Flutter/Flutter.h>
+//#import <Flutter/Flutter.h>
 
 NSString *cellIdentifier = @"tableviewcell";
 
@@ -140,9 +140,9 @@ typedef NS_ENUM(NSUInteger, PureOCTestType) {
 }
 
 - (void)testFlutter {
-    FlutterViewController *vc = [[FlutterViewController alloc] init];
-    
-    [self.navigationController pushViewController:vc animated:YES];
+//    FlutterViewController *vc = [[FlutterViewController alloc] init];
+//    
+//    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)testJKTest {
