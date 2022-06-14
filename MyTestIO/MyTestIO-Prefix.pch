@@ -13,3 +13,18 @@
 #import "EXTScope.h"
 
 #endif /* MyTestIO_Prefix_pch */
+
+#ifdef __OBJC__
+
+#import <Foundation/Foundation.h>
+
+typedef NS_ENUM(NSInteger, SortType) {
+    // 测试DrawRect
+    SortType_Test = 1000,
+    // 冒泡排序
+    SortType_Bubble,
+    // 选择排序
+    SortType_Select,
+};
+
+#endif

@@ -32,7 +32,8 @@ typedef NS_ENUM(NSUInteger, coinType) {
     self.view.backgroundColor = [UIColor lightGrayColor];
     
     [[SKPaymentQueue defaultQueue] addTransactionObserver:self];
-    
+
+    self.title = NSStringFromClass([self class]);
     
     [self renderView];
 }

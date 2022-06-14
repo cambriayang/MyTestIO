@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14294CC12856E3330087A6DF /* TestTypeDrawRectVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 14294CC02856E3330087A6DF /* TestTypeDrawRectVC.m */; };
+		14294CCB285862AA0087A6DF /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14294CC4285862AA0087A6DF /* HeaderView.m */; };
+		14294CCC285862AA0087A6DF /* SortViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14294CC5285862AA0087A6DF /* SortViewController.m */; };
+		14294CCD285862AA0087A6DF /* SortAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 14294CC6285862AA0087A6DF /* SortAlgorithm.m */; };
+		14294CCE285862AA0087A6DF /* ZebraView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14294CC8285862AA0087A6DF /* ZebraView.m */; };
 		14DD815925B588DC00D67B2A /* PureSwiftRootVCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14DD815725B588DC00D67B2A /* PureSwiftRootVCCell.xib */; };
 		14DD815A25B588DC00D67B2A /* PureSwiftRootVCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DD815825B588DC00D67B2A /* PureSwiftRootVCCell.swift */; };
 		2440FCC61FFF9DA900AC685F /* AutolayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2440FCC51FFF9DA900AC685F /* AutolayoutViewController.m */; };
@@ -57,6 +62,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14294CBF2856E3330087A6DF /* TestTypeDrawRectVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestTypeDrawRectVC.h; sourceTree = "<group>"; };
+		14294CC02856E3330087A6DF /* TestTypeDrawRectVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestTypeDrawRectVC.m; sourceTree = "<group>"; };
+		14294CC3285862AA0087A6DF /* ZebraView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZebraView.h; sourceTree = "<group>"; };
+		14294CC4285862AA0087A6DF /* HeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderView.m; sourceTree = "<group>"; };
+		14294CC5285862AA0087A6DF /* SortViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SortViewController.m; sourceTree = "<group>"; };
+		14294CC6285862AA0087A6DF /* SortAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SortAlgorithm.m; sourceTree = "<group>"; };
+		14294CC7285862AA0087A6DF /* HeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderView.h; sourceTree = "<group>"; };
+		14294CC8285862AA0087A6DF /* ZebraView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZebraView.m; sourceTree = "<group>"; };
+		14294CC9285862AA0087A6DF /* SortViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortViewController.h; sourceTree = "<group>"; };
+		14294CCA285862AA0087A6DF /* SortAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortAlgorithm.h; sourceTree = "<group>"; };
 		14DD815725B588DC00D67B2A /* PureSwiftRootVCCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PureSwiftRootVCCell.xib; sourceTree = "<group>"; };
 		14DD815825B588DC00D67B2A /* PureSwiftRootVCCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PureSwiftRootVCCell.swift; sourceTree = "<group>"; };
 		2440FCC41FFF9DA900AC685F /* AutolayoutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AutolayoutViewController.h; sourceTree = "<group>"; };
@@ -168,6 +183,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14294CC2285862AA0087A6DF /* Sort */ = {
+			isa = PBXGroup;
+			children = (
+				14294CC7285862AA0087A6DF /* HeaderView.h */,
+				14294CC4285862AA0087A6DF /* HeaderView.m */,
+				14294CC9285862AA0087A6DF /* SortViewController.h */,
+				14294CC5285862AA0087A6DF /* SortViewController.m */,
+				14294CCA285862AA0087A6DF /* SortAlgorithm.h */,
+				14294CC6285862AA0087A6DF /* SortAlgorithm.m */,
+				14294CC3285862AA0087A6DF /* ZebraView.h */,
+				14294CC8285862AA0087A6DF /* ZebraView.m */,
+			);
+			path = Sort;
+			sourceTree = "<group>";
+		};
 		24C5F6E21FFB7B53006DF2DD /* MyTestUIKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +220,9 @@
 				246D7B96201F425300EE2591 /* TestActivitiyVC.m */,
 				24BEF0E2218C46190039D9C8 /* TestIAPVC.h */,
 				24BEF0E3218C46190039D9C8 /* TestIAPVC.m */,
+				14294CBF2856E3330087A6DF /* TestTypeDrawRectVC.h */,
+				14294CC02856E3330087A6DF /* TestTypeDrawRectVC.m */,
+				14294CC2285862AA0087A6DF /* Sort */,
 			);
 			name = MyTestUIKit;
 			sourceTree = "<group>";
@@ -513,6 +546,7 @@
 				24D57BDB1DE7F2D500A06318 /* LFMessageManager.m in Sources */,
 				24DED14F1DF661E6005C727F /* LFBlockQueue.m in Sources */,
 				24BEF0E4218C46190039D9C8 /* TestIAPVC.m in Sources */,
+				14294CCB285862AA0087A6DF /* HeaderView.m in Sources */,
 				CA46478D1CF18BA4006F2A54 /* EXTNil.m in Sources */,
 				2440FCC91FFFA04200AC685F /* TestLayoutAnimationViewController.m in Sources */,
 				CA3E289D1CF196A80016081F /* NSObject+Swizzle.m in Sources */,
@@ -533,15 +567,19 @@
 				CAD615451D87133300804F1E /* MyTestInstance.m in Sources */,
 				CA0417DB1DF45152007D8B54 /* PureSwiftTestVC.swift in Sources */,
 				24C9A5991FE1476C00A5B60D /* UIView+AIFAutoCollapse.m in Sources */,
+				14294CCD285862AA0087A6DF /* SortAlgorithm.m in Sources */,
 				CACE29411D86F947009B4A69 /* JKTest.m in Sources */,
 				2448087E2008690B00E41B49 /* TestGetVC.m in Sources */,
 				CA46478F1CF18BA4006F2A54 /* EXTSafeCategory.m in Sources */,
 				CA46478B1CF18BA4006F2A54 /* EXTADT.m in Sources */,
 				24C9A59C1FE1479600A5B60D /* MASViewConstraint+AIFCommonUI.m in Sources */,
 				CACE293D1D85B021009B4A69 /* DecimalNumberPadForH5TestVC.swift in Sources */,
+				14294CC12856E3330087A6DF /* TestTypeDrawRectVC.m in Sources */,
 				CA46478E1CF18BA4006F2A54 /* EXTRuntimeExtensions.m in Sources */,
 				CA18E9511DEAFFC9008C718C /* LFMessageTestVC.swift in Sources */,
+				14294CCC285862AA0087A6DF /* SortViewController.m in Sources */,
 				CAEB6DCE1CA82CB60058C699 /* BaseViewController.m in Sources */,
+				14294CCE285862AA0087A6DF /* ZebraView.m in Sources */,
 				CA127F781CA7CA6A00DEE218 /* AppDelegate.m in Sources */,
 				24D57BDA1DE7F2D500A06318 /* LFMessage.m in Sources */,
 				2FF5CEA41F43EBF80060C0DF /* ARKitTestVC.swift in Sources */,

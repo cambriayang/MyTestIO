@@ -11,6 +11,7 @@
 #import "JKTest.h"
 #import "AutolayoutViewController.h"
 #import "TestLayoutAnimationViewController.h"
+#import "SortViewController.h"
 
 #ifdef DEBUG
 #import <FLEX/FLEX.h>
@@ -35,6 +36,8 @@ typedef NS_ENUM(NSUInteger, PureOCTestType) {
     PureOCTestTypeTestActivitiyVC,
     PureOCTestTypeTestIAPVC,
     TestTypeFlutterVC,
+    TestTypeDrawRect,
+    TestTypeSortViewController,
 };
 
 @interface PureOCViewController () <UITableViewDelegate, UITableViewDataSource>
@@ -60,7 +63,9 @@ typedef NS_ENUM(NSUInteger, PureOCTestType) {
                             @"TestWKWebViewVC",
                             @"TestActivitiyVC",
                             @"TestIAPVC",
-                            @"TestTypeFlutterVC"];
+                            @"TestTypeFlutterVC",
+                            @"TestTypeDrawRectVC",
+                            @"SortViewController"];
     }
     
     self.title = NSStringFromClass([self class]);
@@ -125,6 +130,13 @@ typedef NS_ENUM(NSUInteger, PureOCTestType) {
 #endif
         }
             break;
+        case TestTypeSortViewController:{
+            SortViewController *sortController = [[SortViewController alloc] init];
+            sortController.sortType = SortType_Bubble;
+//            sortController.sortName = [_titleArr objectAtIndex:button.tag-1000];
+            [self.navigationController pushViewController:sortController animated:YES];
+            break;
+        }
         case PureOCTestTypeTestBindScrollViews:
         case PureOCTestTypeTestGetVC:
         case PureOCTestTypeTestAutoLayout:
@@ -132,6 +144,7 @@ typedef NS_ENUM(NSUInteger, PureOCTestType) {
         case PureOCTestTypeTestWKWebView:
         case PureOCTestTypeTestActivitiyVC:
         case PureOCTestTypeTestIAPVC:
+        case TestTypeDrawRect:
             [self gotoTestVC];
             break;
         default:
@@ -141,7 +154,7 @@ typedef NS_ENUM(NSUInteger, PureOCTestType) {
 
 - (void)testFlutter {
 //    FlutterViewController *vc = [[FlutterViewController alloc] init];
-//    
+//
 //    [self.navigationController pushViewController:vc animated:YES];
 }
 
