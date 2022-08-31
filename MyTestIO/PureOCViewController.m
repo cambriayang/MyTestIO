@@ -38,6 +38,7 @@ typedef NS_ENUM(NSUInteger, PureOCTestType) {
     TestTypeFlutterVC,
     TestTypeDrawRect,
     TestTypeSortViewController,
+    TestCycleAnimationViewController,
 };
 
 @interface PureOCViewController () <UITableViewDelegate, UITableViewDataSource>
@@ -65,7 +66,9 @@ typedef NS_ENUM(NSUInteger, PureOCTestType) {
                             @"TestIAPVC",
                             @"TestTypeFlutterVC",
                             @"TestTypeDrawRectVC",
-                            @"SortViewController"];
+                            @"SortViewController",
+                            @"TestCycleAnimationViewController",
+        ];
     }
     
     self.title = NSStringFromClass([self class]);
@@ -145,6 +148,7 @@ typedef NS_ENUM(NSUInteger, PureOCTestType) {
         case PureOCTestTypeTestActivitiyVC:
         case PureOCTestTypeTestIAPVC:
         case TestTypeDrawRect:
+        case TestCycleAnimationViewController:
             [self gotoTestVC];
             break;
         default:

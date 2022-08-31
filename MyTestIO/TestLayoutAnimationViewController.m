@@ -14,6 +14,7 @@
 @property (nonatomic,strong) MASConstraint *labelTopOffset;
 @property (nonatomic,strong) MASConstraint *blueBlockTopOffset;
 @property (nonatomic,strong) MASConstraint *blueBlockLeftOffset;
+@property (nonatomic,strong) MASConstraint *blueBlockSize;
 @end
 
 @implementation TestLayoutAnimationViewController
@@ -46,7 +47,7 @@
     [blueBlock mas_makeConstraints:^(MASConstraintMaker *make) {
         self.blueBlockTopOffset = make.top.equalTo(label.mas_bottom).offset(10);
         self.blueBlockLeftOffset = make.left.equalTo(label.mas_left);
-        make.size.mas_equalTo(CGSizeMake(100, 60));
+        self.blueBlockSize = make.size.mas_equalTo(CGSizeMake(100, 60));
     }];
     
     self.blueBlock = blueBlock;
@@ -83,8 +84,9 @@
         self.blueBlockTopOffset.offset = 20;
         self.blueBlockLeftOffset.offset = 50;
         self.label.alpha = 0.7;
+        self.blueBlockSize.sizeOffset=CGSizeZero;
         
-//        //下一个runloop可以改变frame，并且如果在动画block里面，可以直接用
+        //下一个runloop可以改变frame，并且如果在动画block里面，可以直接用
 //        dispatch_async(dispatch_get_main_queue(), ^{
 //            self.label.frame = CGRectMake(0, 260, 100, 100);
 //        });

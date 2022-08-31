@@ -31,6 +31,7 @@
 		24DED14F1DF661E6005C727F /* LFBlockQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DED14E1DF661E6005C727F /* LFBlockQueue.m */; };
 		24FCFD601E821F0F001334DE /* PureOCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24FCFD5F1E821F0F001334DE /* PureOCViewController.m */; };
 		2FF5CEA41F43EBF80060C0DF /* ARKitTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF5CEA31F43EBF80060C0DF /* ARKitTestVC.swift */; };
+		3A1EE28628BFBBAA007B7238 /* TestCycleAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1EE28528BFBBAA007B7238 /* TestCycleAnimationViewController.m */; };
 		CA0417DB1DF45152007D8B54 /* PureSwiftTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0417DA1DF45152007D8B54 /* PureSwiftTestVC.swift */; };
 		CA0417E01E070C63007D8B54 /* findXibsAndAdjustingForXcode7.py in Resources */ = {isa = PBXBuildFile; fileRef = CA0417DF1E070C63007D8B54 /* findXibsAndAdjustingForXcode7.py */; };
 		CA127F751CA7CA6A00DEE218 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CA127F741CA7CA6A00DEE218 /* main.m */; };
@@ -110,6 +111,8 @@
 		24FCFD5E1E821F0F001334DE /* PureOCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureOCViewController.h; sourceTree = "<group>"; };
 		24FCFD5F1E821F0F001334DE /* PureOCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PureOCViewController.m; sourceTree = "<group>"; };
 		2FF5CEA31F43EBF80060C0DF /* ARKitTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARKitTestVC.swift; sourceTree = "<group>"; };
+		3A1EE28428BFBBAA007B7238 /* TestCycleAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestCycleAnimationViewController.h; sourceTree = "<group>"; };
+		3A1EE28528BFBBAA007B7238 /* TestCycleAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCycleAnimationViewController.m; sourceTree = "<group>"; };
 		433C6221B3DF89A3B66F4976 /* Pods-MyTestIO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTestIO.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyTestIO/Pods-MyTestIO.debug.xcconfig"; sourceTree = "<group>"; };
 		59C6F164B84E05FE8F8CDDAB /* libPods-ASDKTestOn4S.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ASDKTestOn4S.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9642CB0838D9BAB2CC6F5B85 /* libPods-MyTestIO.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyTestIO.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -222,6 +225,8 @@
 				24BEF0E3218C46190039D9C8 /* TestIAPVC.m */,
 				14294CBF2856E3330087A6DF /* TestTypeDrawRectVC.h */,
 				14294CC02856E3330087A6DF /* TestTypeDrawRectVC.m */,
+				3A1EE28428BFBBAA007B7238 /* TestCycleAnimationViewController.h */,
+				3A1EE28528BFBBAA007B7238 /* TestCycleAnimationViewController.m */,
 				14294CC2285862AA0087A6DF /* Sort */,
 			);
 			name = MyTestUIKit;
@@ -545,6 +550,7 @@
 				2440FCC61FFF9DA900AC685F /* AutolayoutViewController.m in Sources */,
 				24D57BDB1DE7F2D500A06318 /* LFMessageManager.m in Sources */,
 				24DED14F1DF661E6005C727F /* LFBlockQueue.m in Sources */,
+				3A1EE28628BFBBAA007B7238 /* TestCycleAnimationViewController.m in Sources */,
 				24BEF0E4218C46190039D9C8 /* TestIAPVC.m in Sources */,
 				14294CCB285862AA0087A6DF /* HeaderView.m in Sources */,
 				CA46478D1CF18BA4006F2A54 /* EXTNil.m in Sources */,
